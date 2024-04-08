@@ -56,10 +56,10 @@ function heroSlider() {
     slidesPerView: 1,
     effect: "fade",
     loop: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".hero__slider-pagination",
       clickable: true,
