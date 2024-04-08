@@ -1,0 +1,80 @@
+.favorites {
+  margin-bottom: 140px;
+  margin-top: 30px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 40px;
+  }
+
+  // .favorites__inner
+
+  &__inner {}
+
+  // .favorites__header
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  // .favorites__header-item
+
+  &__header-item {
+    display: flex;
+    width: fit-content;
+    column-gap: 8px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--text-color);
+
+
+    @media (max-width: $breakpoint580) {
+      font-size: 12px;
+    }
+  }
+
+  // .favorites__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+
+    @media (min-width: 1600px) {
+      grid-template-columns: repeat(auto-fill, 280px);
+    }
+
+    @media (max-width: $breakpoint1450) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 1200px) {}
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint580) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .favorites__item
+
+  &__item {}
+}

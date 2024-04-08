@@ -1,0 +1,22 @@
+// Global SCSS-files imports
+@import './base/fonts';
+@import './base/vars';
+@import './base/reset';
+@import './base/global';
+@import './base/utils';
+@import './base/base';
+@import './base/sticky-footer';
+
+// Sections or Pages SCSS-files imports
+@import './components/header';
+@import './components/breadcrumbs';
+@import './components/favorites';
+@import './components/hero';
+@import './components/main-catalog';
+@import './components/products-slider';
+@import './components/pictures-slider';
+@import './components/card';
+@import './components/footer';
+
+// Libs
+// @import './libs/swiper';

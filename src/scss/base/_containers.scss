@@ -1,0 +1,93 @@
+/* Демо контент */
+
+/* Контейнеры */
+.container {
+  margin: 0 auto;
+  padding: 0 var(--containerPadding);
+
+  max-width: var(--containerWidth);
+  width: 100%;
+}
+
+.container-large {
+  margin: 0 auto;
+  padding: 0 var(--containerPadding);
+
+  max-width: 1800px;
+  width: 100%;
+}
+
+.container-small {
+  margin: 0 auto;
+  padding: 0 var(--containerPadding);
+
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+.container-full {
+  padding: 0 var(--containerPadding);
+  max-width: 100%;
+}
+
+.container-left-50 {
+  padding: 0 var(--containerPadding);
+  max-width: 50%;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.container-right-50 {
+  padding: 0 var(--containerPadding);
+  max-width: 50%;
+  margin-left: auto;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.container-right {
+  padding-left: calc((100% - var(--containerWidth)) / 2 + var(--containerPadding));
+
+  @include tablet {
+    padding-left: var(--containerPadding);
+  }
+}
+
+.container-left {
+  padding-right: calc((100% - var(--containerWidth)) / 2 + var(--containerPadding));
+
+  @include tablet {
+    padding-right: var(--containerPadding);
+  }
+}
+
+.container-half-left {
+  padding-right: calc((100% - var(--containerWidth)) / 2 + (var(--containerWidth) / 2));
+  padding-left: calc((100% - var(--containerWidth)) / 2 + var(--containerPadding));
+
+  @include tablet {
+    padding-left: var(--containerPadding);
+  }
+
+  @include mobile {
+    padding: 0 var(--containerPadding);
+  }
+}
+
+.container-half-right {
+  padding-left: calc((100% - var(--containerWidth)) / 2 + (var(--containerWidth) / 2));
+  padding-right: calc((100% - var(--containerWidth)) / 2 + var(--containerPadding));
+
+  @include tablet {
+    padding-right: var(--containerPadding);
+  }
+
+  @include mobile {
+    padding: 0 var(--containerPadding);
+  }
+}

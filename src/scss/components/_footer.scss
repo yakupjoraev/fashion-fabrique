@@ -1,0 +1,357 @@
+// Footer
+
+.footer {
+  padding: 40px 0;
+  background-color: var(--white-color);
+
+  @media (max-width: $breakpoint992) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: $breakpoint580) {
+    padding: 40px 0;
+  }
+
+  // .footer__inner
+
+  &__inner {
+    display: grid;
+    row-gap: 72px;
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 60px;
+    }
+  }
+
+  // .footer__top
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 60px;
+    }
+  }
+
+  // .footer__nav
+
+  &__nav {
+    display: flex;
+    column-gap: 10px;
+
+    @media (max-width: $breakpoint992) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint580) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 6px;
+    }
+  }
+
+  // .footer__list
+
+  &__list {
+    flex: 0 0 190px;
+    display: grid;
+    align-content: baseline;
+    row-gap: 8px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+      row-gap: 0;
+    }
+  }
+
+  // .footer__item
+
+  &__item {
+
+    @media (max-width: $breakpoint992) {
+      max-height: 0;
+      overflow: hidden;
+      user-select: none;
+      pointer-events: none;
+      transition: all 0.3s linear;
+      text-align: right;
+    }
+  }
+
+  // .footer__item--label
+
+  &__item--label {
+    margin-bottom: 10px;
+
+
+    @media (max-width: $breakpoint992) {
+      max-height: fit-content;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      column-gap: 10px;
+      padding: 10px;
+      border-bottom: 1px solid var(--text-color);
+      user-select: auto;
+      pointer-events: visible;
+
+      &.active {
+        .footer__item-btn {
+          transform: rotate(180deg);
+        }
+      }
+
+
+      &.active~.footer__item {
+        max-height: 40px;
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  // .footer__item-label
+
+  &__item-label {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--grey-color);
+
+    @media (min-width: 1600px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 14px;
+      color: var(--text-color);
+    }
+  }
+
+  // .footer__item-btn
+
+  &__item-btn {
+    display: none;
+    background-color: transparent;
+    transition: transform 0.3s linear;
+
+    @media (max-width: $breakpoint992) {
+      display: flex;
+    }
+  }
+
+  // .footer__item-arrow
+
+  &__item-arrow {}
+
+  // .footer__link
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--black-color);
+
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
+  }
+
+  // .footer__list--mobile-politicals
+
+  &__list--mobile-politicals {
+    display: none;
+
+    @media (max-width: $breakpoint992) {
+      display: grid;
+    }
+  }
+
+  // .footer__right
+
+  &__right {
+    display: grid;
+    align-content: baseline;
+    row-gap: 42px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      justify-items: end;
+      width: 100%;
+      text-align: right;
+    }
+
+    @media (max-width: $breakpoint580) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+    }
+  }
+
+  // .footer__row
+
+  &__row {
+    display: grid;
+    row-gap: 8px;
+  }
+
+  // .footer__row-label
+
+  &__row-label {
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--grey-color);
+
+    @media (min-width: 1600px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 14px;
+      color: var(--text-color);
+    }
+  }
+
+  // .footer__row-link
+
+  &__row-link {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--black-color);
+
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  // .footer__social
+
+  &__social {}
+
+  // .footer__social-link
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background-color: var(--black-color);
+  }
+
+  // .footer__social-icon
+
+  &__social-icon {
+    padding: 2px;
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    display: grid;
+    row-gap: 72px;
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 48px;
+    }
+  }
+
+  // .footer__politicals
+
+  &__politicals {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1200px) {
+      column-gap: 20px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+
+  // .footer__political
+
+  &__political {
+    font-family: var(--second-family);
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--black-color);
+
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
+  }
+
+  // .footer__copy
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint992) {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $breakpoint580) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  // .footer__copy-text
+
+  &__copy-text {
+    font-family: var(--second-family);
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--black-color);
+
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
+  }
+}
