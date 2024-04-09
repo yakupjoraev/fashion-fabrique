@@ -76,7 +76,10 @@
   &__item {
 
     @media (max-width: $breakpoint992) {
+      position: relative;
       max-height: 0;
+      right: -40px;
+      opacity: 0;
       overflow: hidden;
       user-select: none;
       pointer-events: none;
@@ -101,6 +104,8 @@
       border-bottom: 1px solid var(--text-color);
       user-select: auto;
       pointer-events: visible;
+      right: 0;
+      opacity: 1;
 
       &.active {
         .footer__item-btn {
@@ -111,6 +116,8 @@
 
       &.active~.footer__item {
         max-height: 40px;
+        right: 0;
+        opacity: 1;
 
         &:not(:first-child) {
           margin-top: 10px;
