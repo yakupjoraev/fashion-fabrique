@@ -26,7 +26,7 @@ function productsSlider() {
   }
 
   containers.forEach(container => {
-    const sliderIndex = container.dataset.slider;
+    const sliderIndex = container.getAttribute('data-slider');
 
     const swiper = new Swiper(container, {
       cssMode: true,
@@ -41,6 +41,7 @@ function productsSlider() {
 }
 
 productsSlider();
+
 
 
 
@@ -131,5 +132,9 @@ class HvrSlider {
     });
   }
 }
-new HvrSlider('.pictures-slider');
+
+if (window.matchMedia("(min-width: 1025px)").matches) {
+  new HvrSlider('.pictures-slider');
+}
+
 
