@@ -21,7 +21,14 @@
 
   // .hero__slider
 
-  &__slider {}
+  &__slider {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    @media (max-width: $breakpoint992) {
+      margin: 0;
+    }
+  }
 
   // .hero__slider-wrapper
 

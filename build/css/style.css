@@ -891,6 +891,11 @@ body {
   margin-left: -40px;
 }
 
+.hero__slider {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 .hero__slide {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -2316,6 +2321,10 @@ body {
 
   .hero .container {
     padding: 0;
+  }
+
+  .hero__slider {
+    margin: 0;
   }
 
   .hero__slide {
