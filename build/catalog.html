@@ -227,6 +227,557 @@
   <h1 hidden> Каталог</h1>
   <div class="container">
     <div class="catalog__inner">
+      <div class="catalog__filters filters">
+        <div class="filters__header">
+          <button type="button" class="filters__header-btn" data-btn-filters>
+            <span>Фильтры</span>
+            <img src="./img/icons/filter-plus.svg" alt="plus">
+          </button>
+
+          <button type="button" class="filters__header-btn" data-btn-sort>
+            <span>Сортировать</span>
+            <img src="./img/icons/filter-plus.svg" alt="plus">
+          </button>
+
+          <div class="filters__header-btns">
+            <button type="button" class="filters__header-btn active" data-btn-view="4">
+              <svg class="svg-view-4" width="14" height="12" viewBox="0 0 14 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="1">
+                  <rect width="2" height="12" fill="#111810" />
+                  <rect x="4" width="2" height="12" fill="#111810" />
+                  <rect x="8" width="2" height="12" fill="#111810" />
+                  <rect x="12" width="2" height="12" fill="#111810" />
+                </g>
+              </svg>
+            </button>
+
+            <button type="button" class="filters__header-btn" data-btn-view="6">
+              <svg class="svg-view-6" width="24" height="12" viewBox="0 0 24 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="1" width="2.33333" height="12" fill="#111810" />
+                <rect opacity="1" x="4.33301" width="2.33333" height="12" fill="#111810" />
+                <rect opacity="1" x="8.66699" width="2.33333" height="12" fill="#111810" />
+                <rect opacity="1" x="13" width="2.33333" height="12" fill="#111810" />
+                <rect opacity="1" x="17.333" width="2.33333" height="12" fill="#111810" />
+                <rect opacity="1" x="21.667" width="2.33333" height="12" fill="#111810" />
+              </svg>
+
+            </button>
+          </div>
+        </div>
+
+        <div class="filters__filters" data-filters-content>
+          <div class="filters__items" data-filters-items>
+            <div class="filters__item">
+              <div class="filters__item-head" data-filters-items-head>
+                <p class="filters__item-label">Тип продукта</p>
+
+                <div class="filters__item-icons">
+                  <div class="filters__item-delete">
+                    <img src="./img/icons/filters-delete.svg" alt="filters-delete">
+                  </div>
+                  <div class="filters__item-arrow">
+                    <img src="./img/icons/filters-arrow.svg" alt="filters-arrow">
+                  </div>
+                </div>
+              </div>
+
+              <div class="filters__item-content" data-filters-items-content>
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Платья (мини)</span>
+                  <span class="filters__item-count">3</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Платья (миди)</span>
+                  <span class="filters__item-count">88</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Платья (макси)</span>
+                  <span class="filters__item-count">5</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Рубашки и блузы</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Трикотаж</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Юбки</span>
+                  <span class="filters__item-count">12</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Брюки и шорты</span>
+                  <span class="filters__item-count">15</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Деним</span>
+                  <span class="filters__item-count">356</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Костюмы и комбинезоны</span>
+                  <span class="filters__item-count">34</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Топы и футболки</span>
+                  <span class="filters__item-count">22</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Свитшоты и худи</span>
+                  <span class="filters__item-count">95</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Верхняя одежда</span>
+                  <span class="filters__item-count">10</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Жакеты и жилеты</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Белье</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Туфли</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Босоножки</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Мюли и сандалии</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Кроссовки и кеды </span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Лоферы и ботинки</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Сапоги</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Балетки</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Серьги</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Колье</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Кольца и браслеты</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Украшения для волос</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Ремни</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Ремни</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Сумки</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Головные уборы</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Шарфы</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Перчатки и варежки</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Брошь</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Воротнички и манишки</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filters__items" data-filters-items>
+            <div class="filters__item">
+              <div class="filters__item-head" data-filters-items-head>
+                <p class="filters__item-label">Размер</p>
+
+                <div class="filters__item-icons">
+                  <div class="filters__item-delete">
+                    <img src="./img/icons/filters-delete.svg" alt="filters-delete">
+                  </div>
+                  <div class="filters__item-arrow">
+                    <img src="./img/icons/filters-arrow.svg" alt="filters-arrow">
+                  </div>
+                </div>
+              </div>
+              <div class="filters__item-content" data-filters-items-content>
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">XS (40RUS)</span>
+                  <span class="filters__item-count">3</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">S (40/42RUS)</span>
+                  <span class="filters__item-count">5</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">M (42/44RUS)</span>
+                  <span class="filters__item-count">88</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">L (44/46RUS)</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">XL (46RUS)</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Onesize</span>
+                  <span class="filters__item-count">12</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">Oversize</span>
+                  <span class="filters__item-count">15</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">25</span>
+                  <span class="filters__item-count">356</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">26</span>
+                  <span class="filters__item-count">34</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">27</span>
+                  <span class="filters__item-count">22</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">28</span>
+                  <span class="filters__item-count">95</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">29</span>
+                  <span class="filters__item-count">10</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">30</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">35 (22,5см)</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">36 (23см)</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">37 (23,5см) </span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">38 (24см) </span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">39 (24,5см)</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">40 (25см)</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">15</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">16</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">16,5</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">17</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">17,5</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">18</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">18,5</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name">19</span>
+                  <span class="filters__item-count">11</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filters__items" data-filters-items>
+            <div class="filters__item">
+              <div class="filters__item-head" data-filters-items-head>
+                <p class="filters__item-label">Цвет</p>
+
+                <div class="filters__item-icons">
+                  <div class="filters__item-delete">
+                    <img src="./img/icons/filters-delete.svg" alt="filters-delete">
+                  </div>
+                  <div class="filters__item-arrow">
+                    <img src="./img/icons/filters-arrow.svg" alt="filters-arrow">
+                  </div>
+                </div>
+              </div>
+              <div class="filters__item-content" data-filters-items-content>
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#fff;"></span>
+                  <span class="filters__item-name">Белый</span>
+                  <span class="filters__item-count">123</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#0085ff;"></span>
+                  <span class="filters__item-name">Молочный</span>
+                  <span class="filters__item-count">77</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#111;"></span>
+                  <span class="filters__item-name">Черный</span>
+                  <span class="filters__item-count">53</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#d4d4d4;"></span>
+                  <span class="filters__item-name">Серый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#915b1d;"></span>
+                  <span class="filters__item-name">Коричневый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#24b165;"></span>
+                  <span class="filters__item-name">Зеленый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#ff9bfb;"></span>
+                  <span class="filters__item-name">Розовый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#980cbb;"></span>
+                  <span class="filters__item-name">Фиолетовый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#77beff;"></span>
+                  <span class="filters__item-name">Голубой</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#0085ff;"></span>
+                  <span class="filters__item-name">Синий</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#f5ec10;"></span>
+                  <span class="filters__item-name">Желтый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#dc8d18;"></span>
+                  <span class="filters__item-name">Оранжевый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#f00;"></span>
+                  <span class="filters__item-name">Красный</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#c41f33;"></span>
+                  <span class="filters__item-name">Бордовый</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#ddd742;"></span>
+                  <span class="filters__item-name">Золотой</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-color" style="background-color:#d4d4d4;"></span>
+                  <span class="filters__item-name">Серебряный</span>
+                  <span class="filters__item-count">1</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filters__items" data-filters-items>
+            <div class="filters__item">
+              <div class="filters__item-head" data-filters-items-head>
+                <p class="filters__item-label">Стоимоть</p>
+
+                <div class="filters__item-icons">
+                  <div class="filters__item-delete">
+                    <img src="./img/icons/filters-delete.svg" alt="filters-delete">
+                  </div>
+                  <div class="filters__item-arrow">
+                    <img src="./img/icons/filters-arrow.svg" alt="filters-arrow">
+                  </div>
+                </div>
+              </div>
+              <div class="filters__item-content" data-filters-items-content>
+                <a class="filters__item-row" href="#">
+                  <span class="filters__item-name"></span>
+                  <span class="filters__item-count"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters__sort" data-sort-content>
+          <div class="filters__sort-items" data-sort-items>
+            <div class="filters__item-head" data-sort-items-head>
+              <p class="filters__item-label">Новое</p>
+
+              <div class="filters__item-icons">
+                <div class="filters__item-delete">
+                  <img src="./img/icons/filters-delete.svg" alt="filters-delete">
+                </div>
+                <div class="filters__item-arrow">
+                  <img src="./img/icons/filters-arrow.svg" alt="filters-arrow">
+                </div>
+              </div>
+            </div>
+
+            <div class="filters__item-content" data-sort-items-content>
+              <a class="filters__item-row" href="#">
+                <span class="filters__item-name">Сначала Дешевле</span>
+              </a>
+
+              <a class="filters__item-row" href="#">
+                <span class="filters__item-name">Сначала Дороже</span>
+              </a>
+
+              <a class="filters__item-row" href="#">
+                <span class="filters__item-name">Дешевле</span>
+              </a>
+
+              <a class="filters__item-row" href="#">
+                <span class="filters__item-name">Sales</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
 
       <div class="catalog__main">
         <div class="catalog__list">

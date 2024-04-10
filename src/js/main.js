@@ -58,6 +58,101 @@ burgerMenu()
 //   }
 // }
 // window.addEventListener('scroll', fixedNav)
+function filters() {
+  const container = document.querySelector('.filters')
+
+  if (!container) {
+    return null
+  }
+
+  const filtersBtn = document.querySelector('[data-btn-filters]');
+  const filtersContent = document.querySelector('[data-filters-content]');
+  const filterItems = document.querySelectorAll('[data-filters-items]');
+
+  filtersBtn.addEventListener('click', function () {
+    filtersContent.classList.toggle('active');
+    filtersBtn.classList.toggle('active');
+  });
+
+  filterItems.forEach(filterItem => {
+    const head = filterItem.querySelector('[data-filters-items-head]');
+    const content = filterItem.querySelector('[data-filters-items-content]');
+
+    head.addEventListener('click', () => {
+      // Перед открытием текущего элемента фильтра, закрываем все другие элементы
+      filterItems.forEach(item => {
+        if (item !== filterItem) {
+          item.classList.remove('active');
+        }
+      });
+      filterItem.classList.toggle('active');
+    })
+  });
+
+  // Добавляем обработчик клика для всего документа
+  document.addEventListener('click', function (event) {
+    const isFilterItem = event.target.closest('[data-filters-items]');
+
+    // Если клик был вне элементов filterItem, убираем класс active у всех элементов
+    if (!isFilterItem) {
+      filterItems.forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+  });
+}
+
+filters();
+
+
+function sort() {
+  const container = document.querySelector('.filters')
+
+  if (!container) {
+    return null
+  }
+
+  const sortBtn = document.querySelector('[data-btn-sort]');
+  const sortContent = document.querySelector('[data-sort-content]');
+  const sortItems = document.querySelectorAll('[data-sort-items]');
+
+  sortBtn.addEventListener('click', function () {
+    sortContent.classList.toggle('active');
+    sortBtn.classList.toggle('active');
+  });
+
+  sortItems.forEach(sortItem => {
+    const head = sortItem.querySelector('[data-sort-items-head]');
+    const content = sortItem.querySelector('[data-sort-items-content]');
+
+    head.addEventListener('click', () => {
+      // Перед открытием текущего элемента сортировки, закрываем все другие элементы
+      sortItems.forEach(item => {
+        if (item !== sortItem) {
+          item.classList.remove('active');
+        }
+      });
+      sortItem.classList.toggle('active');
+    })
+  });
+
+  // Добавляем обработчик клика для всего документа
+  document.addEventListener('click', function (event) {
+    const isSortItem = event.target.closest('[data-sort-items]');
+
+    // Если клик был вне элементов sortItem, убираем класс active у всех элементов
+    if (!isSortItem) {
+      sortItems.forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+  });
+}
+
+sort();
+
+
+
 
 
 function footerMobileAccordion() {
