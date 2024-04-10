@@ -177,11 +177,18 @@
   &__availability {
     padding: 10px;
     background-color: var(--white-color);
+    border: 1px solid transparent;
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
     text-transform: uppercase;
     color: var(--text-color);
+
+    &--outline {
+      background: transparent;
+      border-color: var(--white-color);
+      color: var(--white-color);
+    }
   }
 
   // .card__delete
