@@ -43,7 +43,7 @@ function burgerMenu() {
     }
   })
 }
-burgerMenu()
+burgerMenu();
 
 
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
@@ -59,6 +59,35 @@ burgerMenu()
 //   }
 // }
 // window.addEventListener('scroll', fixedNav)
+
+function accardion() {
+  const container = document.querySelector('[data-accardion]')
+
+  if (!container) {
+    return null
+  }
+
+  const accordionItems = document.querySelectorAll('[data-accardion-item]');
+
+  accordionItems.forEach(item => {
+    const head = item.querySelector('[data-accardion-head]');
+    const content = item.querySelector('[data-accardion-content]');
+
+    head.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // Закрыть все элементы аккордеона перед открытием нового
+      accordionItems.forEach(el => el.classList.remove('active'));
+
+      if (!isOpen) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
+accardion();
+
 function filters() {
   const container = document.querySelector('.filters')
 
@@ -154,8 +183,6 @@ sort();
 
 
 
-
-
 function footerMobileAccordion() {
   const container = document.querySelector('.footer');
 
@@ -197,7 +224,51 @@ function productsSlider() {
 
 productsSlider();
 
+function producrSlider() {
+  const containers = document.querySelectorAll('.product__sliders');
+  if (!containers || containers.length === 0) {
+    return null;
+  }
 
+
+  var swiper = new Swiper(".product__slider-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+
+    watchSlidesProgress: true,
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      // 320: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 20
+      // },
+      // // when window width is >= 480px
+      // 480: {
+      //   slidesPerView: 3,
+      //   spaceBetween: 30
+      // },
+      // when window width is >= 640px
+      991: {
+        direction: "vertical",
+      }
+    }
+  });
+  var swiper2 = new Swiper(".product__slider-main", {
+    spaceBetween: 10,
+    pagination: {
+      el: ".product__slider-main-pagination",
+      clickable: true,
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+}
+
+producrSlider();
 
 
 
@@ -291,5 +362,18 @@ class HvrSlider {
 if (window.matchMedia("(min-width: 1025px)").matches) {
   new HvrSlider('.pictures-slider');
 }
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+
+  Toolbar: {
+    display: {
+      left: [],
+      // middle: ["prev", "infobar", "next"],
+      right: ["close"],
+    },
+  },
+
+});
 
 
