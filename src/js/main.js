@@ -362,6 +362,32 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
   new HvrSlider('.pictures-slider');
 }
 
+function texnicalLinks() {
+  const container = document.querySelector('.tehnical__links');
+
+  if (!container) {
+    return null
+  }
+  const links = document.querySelectorAll(".tehnical__link");
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+      const offsetTop = targetElement.offsetTop - 20; // добавляем 20px сверху
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    });
+  });
+}
+
+texnicalLinks();
+
+
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
 

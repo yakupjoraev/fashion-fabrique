@@ -1,0 +1,273 @@
+.tehnical {
+
+  // .tehnical__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint992) {
+      column-gap: 24px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column-reverse;
+      row-gap: 40px;
+    }
+  }
+
+  // .tehnical__content
+
+  &__content {
+    flex: 0 1 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+
+    @media (min-width: 1600px) {
+      flex: 0 1 600px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 60px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__block {}
+
+  // .tehnical__label
+
+  &__label {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black-color);
+
+    @media (min-width: 1600px) {
+      font-size: 24px;
+    }
+  }
+
+  // .tehnical__text
+
+  &__text {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 120%;
+    color: var(--black-color);
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 16px;
+    }
+  }
+
+  // .tehnical__aside
+
+  &__aside {
+    flex: 0 0 350px;
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 44px;
+    height: fit-content;
+
+    &--max {
+      flex: 0 0 440px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      &--max {
+        flex: 0 0 360px;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+      justify-content: center;
+      align-items: center;
+      row-gap: 24px;
+      position: static;
+
+      &--max {
+        flex: 0 1 auto;
+      }
+    }
+  }
+
+  // .tehnical__title
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--black-color);
+
+    &--mb {
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 28px;
+
+      &--mb {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      text-align: center;
+
+      &--mb {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  // .tehnical__links
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 12px;
+
+    @media (max-width: $breakpoint992) {
+      align-items: center;
+    }
+  }
+
+  // .tehnical__link
+
+  &__link {
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--black-color);
+    opacity: 0.3;
+    transition: opacity 0.2s linear;
+
+    &.active {
+      opacity: 1;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 22px;
+    }
+  }
+
+  // .tehnical__aside-btns
+
+  &__aside-btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+
+    @media (max-width: $breakpoint768) {
+      justify-content: center;
+    }
+  }
+
+  // .tehnical__btn
+
+  &__btn {
+    min-height: 50px;
+    max-width: 350px;
+    width: 100%;
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+
+  // .tehnical__block-border
+
+  &__block-border {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--text-color);
+  }
+
+
+  // .tehnical__block-list
+
+  &__block-list {
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      list-style: disc;
+      padding-left: 18px;
+      margin-bottom: 4px;
+
+      li {
+        list-style: disc;
+        font-family: var(--second-family);
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--black-color);
+
+        @media (min-width: 1600px) {
+          font-size: 14px;
+        }
+      }
+
+    }
+
+    ol {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      list-style: lower-greek;
+
+      li {
+        list-style: disc;
+        font-family: var(--second-family);
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--black-color);
+
+        @media (min-width: 1600px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // .tehnical__sublabel
+
+  &__sublabel {
+    font-family: var(--second-family);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 120%;
+
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
+  }
+}

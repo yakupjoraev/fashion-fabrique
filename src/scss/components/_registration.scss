@@ -1,0 +1,140 @@
+.registration {
+
+  // .registration__inner
+
+  &__inner {
+    max-width: 390px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  // .registration__row
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  // .registration__label
+
+  &__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  // .registration__input-wrapper
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  // .registration__input
+
+  &__input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var(--grey-color);
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--text-color);
+    transition: border 0.2s linear;
+
+    &.error {
+      border-color: rgba(255, 0, 0, 0.3);
+
+      &:active {
+        border-color: rgba(255, 0, 0, 0.3);
+      }
+
+      @media (hover:hover) {
+        &:hover {
+          border-color: rgba(255, 0, 0, 0.3);
+        }
+      }
+    }
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--text-color);
+    }
+
+    &:active {
+      border-color: var(--black-color);
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        border-color: var(--black-color);
+      }
+    }
+  }
+
+  // .registration__text
+
+  &__text {
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 120%;
+    color: var(--text-color);
+  }
+
+  // .registration__text--grey
+
+  &__text--grey {
+    color: var(--grey-color);
+  }
+
+  // .registration__btn
+
+  &__btn {
+    min-height: 50px;
+  }
+
+  // .registration__dates
+
+  &__dates {}
+
+  // .registration__dates-label
+
+  &__dates-label {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black-color);
+    margin-bottom: 8px;
+  }
+
+  // .registration__dates-list
+
+  &__dates-list {
+    display: grid;
+    grid-template-columns: 74px 1fr 1fr;
+    column-gap: 10px;
+  }
+
+  // .registration__attantion
+
+  &__attantion {
+    background-color: rgba(255, 0, 0, 0.05);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    padding: 20px;
+  }
+}

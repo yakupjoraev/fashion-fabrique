@@ -35,7 +35,19 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   overflow: hidden;
+
+  &--not-hidden {
+    overflow: visible;
+  }
+
+  main {
+    flex-grow: 1;
+  }
 }
 
 // Animations
