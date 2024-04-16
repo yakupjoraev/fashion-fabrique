@@ -23,8 +23,8 @@
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 20px;
+    row-gap: 20px;
 
     @media (min-width: 1600px) {
       grid-template-columns: repeat(auto-fill, 280px);
@@ -60,7 +60,13 @@
 
   // .basket__card-accardion
 
-  &__card-accardion {}
+  &__card-accardion {
+    margin-top: 20px;
+
+    @media (max-width: $breakpoint768) {
+      margin-top: 10px;
+    }
+  }
 
   // .basket__aside
 
