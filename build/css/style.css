@@ -455,6 +455,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .header__top {
@@ -505,40 +506,11 @@ body {
   width: 32px;
   height: 32px;
   min-width: 32px;
-}
-
-.header__action:before,
-.header__action:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.header__action:before {
-  border-bottom: 2px solid var(--text-color);
-  border-left: 2px solid var(--text-color);
-  -webkit-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-          transform-origin: 0 100%;
-}
-
-.header__action:after {
-  border-top: 2px solid var(--text-color);
-  border-right: 2px solid var(--text-color);
-  -webkit-transform-origin: 100% 0%;
-      -ms-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
+  border-radius: 100%;
+  background-color: transparent;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .header__bottom {
@@ -668,16 +640,19 @@ body {
 
 .full-menu {
   position: absolute;
-  top: 72px;
+  top: 0;
   left: -50%;
+  display: grid;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 12px 0 20px 42px;
+  height: 100vh;
+  padding: 88px 0 20px 44px;
   background-color: var(--white-color);
   -webkit-transition: 0.4s linear;
   -o-transition: 0.4s linear;
   transition: 0.4s linear;
+  overflow-y: auto;
   z-index: 4;
 }
 
@@ -686,6 +661,8 @@ body {
 }
 
 .full-menu__top {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,6 +686,74 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  height: 20px;
+  width: 30px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.full-menu__burger.active-burger:before {
+  background: var(--white-color);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  top: 8px;
+}
+
+.full-menu__burger.active-burger:after {
+  background: var(--white-color);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 10px;
+  -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+}
+
+.full-menu__burger.active-burger span {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.full-menu__burger:before,
+.full-menu__burger:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--white-color);
+  -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+}
+
+.full-menu__burger:before {
+  top: 0;
+}
+
+.full-menu__burger::after {
+  bottom: 0;
+}
+
+.full-menu__burger span {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 100%;
+  background: var(--white-color);
+  height: 2px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
 }
 
 .full-menu__burger::before,
@@ -735,6 +780,7 @@ body {
           flex-direction: column;
   row-gap: 60px;
   width: 432px;
+  height: 100%;
   padding-left: 84px;
 }
 
@@ -746,6 +792,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.full-menu__row:nth-child(2) {
+  margin-top: auto;
 }
 
 .full-menu__link {
@@ -787,9 +837,9 @@ body {
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
-  -webkit-transition: 0.4s linear;
-  -o-transition: 0.4s linear;
-  transition: 0.4s linear;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
   padding: 88px 0;
   border-left: 1px solid rgba(194, 198, 199, 0.3);
   background-color: var(--white-color);
@@ -3175,6 +3225,10 @@ body {
   height: 34px;
   border-radius: 100%;
   background-color: var(--black-color);
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border: 1px solid transparent;
 }
 
 .footer__social-icon {
@@ -3943,7 +3997,7 @@ body {
   }
 
   .full-menu {
-    top: 30px;
+    padding-top: 42px;
   }
 
   .full-menu__top {
@@ -3958,6 +4012,10 @@ body {
   .full-menu__burger {
     margin-left: auto;
     margin-top: -5px;
+  }
+
+  .full-menu__logo-img {
+    width: 80%;
   }
 
   .full-menu__rows {
@@ -4242,11 +4300,13 @@ body {
     color: var(--white-color);
   }
 
-  .header__action:hover:after,
-  .header__action:hover:before {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+  .header__action:hover {
+    background-color: var(--black-color);
+  }
+
+  .header__action:hover img {
+    -webkit-filter: invert(1);
+            filter: invert(1);
   }
 
   .nav__link:hover:after {
@@ -4371,5 +4431,15 @@ body {
 
   .tehnical__link:hover {
     opacity: 1;
+  }
+
+  .footer__social-link:hover {
+    background-color: var(--white-color);
+    border-color: var(--black-color);
+  }
+
+  .footer__social-link:hover img {
+    -webkit-filter: invert(1);
+            filter: invert(1);
   }
 }

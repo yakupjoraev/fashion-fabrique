@@ -1,48 +1,68 @@
 // Custom scripts
 // Мобильное меню бургер
+function getScrollbarWidth() {
+  const outer = document.createElement('div');
+  outer.style.visibility = 'hidden';
+  outer.style.overflow = 'scroll';
+  document.body.appendChild(outer);
+  const widthNoScroll = outer.offsetWidth;
+  outer.style.overflow = 'scroll';
+  const inner = document.createElement('div');
+  inner.style.width = '100%';
+  outer.appendChild(inner);
+  const widthWithScroll = inner.offsetWidth;
+  outer.parentNode.removeChild(outer);
+  return widthNoScroll - widthWithScroll;
+}
+
 function burgerMenu() {
-  const burger = document.querySelector('.burger')
-  const burgerClose = document.querySelector('.full-menu__burger')
-  const menu = document.querySelector('.full-menu')
-  // const body = document.querySelector('body')
+  const burger = document.querySelector('.burger');
+  const burgerClose = document.querySelector('.full-menu__burger');
+  const menu = document.querySelector('.full-menu');
+  const body = document.querySelector('body');
+  const scrollbarWidth = getScrollbarWidth();
+
   burger.addEventListener('click', () => {
     if (!menu.classList.contains('active')) {
-      menu.classList.add('active')
-      // burger.classList.add('active-burger')
-      // body.classList.add('locked')
+      menu.classList.add('active');
+      body.classList.add('locked');
+      if (scrollbarWidth > 0) {
+        body.style.paddingRight = scrollbarWidth + 'px';
+      }
     } else {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      // body.classList.remove('locked')
+      menu.classList.remove('active');
+      body.classList.remove('locked');
+      body.style.paddingRight = '';
     }
-  })
-
-  burgerClose.addEventListener('click', () => {
-    menu.classList.remove('active')
-    burger.classList.remove('active-burger')
-  })
-
-  //снять классы при клике на элементы меню
-  const menuItems = document.querySelectorAll('.full-menu__link', '.full-menu__sublink')
-
-  menuItems.forEach(item => {
-    item.addEventListener('click', function () {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      // body.classList.remove('locked')
-    })
   });
 
-  // Вот тут мы ставим брейкпоинт навбара
+  burgerClose.addEventListener('click', () => {
+    menu.classList.remove('active');
+    body.classList.remove('locked');
+    body.style.paddingRight = '';
+  });
+
+  const menuItems = document.querySelectorAll('.full-menu__link, .full-menu__sublink');
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      menu.classList.remove('active');
+      body.classList.remove('locked');
+      body.style.paddingRight = '';
+    });
+  });
+
   window.addEventListener('resize', () => {
     if (window.innerWidth > 991.98) {
-      menu.classList.remove('active')
-      burger.classList.remove('active-burger')
-      // body.classList.remove('locked')
+      menu.classList.remove('active');
+      burger.classList.remove('active-burger');
+      body.classList.remove('locked');
+      body.style.paddingRight = '';
     }
-  })
+  });
 }
+
 burgerMenu();
+
 
 
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.

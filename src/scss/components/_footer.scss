@@ -278,6 +278,21 @@
     height: 34px;
     border-radius: 100%;
     background-color: var(--black-color);
+    transition: 0.2s linear;
+    border: 1px solid transparent;
+
+    @media (hover:hover) {
+
+      &:hover {
+        background-color: var(--white-color);
+        border-color: var(--black-color);
+
+        img {
+          filter: invert(1);
+        }
+      }
+
+    }
   }
 
   // .footer__social-icon

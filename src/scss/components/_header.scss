@@ -11,6 +11,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     @media (max-width: $breakpoint768) {
       flex-direction: row;
@@ -63,38 +64,20 @@
     width: 32px;
     height: 32px;
     min-width: 32px;
-
-    &:before,
-    &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      box-sizing: border-box;
-      transform: scale(0);
-      transition: 0.5s;
-    }
-
-    &:before {
-      border-bottom: 2px solid var(--text-color);
-      border-left: 2px solid var(--text-color);
-      transform-origin: 0 100%;
-    }
-
-    &:after {
-      border-top: 2px solid var(--text-color);
-      border-right: 2px solid var(--text-color);
-      transform-origin: 100% 0%;
-    }
+    border-radius: 100%;
+    background-color: transparent;
+    transition: 0.2s linear;
 
     @media (hover:hover) {
 
-      &:hover:after,
-      &:hover:before {
-        transform: scale(1);
+      &:hover {
+        background-color: var(--black-color);
+
+        img {
+          filter: invert(1);
+        }
       }
+
     }
 
     @media (max-width: $breakpoint768) {
