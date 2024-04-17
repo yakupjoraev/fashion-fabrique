@@ -150,6 +150,10 @@
     font-size: 12px;
     line-height: 125%;
     color: var(--text-color);
+
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
   }
 
   // .hero__slide-footer

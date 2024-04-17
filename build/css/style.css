@@ -3291,6 +3291,14 @@ body {
     grid-template-columns: repeat(auto-fill, 280px);
   }
 
+  .hero__slide-text {
+    font-size: 14px;
+  }
+
+  .main-catalog__label {
+    font-size: 18px;
+  }
+
   .catalog__list {
     grid-template-columns: repeat(auto-fill, 280px);
   }

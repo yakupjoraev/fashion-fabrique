@@ -135,6 +135,10 @@
     color: var(--white-color);
     transition: transform 0.5s linear;
 
+    @media (min-width: 1600px) {
+      font-size: 18px;
+    }
+
     @media (max-width: $breakpoint580) {
       font-weight: 500;
       color: var(--text-color);
