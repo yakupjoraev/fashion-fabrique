@@ -652,7 +652,6 @@ body {
   -webkit-transition: 0.4s linear;
   -o-transition: 0.4s linear;
   transition: 0.4s linear;
-  overflow-y: auto;
   z-index: 4;
 }
 
@@ -3526,6 +3525,8 @@ body {
     -webkit-transition: 0.3s linear;
     -o-transition: 0.3s linear;
     transition: 0.3s linear;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .full-menu__top {

@@ -8,7 +8,7 @@
   padding: 88px 0 20px 44px;
   background-color: var(--white-color);
   transition: 0.4s linear;
-  overflow-y: auto;
+
   z-index: 4;
 
   &.active {
@@ -20,6 +20,8 @@
     padding-left: 10px;
     width: 100%;
     transition: 0.3s linear;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   @media (max-width: $breakpoint768) {
