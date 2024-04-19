@@ -54,6 +54,7 @@
 
     @media (max-width: $breakpoint580) {
       height: 580px;
+      height: calc(100vh - 72px);
     }
   }
 
@@ -61,31 +62,65 @@
 
   &__slide-picture {
     position: relative;
-    max-height: 800px;
+    height: calc(100vh - 132px);
+    min-height: 800px;
 
     &--object-top {
       .hero__slide-img {
-        height: 100%;
+        height: calc(100vh - 132px);
         object-fit: cover;
         object-position: top;
+
+        @media (max-width: 1200px) {
+          min-height: 1px;
+        }
+
+        @media (max-width: $breakpoint992) {
+          min-height: 1px;
+        }
+
+        @media (max-width: $breakpoint580) {
+          min-height: 580px;
+          height: calc(100vh - 72px);
+        }
       }
     }
 
     &--object-middle {
       .hero__slide-img {
-        height: 100%;
+        height: calc(100vh - 132px);
         object-fit: cover;
         object-position: center;
+
+        @media (max-width: 1200px) {
+          min-height: 1px;
+        }
+
+        @media (max-width: $breakpoint992) {
+          min-height: 1px;
+        }
+
+        @media (max-width: $breakpoint580) {
+          min-height: 580px;
+          height: calc(100vh - 72px);
+        }
       }
+    }
+
+    @media (max-width: 1200px) {
+      min-height: 1px;
+      height: 520px;
     }
 
     @media (max-width: $breakpoint992) {
       height: 450px;
+      min-height: 1px;
       width: 100%;
     }
 
     @media (max-width: $breakpoint580) {
-      height: 580px;
+      min-height: 580px;
+      height: calc(100vh - 72px);
     }
   }
 
