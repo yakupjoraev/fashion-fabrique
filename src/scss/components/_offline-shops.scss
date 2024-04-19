@@ -1,0 +1,141 @@
+.offline-shops {
+
+  // .offline-shops__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  // .offline-shops__row
+
+  &__row {}
+
+  // .offline-shops__items-title
+
+  &__items-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black-color);
+
+    @media (max-width: $breakpoint768) {
+      font-size: 28px;
+    }
+  }
+
+  // .offline-shops__items
+
+  &__items {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-color: var(--primary-color) var(--black-color);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // .offline-shops__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 390px;
+
+    @media (max-width: $breakpoint768) {
+      width: 280px;
+    }
+  }
+
+  // .offline-shops__item-map
+
+  &__item-map {
+    width: 390px;
+    height: 250px;
+
+    @media (max-width: $breakpoint768) {
+      width: 280px;
+      overflow: hidden;
+    }
+  }
+
+  // .offline-shops__item-footer
+
+  &__item-footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  // .offline-shops__item-row
+
+  &__item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  // .offline-shops__item-address
+
+  &__item-address {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black-color);
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+    }
+  }
+
+  // .offline-shops__item-dotes
+
+  &__item-dotes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-end;
+  }
+
+  // .offline-shops__item-doted
+
+  &__item-doted {
+    text-align: right;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+
+  // .offline-shops__item-times
+
+  &__item-times {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+
+  // .offline-shops__item-time
+
+  &__item-time {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+}

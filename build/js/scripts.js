@@ -221,6 +221,44 @@ function footerMobileAccordion() {
 
 footerMobileAccordion();
 
+function sertificateCards() {
+
+  const container = document.querySelector('.card-gift__cards');
+
+  if (!container) {
+    return null;
+  }
+
+  // Находим все элементы .accardion__item-design
+  const designItems = document.querySelectorAll(".accardion__item-design");
+
+  // Находим все элементы .card-gift__card
+  const cardItems = document.querySelectorAll(".card-gift__card");
+
+  // Добавляем обработчик события клика на каждый элемент .accardion__item-design
+  designItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      // Удаляем класс active у всех .card-gift__card
+      cardItems.forEach(function (card) {
+        card.classList.remove("active");
+      });
+
+      // Получаем значение атрибута data-card-btn у текущего элемента
+      const cardBtn = item.getAttribute("data-card-btn");
+
+      // Находим соответствующий элемент .card-gift__card и добавляем ему класс active
+      const correspondingCard = document.querySelector(`.card-gift__card[data-card="${cardBtn}"]`);
+      if (correspondingCard) {
+        correspondingCard.classList.add("active");
+      }
+    });
+  });
+}
+
+sertificateCards();
+
+
+
 function productsSlider() {
   const containers = document.querySelectorAll('.products-slider__slider');
   if (!containers || containers.length === 0) {
