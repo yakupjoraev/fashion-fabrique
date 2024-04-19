@@ -7,6 +7,8 @@
 
   &__item {
     position: relative;
+    background-color: var(--white-color);
+    position: relative;
 
     &.active {
 
@@ -84,13 +86,13 @@
   &__item-content {
     position: relative;
 
-    top: -40px;
+    top: -30px;
     max-height: 0;
     opacity: 0;
     padding: 0 20px;
     user-select: none;
     pointer-events: none;
-    transition: all 0.3s linear;
+    transition: top 0.2s linear, max-height 0.2s linear, padding 0.3s linear, opacity 0.1s linear;
   }
 
   // .accardion__item-content--absolute
