@@ -1,6 +1,10 @@
 .product {
   margin-top: 40px;
 
+  @media (max-width: $breakpoint1450) {
+    margin: 40px 0;
+  }
+
   @media (max-width: $breakpoint768) {
     margin-top: 0;
   }

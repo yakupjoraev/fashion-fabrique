@@ -200,6 +200,29 @@ function sort() {
 
 sort();
 
+function viewBtns() {
+
+  const container = document.querySelector('.filters__header-btns');
+
+  if (!container) {
+    return null;
+  }
+
+  const buttons = document.querySelectorAll('.filters__header-btn');
+  const catalogList = document.querySelector('.catalog__list');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      const viewClass = 'view-' + this.dataset.btnView;
+      catalogList.className = 'catalog__list ' + viewClass;
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
+
+viewBtns();
 
 
 function footerMobileAccordion() {
@@ -297,19 +320,13 @@ function producrSlider() {
 
     // Responsive breakpoints
     breakpoints: {
-      // when window width is >= 320px
-      // 320: {
-      //   slidesPerView: 2,
-      //   spaceBetween: 20
-      // },
-      // // when window width is >= 480px
-      // 480: {
-      //   slidesPerView: 3,
-      //   spaceBetween: 30
-      // },
-      // when window width is >= 640px
+
       991: {
         direction: "vertical",
+        mousewheel: true,
+        mousewheel: {
+          releaseOnEdges: true,
+        },
       }
     }
   });

@@ -207,6 +207,12 @@
     padding: 10px 20px;
     background-color: var(--white-color);
 
+    @media (hover:hover) {
+      &:hover {
+        background: rgba(194, 198, 199, 0.1);
+      }
+    }
+
     @media (max-width: $breakpoint992) {
       padding: 10px;
     }

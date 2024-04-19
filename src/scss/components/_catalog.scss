@@ -17,6 +17,7 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
     column-gap: 10px;
     row-gap: 10px;
 
@@ -40,6 +41,75 @@
 
     @media (max-width: $breakpoint580) {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__list {
+    transition: 0.2s linear;
+
+
+
+    &.view-6 {
+      grid-template-columns: repeat(auto-fill, 186px) !important;
+
+      column-gap: 10px;
+      row-gap: 40px;
+
+      .card__availability {
+        padding: 4px;
+        font-size: 12px;
+      }
+
+      .card__new {
+        padding: 4px 10px;
+        font-size: 12px;
+      }
+
+      .catalog__item {
+        height: 280px;
+        width: 190px;
+      }
+
+      .card__top {
+        height: 240px;
+      }
+
+      .card__picture {
+        height: 240px;
+      }
+
+      .card__img {
+        height: 240px;
+      }
+
+      .card__bottom {
+        padding: 10px 0;
+      }
+
+      .card__old-price {
+        display: none;
+      }
+
+      .card__colors {
+        display: none;
+      }
+
+      @media (max-width: $breakpoint580) {
+        grid-template-columns: 1fr 1fr !important;
+
+        .catalog__item {
+          width: 100%;
+        }
+
+        .card__name {
+          font-size: 12px;
+        }
+
+        .card__price {
+          font-size: 18px;
+        }
+      }
+
     }
   }
 

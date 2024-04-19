@@ -3,6 +3,20 @@
   max-width: 1840px;
   overflow: hidden;
 
+  &--column {
+    .products-slider__inner {
+      display: block;
+    }
+
+    .products-slider__arrow--prev {
+      left: 40px;
+
+      @media (max-width: $breakpoint992) {
+        left: 10px;
+      }
+    }
+  }
+
   @media (max-width: $breakpoint992) {
     padding: 0 10px;
     margin-right: -10px;
@@ -70,6 +84,7 @@
     align-items: flex-start;
     width: fit-content;
     column-gap: 12px;
+    border-bottom: 1px solid transparent;
 
     white-space: nowrap;
     font-weight: 500;
@@ -77,14 +92,16 @@
     line-height: 100%;
     text-transform: uppercase;
     color: var(--text-color);
+    transition: border 0.2s linear;
 
     img {
-      margin-top: -1px;
       transition: transform 0.2s linear;
     }
 
     @media (hover:hover) {
       &:hover {
+        border-color: var(--text-color);
+
         img {
           transform: translateX(5px);
         }

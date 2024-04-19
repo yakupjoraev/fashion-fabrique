@@ -1,4 +1,9 @@
 .basket {
+  margin-bottom: 160px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 80px;
+  }
 
   // .basket__inner
 
