@@ -316,7 +316,9 @@ function producrSlider() {
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
-
+    // Добавьте параметр mousewheel и установите его в true
+    freeModeMomentum: true, // Добавьте эту опцию
+    mousewheel: true,
     watchSlidesProgress: true,
 
     // Responsive breakpoints
@@ -324,6 +326,7 @@ function producrSlider() {
 
       991: {
         direction: "vertical",
+        freeModeMomentum: true, // Добавьте эту опцию
         mousewheel: true,
         mousewheel: {
           releaseOnEdges: true,
@@ -340,6 +343,7 @@ function producrSlider() {
     thumbs: {
       swiper: swiper,
     },
+
   });
 }
 

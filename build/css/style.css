@@ -2545,6 +2545,7 @@ body {
 
 .product__slider-thumbs-slide {
   width: 100%;
+  cursor: pointer;
 }
 
 .product__slider-thumbs-slide img {
