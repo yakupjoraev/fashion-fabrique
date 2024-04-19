@@ -463,6 +463,61 @@ function texnicalLinks() {
 
 texnicalLinks();
 
+function range() {
+  const container = document.querySelector('.filters__range');
+
+  if (!container) {
+    return;
+  }
+
+  let sliderOne = container.querySelector(".slider-1");
+  let sliderTwo = container.querySelector(".slider-2");
+  let displayValOne = container.querySelector(".values__range1");
+  let displayValTwo = container.querySelector(".values__range2");
+  let sliderTrack = container.querySelector(".slider-track");
+
+  if (!sliderOne || !sliderTwo || !displayValOne || !displayValTwo || !sliderTrack) {
+    console.error('Не удалось найти один или несколько элементов');
+    return;
+  }
+
+  let minGap = 0;
+  let sliderMaxValue = sliderOne.max;
+
+  function slideOne() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+      sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    displayValOne.textContent = `${sliderOne.value} р.`;
+    fillColor();
+  }
+
+  function slideTwo() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+      sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    displayValTwo.textContent = `${sliderTwo.value} р.`;
+    fillColor();
+  }
+
+  function fillColor() {
+    let percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    sliderTrack.style.background = `linear-gradient(to right, #eee ${percent1}%, #000 ${percent1}%, #000 ${percent2}%, #eee ${percent2}%)`;
+  }
+
+  sliderOne.addEventListener("input", slideOne);
+  sliderTwo.addEventListener("input", slideTwo);
+
+  // Вызываем функции slideOne и slideTwo после добавления слушателей
+  slideOne();
+  slideTwo();
+}
+
+range();
+
+
+
 
 Fancybox.bind("[data-fancybox]", {
   // Your custom options

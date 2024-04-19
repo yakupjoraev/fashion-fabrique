@@ -732,10 +732,23 @@
                 </div>
               </div>
               <div class="filters__item-content" data-filters-items-content>
-                <a class="filters__item-row" href="#">
-                  <span class="filters__item-name"></span>
-                  <span class="filters__item-count"></span>
-                </a>
+                <div class="filters__item-row">
+                  <div class="filters__range">
+                    <div class="values">
+                      <span class="values__range1">300 р.</span>
+
+                      <span class="values__range2">86 000 р.</span>
+                    </div>
+                    <div class="range__container">
+                      <div class="slider-track"></div>
+                      <input type="range" min="300" max="86000" value="300" class="range-input slider-1"
+                        oninput="slideOne()">
+                      <input type="range" min="300" max="86000" value="86000" class="range-input slider-2"
+                        oninput="slideTwo()">
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
