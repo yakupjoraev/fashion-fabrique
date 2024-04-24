@@ -279,12 +279,12 @@
   // .accardion__item-nominals
 
   &__item-nominals {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
     column-gap: 10px;
     row-gap: 10px;
-    flex-wrap: wrap;
     margin-bottom: 20px;
   }
 
@@ -294,8 +294,10 @@
     border: 1px solid rgba(194, 198, 199, 0.3);
     padding: 12px;
 
+    text-align: center;
+    white-space: nowrap;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 100%;
     color: var(--text-color);
     cursor: pointer;
@@ -314,7 +316,8 @@
     }
 
     @media (max-width: $breakpoint992) {
-      font-size: 18px;
+      padding: 8px;
+      font-size: 16px;
     }
   }
 

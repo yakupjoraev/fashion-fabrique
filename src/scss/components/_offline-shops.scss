@@ -77,14 +77,24 @@
     row-gap: 10px;
   }
 
+  // .offline-shops__item-rows
+  &__item-rows {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 0 12px;
+  }
+
   // .offline-shops__item-row
 
   &__item-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-start;
     column-gap: 20px;
     row-gap: 20px;
+
   }
 
   // .offline-shops__item-address
@@ -92,7 +102,7 @@
   &__item-address {
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 100%;
     text-transform: uppercase;
     color: var(--black-color);

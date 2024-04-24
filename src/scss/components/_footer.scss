@@ -77,13 +77,14 @@
 
     @media (max-width: $breakpoint992) {
       position: relative;
-      max-height: 0;
-      right: -40px;
-      opacity: 0;
+      height: 0;
+      top: -20px;
+      right: 30px;
+      // opacity: 0;
       overflow: hidden;
       user-select: none;
       pointer-events: none;
-      transition: all 0.3s linear;
+      transition: top 0.2s linear, height 0.1s linear, margin 0.1s linear;
       text-align: right;
     }
   }
@@ -93,9 +94,12 @@
   &__item--label {
     margin-bottom: 10px;
 
-
     @media (max-width: $breakpoint992) {
-      max-height: fit-content;
+      padding-bottom: 10px;
+      background-color: var(--white-color);
+      overflow: hidden;
+
+      height: fit-content;
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;
@@ -105,6 +109,7 @@
       user-select: auto;
       pointer-events: visible;
       right: 0;
+      top: 0;
       opacity: 1;
 
       &.active {
@@ -115,8 +120,9 @@
 
 
       &.active~.footer__item {
-        max-height: 40px;
-        right: 0;
+        height: fit-content;
+        right: 30px;
+        top: 0;
         opacity: 1;
 
         &:not(:first-child) {

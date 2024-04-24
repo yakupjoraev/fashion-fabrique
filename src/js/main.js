@@ -103,9 +103,21 @@ function accardion() {
       }
     });
   });
+
+  // Добавляем обработчик для клика вне аккордеона
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+
+    // Проверяем, что клик не произошел внутри аккордеона или его заголовков
+    if (!container.contains(target) && !target.closest('[data-accardion-head]')) {
+      // Снимаем классы активности у всех элементов аккордеона
+      accordionItems.forEach(el => el.classList.remove('active'));
+    }
+  });
 }
 
 accardion();
+
 
 function filters() {
   const container = document.querySelector('.filters')
@@ -201,14 +213,13 @@ function sort() {
 sort();
 
 function viewBtns() {
-
   const container = document.querySelector('.filters__header-btns');
 
   if (!container) {
     return null;
   }
 
-  const buttons = document.querySelectorAll('.filters__header-btn');
+  const buttons = document.querySelectorAll('[data-btn-view]'); // Изменено на выбор по атрибуту
   const catalogList = document.querySelector('.catalog__list');
 
   buttons.forEach(button => {
@@ -223,6 +234,7 @@ function viewBtns() {
 }
 
 viewBtns();
+
 
 
 function footerMobileAccordion() {
@@ -313,7 +325,7 @@ function producrSlider() {
 
   var swiper = new Swiper(".product__slider-thumbs", {
     spaceBetween: 10,
-    slidesPerView: 4,
+    slidesPerView: 3.5,
     freeMode: true,
     // Добавьте параметр mousewheel и установите его в true
     freeModeMomentum: true, // Добавьте эту опцию

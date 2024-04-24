@@ -203,6 +203,9 @@
     pointer-events: none;
     transition: all 0.3s linear;
 
+    &[data-sort-items-content] {
+      padding: 10px 0 10px;
+    }
   }
 
   // .filters__item-row
@@ -213,6 +216,10 @@
     column-gap: 10px;
     padding: 10px 20px;
     background-color: var(--white-color);
+
+    &--range {
+      padding-bottom: 30px;
+    }
 
     @media (hover:hover) {
       &:hover {
@@ -251,6 +258,10 @@
     width: 8px;
     height: 8px;
     border-radius: 100%;
+
+    &--border {
+      border: 0.01rem solid var(--grey-color);
+    }
   }
 
   // .filters__sort

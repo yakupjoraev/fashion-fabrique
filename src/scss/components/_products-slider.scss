@@ -83,8 +83,7 @@
     display: flex;
     align-items: flex-start;
     width: fit-content;
-    column-gap: 12px;
-    border-bottom: 1px solid transparent;
+    column-gap: 4px;
 
     white-space: nowrap;
     font-weight: 500;
@@ -92,15 +91,23 @@
     line-height: 100%;
     text-transform: uppercase;
     color: var(--text-color);
-    transition: border 0.2s linear;
 
     img {
       transition: transform 0.2s linear;
     }
 
+
+    span {
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s linear;
+    }
+
+
     @media (hover:hover) {
       &:hover {
-        border-color: var(--text-color);
+        span {
+          border-color: var(--text-color);
+        }
 
         img {
           transform: translateX(5px);

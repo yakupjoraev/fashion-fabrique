@@ -12,16 +12,18 @@
     margin-left: auto;
     margin-bottom: 20px;
     width: fit-content;
-    column-gap: 12px;
-    border-bottom: 1px solid transparent;
-
+    column-gap: 4px;
     white-space: nowrap;
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
     text-transform: uppercase;
     color: var(--text-color);
-    transition: border 0.2s linear;
+
+    span {
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s linear;
+    }
 
     img {
       transition: transform 0.2s linear;
@@ -29,7 +31,9 @@
 
     @media (hover:hover) {
       &:hover {
-        border-color: var(--text-color);
+        span {
+          border-color: var(--text-color);
+        }
 
         img {
           transform: translateX(5px);
@@ -99,6 +103,7 @@
       flex-direction: row;
       justify-content: flex-end;
       text-align: right;
+      column-gap: 4px;
       border-bottom: 1px solid var(--text-color);
     }
   }

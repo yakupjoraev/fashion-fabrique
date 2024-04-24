@@ -41,10 +41,10 @@
     grid-template-columns: 1fr 340px;
     column-gap: 10px;
     opacity: 0 !important;
+    height: 800px;
 
-
-    &.swiper-slide-active {
-      opacity: 1 !important;
+    @media (max-width: 1200px) {
+      height: 520px;
     }
 
     @media (max-width: $breakpoint992) {
@@ -54,73 +54,47 @@
 
     @media (max-width: $breakpoint580) {
       height: 580px;
-      height: calc(100vh - 72px);
     }
+
+
+    &.swiper-slide-active {
+      opacity: 1 !important;
+    }
+
   }
 
   // .hero__slide-picture
 
   &__slide-picture {
     position: relative;
-    height: calc(100vh - 132px);
-    min-height: 800px;
+    height: 800px;
 
     &--object-top {
       .hero__slide-img {
-        height: calc(100vh - 132px);
         object-fit: cover;
         object-position: top;
-
-        @media (max-width: 1200px) {
-          min-height: 1px;
-        }
-
-        @media (max-width: $breakpoint992) {
-          min-height: 1px;
-        }
-
-        @media (max-width: $breakpoint580) {
-          min-height: 580px;
-          height: calc(100vh - 72px);
-        }
       }
     }
 
     &--object-middle {
       .hero__slide-img {
-        height: calc(100vh - 132px);
         object-fit: cover;
         object-position: center;
 
-        @media (max-width: 1200px) {
-          min-height: 1px;
-        }
-
-        @media (max-width: $breakpoint992) {
-          min-height: 1px;
-        }
-
-        @media (max-width: $breakpoint580) {
-          min-height: 580px;
-          height: calc(100vh - 72px);
-        }
       }
     }
 
     @media (max-width: 1200px) {
-      min-height: 1px;
       height: 520px;
     }
 
     @media (max-width: $breakpoint992) {
       height: 450px;
-      min-height: 1px;
       width: 100%;
     }
 
     @media (max-width: $breakpoint580) {
-      min-height: 580px;
-      height: calc(100vh - 72px);
+      height: 580px;
     }
   }
 
@@ -129,7 +103,7 @@
   &__slide-img {
     max-width: 100%;
     width: 100%;
-    height: auto;
+    height: 100%;
 
     @media (max-width: $breakpoint992) {
       height: 100%;
