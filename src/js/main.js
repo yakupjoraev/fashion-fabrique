@@ -59,26 +59,91 @@ function burgerMenu() {
       body.style.paddingRight = '';
     }
   });
+
 }
 
 burgerMenu();
 
 
 
+
+
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
 function fixedHeader() {
-  const header = document.querySelector('.header')
-  const headerInner = document.querySelector('.header__inner')
+  const header = document.querySelector('.header');
+  const headerInner = document.querySelector('.header__inner');
 
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1
+  // указываем в пикселях, сколько нужно проскроллить, чтобы наше меню стало фиксированным
+  const breakpoint = 500; // изменено значение на 500px
+
   if (window.scrollY >= breakpoint) {
-    header.classList.add('header-fixed')
+    header.classList.add('header-fixed');
   } else {
-    header.classList.remove('header-fixed')
+    header.classList.remove('header-fixed');
   }
 }
-window.addEventListener('scroll', fixedHeader)
+
+window.addEventListener('scroll', fixedHeader);
+
+
+function menuBtns() {
+  const container = document.querySelector('.full-menu');
+
+  if (!container) {
+    return null;
+  }
+
+  let items = document.querySelectorAll('.full-menu__item');
+
+  items.forEach(item => {
+    const btn = item.querySelector('.full-menu__btn');
+    const sublist = item.querySelector('.full-menu__sublist');
+
+    if (btn && sublist) {
+      btn.addEventListener('click', () => {
+        sublist.classList.toggle('active');
+      });
+    }
+
+    const sublinks = item.querySelectorAll('.full-menu__sublink');
+    sublinks.forEach(sublink => {
+      sublink.addEventListener('click', event => {
+        event.stopPropagation();
+        sublist.classList.remove('active');
+      });
+    });
+  });
+
+  const handleClick = event => {
+    const target = event.target;
+    const isMenuClicked = container.contains(target);
+    const isSublinkClicked = target.classList.contains('full-menu__sublink');
+
+    if (!isMenuClicked && !isSublinkClicked) {
+      items.forEach(item => {
+        const sublist = item.querySelector('.full-menu__sublist');
+        if (sublist) {
+          sublist.classList.remove('active');
+        }
+      });
+    }
+  };
+
+  document.addEventListener('click', handleClick);
+  items.forEach(item => {
+    const sublinks = item.querySelectorAll('.full-menu__sublink');
+    sublinks.forEach(sublink => {
+      sublink.addEventListener('click', handleClick);
+    });
+  });
+}
+
+menuBtns();
+
+
+
+
+
 
 function accardion() {
   const container = document.querySelector('[data-accardion]')
