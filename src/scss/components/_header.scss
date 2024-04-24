@@ -331,7 +331,7 @@
 
 .main__body.locked .header.header-fixed {
   .header__inner {
-    left: 50%;
+    left: calc(50% - 12px);
 
     @media (max-width: 1920px) {
       left: calc(50% - 8px);

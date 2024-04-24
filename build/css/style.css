@@ -695,7 +695,7 @@ body {
 }
 
 .main__body.locked .header.header-fixed .header__inner {
-  left: 50%;
+  left: calc(50% - 12px);
 }
 
 .header.header-fixed {
