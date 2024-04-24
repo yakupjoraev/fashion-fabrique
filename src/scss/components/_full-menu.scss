@@ -269,7 +269,8 @@
 
     @media (max-width: $breakpoint992) {
       position: static;
-      padding: 20px 0;
+      height: fit-content;
+      padding: 10px 0 10px 10px;
       transform: translateX(0);
       opacity: 1;
       user-select: auto;
@@ -308,7 +309,7 @@
     }
 
     @media (max-width: $breakpoint992) {
-      padding: 8px;
+      padding: 4px 8px;
     }
 
   }

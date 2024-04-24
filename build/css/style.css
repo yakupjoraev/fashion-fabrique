@@ -4624,7 +4624,10 @@ body {
 
   .full-menu__sublist {
     position: static;
-    padding: 20px 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 0 10px 10px;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
@@ -4639,7 +4642,7 @@ body {
   }
 
   .full-menu__sublink {
-    padding: 8px;
+    padding: 4px 8px;
   }
 
   .favorites {
