@@ -66,18 +66,19 @@ burgerMenu();
 
 
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-// function fixedNav() {
-//   const nav = document.querySelector('nav')
+function fixedHeader() {
+  const header = document.querySelector('.header')
+  const headerInner = document.querySelector('.header__inner')
 
-//   // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-//   const breakpoint = 1
-//   if (window.scrollY >= breakpoint) {
-//     nav.classList.add('fixed__nav')
-//   } else {
-//     nav.classList.remove('fixed__nav')
-//   }
-// }
-// window.addEventListener('scroll', fixedNav)
+  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
+  const breakpoint = 1
+  if (window.scrollY >= breakpoint) {
+    header.classList.add('header-fixed')
+  } else {
+    header.classList.remove('header-fixed')
+  }
+}
+window.addEventListener('scroll', fixedHeader)
 
 function accardion() {
   const container = document.querySelector('[data-accardion]')

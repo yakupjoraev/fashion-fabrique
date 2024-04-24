@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear;
 
     @media (max-width: $breakpoint768) {
       flex-direction: row;
@@ -319,6 +320,76 @@
     }
 
     .burger span {
+      background: var(--white-color);
+    }
+  }
+}
+
+.header.header-fixed {
+  height: 132px;
+  transition: height 0.3s linear;
+
+  @media (max-width: $breakpoint768) {
+    height: 72px;
+  }
+
+  .header__inner {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+
+    transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear;
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: row;
+    }
+  }
+
+  .header__bottom {
+    background-color: var(--white-color);
+
+    @media (max-width: $breakpoint768) {
+      background-color: var(--text-color);
+    }
+  }
+
+  .header__top {
+    width: 100%;
+    transition: width 0.3s linear;
+  }
+
+  .logo {
+    margin-left: auto;
+
+    transition: margin 0.3s linear;
+
+    @media (max-width: $breakpoint768) {
+      margin-left: 0;
+    }
+  }
+
+  .header__actions {
+    @media (max-width: $breakpoint768) {
+      margin-left: 0;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger:after,
+  .burger:before,
+  .burger span {
+    background: var(--black-color);
+
+    @media (max-width: $breakpoint768) {
       background: var(--white-color);
     }
   }

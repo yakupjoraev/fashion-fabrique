@@ -469,6 +469,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  -webkit-transition: width 0.3s linear, flex-direction 0.3s linear, top 0.3s linear, -webkit- 2009flex-direction 0.3s linear, -webkit-box-pack 0.3s linear;
+  transition: width 0.3s linear, flex-direction 0.3s linear, top 0.3s linear, -webkit- 2009flex-direction 0.3s linear, -webkit-box-pack 0.3s linear;
+  -o-transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear;
+  transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear;
+  transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear, -webkit- 2009flex-direction 0.3s linear, -ms-flex-direction 0.3s linear, -webkit-box-pack 0.3s linear, -ms-flex-pack 0.3s linear;
 }
 
 .header__top {
@@ -682,6 +687,64 @@ body {
 }
 
 .header__burger-second .burger span {
+  background: var(--black-color);
+}
+
+.header.header-fixed {
+  height: 132px;
+  -webkit-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
+}
+
+.header.header-fixed .header__inner {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-transition: width 0.3s linear, flex-direction 0.3s linear, top 0.3s linear, -webkit- 2009flex-direction 0.3s linear, -webkit-box-pack 0.3s linear;
+  transition: width 0.3s linear, flex-direction 0.3s linear, top 0.3s linear, -webkit- 2009flex-direction 0.3s linear, -webkit-box-pack 0.3s linear;
+  -o-transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear;
+  transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear;
+  transition: width 0.3s linear, flex-direction 0.3s linear, justify-content 0.3s linear, top 0.3s linear, -webkit- 2009flex-direction 0.3s linear, -ms-flex-direction 0.3s linear, -webkit-box-pack 0.3s linear, -ms-flex-pack 0.3s linear;
+}
+
+.header.header-fixed .header__bottom {
+  background-color: var(--white-color);
+}
+
+.header.header-fixed .header__top {
+  width: 100%;
+  -webkit-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+
+.header.header-fixed .logo {
+  margin-left: auto;
+  -webkit-transition: margin 0.3s linear;
+  -o-transition: margin 0.3s linear;
+  transition: margin 0.3s linear;
+}
+
+.header.header-fixed .nav {
+  display: none;
+}
+
+.header.header-fixed .burger:after,
+.header.header-fixed .burger:before,
+.header.header-fixed .burger span {
   background: var(--black-color);
 }
 
@@ -5273,6 +5336,35 @@ body {
   }
 
   .header__burger-second .burger span {
+    background: var(--white-color);
+  }
+
+  .header.header-fixed {
+    height: 72px;
+  }
+
+  .header.header-fixed .header__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .header.header-fixed .header__bottom {
+    background-color: var(--text-color);
+  }
+
+  .header.header-fixed .logo {
+    margin-left: 0;
+  }
+
+  .header.header-fixed .header__actions {
+    margin-left: 0;
+  }
+
+  .header.header-fixed .burger:after,
+  .header.header-fixed .burger:before,
+  .header.header-fixed .burger span {
     background: var(--white-color);
   }
 
