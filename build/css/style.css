@@ -4028,14 +4028,9 @@ body {
   max-height: 1000px;
 }
 
-.check-out__row--gift .check-out__content {
-  -webkit-transition: 0.4s linear;
-  -o-transition: 0.4s linear;
-  transition: 0.4s linear;
-}
-
 .check-out__row--gift.active .check-out__content {
-  max-height: 400px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .check-out__head {
@@ -4143,10 +4138,15 @@ body {
   color: var(--text-color);
 }
 
-.check-out__content--dark {
+.check-out__content--gifts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
 }
 
 .check-out__block {
@@ -4159,8 +4159,22 @@ body {
   padding: 40px 20px 20px;
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: -20px;
+  background-color: var(--white-color);
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.check-out__block.active {
   background-color: var(--text-color);
+}
+
+.check-out__block.active .check-out__block-descr,
+.check-out__block.active .check-out__block-label,
+.check-out__block.active .check-out__block-text,
+.check-out__block.active .check-out__block-sum {
+  color: var(--white-color);
 }
 
 .check-out__block-left {
@@ -4181,14 +4195,14 @@ body {
   font-weight: 500;
   font-size: 22px;
   line-height: 100%;
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 .check-out__block-text {
   font-size: 14px;
   line-height: 100%;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 .check-out__block-right {
@@ -4211,7 +4225,7 @@ body {
   font-size: 14px;
   line-height: 100%;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 .check-out__block-rows {
@@ -4251,7 +4265,7 @@ body {
   font-weight: 300;
   font-size: 12px;
   line-height: 125%;
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 .check-out__row--disabled {

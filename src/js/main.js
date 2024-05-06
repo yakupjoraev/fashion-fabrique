@@ -653,6 +653,27 @@ function deliveryRadios() {
 
 deliveryRadios();
 
+function deliveryTypes() {
+  const container = document.querySelector('.check-out');
+
+  if (!container) {
+    return;
+  }
+
+  let types = document.querySelectorAll('[data-delivery-type]');
+
+  types.forEach(type => {
+    type.addEventListener('click', () => {
+
+      types.forEach(type => {
+        type.classList.remove('active')
+      });
+
+      type.classList.add('active')
+    })
+  });
+}
+deliveryTypes();
 
 
 Fancybox.bind("[data-fancybox]", {
