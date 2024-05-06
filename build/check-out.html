@@ -214,22 +214,36 @@
     <div class="check-out__inner">
       <h1 class="check-out__title">Оформление заказа</h1>
 
-      <div class="check-out__main">
+      <form action="#" class="check-out__main">
         <div class="check-out__rows">
           <div class="check-out__row">
             <div class="check-out__head">
               <p class="check-out__head-text">Доставка заказа</p>
-              <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
+              <button type="button" class="check-out__head-btn">
+                <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
+              </button>
             </div>
 
             <div class="check-out__content">
               <div class="check-out__labels">
-                <div class="check-out__label active">Курьер</div>
-                <div class="check-out__label">ПВЗ</div>
-                <div class="check-out__label">Из Магазина</div>
+                <label for="delivery-1" class="check-out__label">
+                  Курьер
+
+                  <input type="radio" name="delivery" checked id="delivery-1">
+                </label>
+
+                <label for="delivery-2" class="check-out__label">
+                  ПВЗ
+                  <input type="radio" name="delivery" id="delivery-2">
+                </label>
+
+                <label for="delivery-3" class="check-out__label">
+                  Из Магазина
+                  <input type="radio" name="delivery" id="delivery-3">
+                </label>
               </div>
 
-              <div class="check-out__form">
+              <div class="check-out__form radio-form-content active" data-delivery="1">
                 <div class="registration__row">
                   <h3 class="registration__label">Получатель</h3>
 
@@ -274,13 +288,139 @@
                     industry</p>
                 </div>
               </div>
+
+              <div class="check-out__form radio-form-content" data-delivery="2">
+                <div class="registration__row">
+                  <h3 class="registration__label">Получатель</h3>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Имя">
+                  </div>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Фамилия">
+                  </div>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="tel" placeholder="Номер телефона">
+                  </div>
+
+                  <p class="registration__text registration__text--grey">Мы отправим подтверждение заказа через смс
+                  </p>
+                </div>
+
+                <br />
+                <br />
+                <br />
+
+                <div class="registration__row">
+                  <h3 class="registration__label">Выбор ПВЗ</h3>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Город">
+                  </div>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Почтовый индекс">
+                  </div>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Адрес ПВЗ">
+                  </div>
+
+                  <div class="registration__map">Тут карта</div>
+
+                  <button type="submit" class="registration__btn btn-white">Применить </button>
+                  <p class="registration__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry</p>
+                </div>
+              </div>
+
+              <div class="check-out__form radio-form-content" data-delivery="3">
+                <div class="registration__row">
+                  <h3 class="registration__label">Получатель</h3>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Имя">
+                  </div>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="text" placeholder="Фамилия">
+                  </div>
+
+                  <div class="registration__input-wrapper">
+                    <input class="registration__input" type="tel" placeholder="Номер телефона">
+                  </div>
+
+                  <p class="registration__text registration__text--grey">Мы отправим подтверждение заказа через смс
+                  </p>
+                </div>
+
+                <br />
+                <br />
+                <br />
+
+                <div class="registration__row">
+                  <h3 class="registration__label">Выбор магазина</h3>
+
+                  <div class="registration__magazines">
+                    <div class="registration__magazine">
+                      <input class="registration__magazine-input" name="magazine" type="radio" id="magazine-1" checked>
+                      <label class="registration__magazine-label" for="magazine-1">
+                        <address class="registration__magazine-address">Москва, Кузнецкий мост, 19с1</address>
+                        <time class="registration__magazine-time">Ежедневно с 10:00 до 22:00</time>
+
+                        <div class="registration__magazine-columns">
+                          <div class="registration__magazine-column">Кузнецкий мост</div>
+                          <div class="registration__magazine-column">Лубянка</div>
+                          <div class="registration__magazine-column">Китай-город</div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="registration__magazine">
+                      <input class="registration__magazine-input" name="magazine" type="radio" id="magazine-2">
+                      <label class="registration__magazine-label" for="magazine-2">
+                        <address class="registration__magazine-address">Санкт-петербург, Литейный проспект, 15</address>
+                        <time class="registration__magazine-time">Ежедневно с 10:00 до 22:00</time>
+
+                        <div class="registration__magazine-columns">
+                          <div class="registration__magazine-column">Площадь Ленина</div>
+                          <div class="registration__magazine-column">Маяковская</div>
+                          <div class="registration__magazine-column">Чернышевская</div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="registration__magazine">
+                      <input class="registration__magazine-input" name="magazine" type="radio" id="magazine-3">
+                      <label class="registration__magazine-label" for="magazine-3">
+                        <address class="registration__magazine-address">Санкт-петербург, Бородинская, 15</address>
+                        <time class="registration__magazine-time">Ежедневно с 10:00 до 22:00</time>
+
+                        <div class="registration__magazine-columns">
+                          <div class="registration__magazine-column">Звенигородская</div>
+                          <div class="registration__magazine-column">Пушкинская</div>
+                          <div class="registration__magazine-column">Достоевская</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="registration__btn btn-white">Применить </button>
+                  <p class="registration__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="check-out__row">
+          <div class="check-out__row check-out__row--gift">
             <div class="check-out__head">
               <p class="check-out__head-text">подарочная карта</p>
-              <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
+              <button type="button" class="check-out__head-btn"><img width="12" height="12"
+                  src="./img/icons/accardion-arrow.svg" alt="arrow"></button>
+
             </div>
 
             <div class="check-out__content check-out__content--dark">
@@ -313,10 +453,11 @@
           </div>
 
 
-          <div class="check-out__row check-out__row--disabled">
+          <div class="check-out__row check-out__row--disabled" style="display: none;">
             <div class="check-out__head">
               <p class="check-out__head-text">Промокод</p>
-              <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
+              <button type="button" class="check-out__head-btn"><img width="12" height="12"
+                  src="./img/icons/accardion-arrow.svg" alt="arrow"></button>
             </div>
 
             <div class="check-out__content">
@@ -344,7 +485,8 @@
           <div class="check-out__row">
             <div class="check-out__head">
               <p class="check-out__head-text">подарочная карта</p>
-              <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
+              <button type="button" class="check-out__head-btn"><img width="12" height="12"
+                  src="./img/icons/accardion-arrow.svg" alt="arrow"></button>
             </div>
 
             <div class="check-out__content">
@@ -369,7 +511,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
 
       <aside class="check-out__aside basket__aside">
         <h1 class="basket__title">Оформление заказа</h1>

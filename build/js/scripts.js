@@ -599,6 +599,61 @@ function range() {
 range();
 
 
+function checkOutAccordion() {
+  const container = document.querySelector('.check-out');
+
+  if (!container) {
+    return;
+  }
+
+  let rows = document.querySelectorAll('.check-out__row');
+
+  rows.forEach(row => {
+    const btn = row.querySelector('.check-out__head')
+    const content = row.querySelector('.check-out__content')
+
+    btn.addEventListener('click', () => {
+      row.classList.toggle('active')
+    })
+  });
+}
+checkOutAccordion();
+
+function deliveryRadios() {
+  const container = document.querySelector('.check-out');
+
+  if (!container) {
+    return;
+  }
+
+  const deliveryRadios = document.querySelectorAll('input[type="radio"][name="delivery"]');
+  const radioFormContents = document.querySelectorAll('.radio-form-content');
+
+  // Функция для обновления класса active у формы в зависимости от выбранного радио-инпута
+  function updateActiveForm() {
+    radioFormContents.forEach(form => {
+      const dataDelivery = form.getAttribute('data-delivery');
+      const correspondingRadio = document.getElementById(`delivery-${dataDelivery}`);
+
+      if (correspondingRadio.checked) {
+        form.classList.add('active');
+      } else {
+        form.classList.remove('active');
+      }
+    });
+  }
+
+  // Обработчик события для радио-инпутов
+  deliveryRadios.forEach(radio => {
+    radio.addEventListener('change', updateActiveForm);
+  });
+
+  // Вызываем функцию при загрузке страницы для установки начального состояния
+  updateActiveForm();
+}
+
+deliveryRadios();
+
 
 
 Fancybox.bind("[data-fancybox]", {
