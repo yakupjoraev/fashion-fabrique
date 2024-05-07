@@ -302,6 +302,7 @@
     color: var(--text-color);
     cursor: pointer;
     transition: 0.2s linear;
+    cursor: pointer;
 
     @media (hover:hover) {
       &:hover {
@@ -310,10 +311,23 @@
       }
     }
 
-    &.active {
+    &:has(>input:checked) {
       background-color: var(--text-color);
       color: var(--white-color);
     }
+
+    &>input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      z-index: -100;
+      opacity: 0;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
 
     @media (max-width: $breakpoint992) {
       padding: 8px;

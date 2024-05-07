@@ -202,13 +202,13 @@
     border: 0;
     outline: 0;
 
-    @media (hover:hover) {
-      &:hover {
-        .card__delete-img {
-          filter: brightness(0) saturate(100%)
-        }
-      }
-    }
+    // @media (hover:hover) {
+    //   &:hover {
+    //     .card__delete-img {
+    //       filter: brightness(0) saturate(100%)
+    //     }
+    //   }
+    // }
   }
 
   // .card__delete-img

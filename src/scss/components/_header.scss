@@ -331,24 +331,18 @@
 
 .main__body.locked .header.header-fixed {
   .header__inner {
-    left: calc(50% - 12px);
+    left: calc(50% - 9px);
 
     @media (max-width: 1920px) {
-      left: calc(50% - 8px);
+      left: calc(50% - 2px);
     }
-
-
 
     @media (max-width: $breakpoint992) {
       left: 50%;
     }
   }
 
-
 }
-
-
-
 
 .header.header-fixed {
   height: 132px;
@@ -395,10 +389,6 @@
       display: none;
     }
   }
-
-
-
-
 
   .full-menu {
     height: 100dvh;
@@ -456,4 +446,8 @@
       background: var(--white-color);
     }
   }
+}
+
+.header.header-small.header-fixed {
+  height: 72px;
 }

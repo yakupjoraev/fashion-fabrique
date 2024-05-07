@@ -256,16 +256,26 @@
             </div>
           </div>
 
-          <div class="accardion__item" data-accardion-item>
+          <div class="accardion__item accardion__item--nominals" data-accardion-item>
             <div class="accardion__item-head" data-accardion-head>
               <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
               <span>Выбирите номинал</span>
             </div>
             <div class="accardion__item-content" data-accardion-content>
               <div class="accardion__item-nominals">
-                <div class="accardion__item-nominal active">5000 р.</div>
-                <div class="accardion__item-nominal">10,000 р.</div>
-                <div class="accardion__item-nominal">15,000 р.</div>
+
+                <div class="accardion__item-nominal">
+                  <input type="radio" name="nominal" checked id="nominal1">
+                  <label class="accardion__item-nominal-label" for="nominal1"> 5000 р.</label>
+                </div>
+                <div class="accardion__item-nominal">
+                  <input type="radio" name="nominal" checked id="nominal2">
+                  <label class="accardion__item-nominal-label" for="nominal2"> 10,000 р.</label>
+                </div>
+                <div class="accardion__item-nominal">
+                  <input type="radio" name="nominal" checked id="nominal3">
+                  <label class="accardion__item-nominal-label" for="nominal3"> 15,000 р.</label>
+                </div>
               </div>
 
               <input class="accardion__item-input" type="number" placeholder="Или введите свою сумму">
@@ -281,25 +291,7 @@
             <div class="accardion__item-content accardion__item-content--row-gap" data-accardion-content>
               <input class="accardion__item-input" type="text" placeholder="Имя получателя">
               <input class="accardion__item-input" type="email" placeholder="Email получателя">
-              <input class="accardion__item-input" type="text" placeholder="Имя отправителя">
-
-              <!-- <div class="accardion__item accardion__item--border" data-accardion-item>
-                <label for="" class="accardion__item-label accardion__item-label--right-text">Время отправки</label>
-                <div class="accardion__item-head" data-accardion-head>
-                  <img width="12" height="12" src="./img/icons/accardion-arrow.svg" alt="arrow">
-                  <span>Завтра</span>
-                </div>
-                <div class="accardion__item-content accardion__item-content--absolute" data-accardion-content>
-                  <ul class="accardion__item-content-list">
-                    <li class="accardion__item-content-item">Завтра</li>
-                    <li class="accardion__item-content-item">Завтра</li>
-                    <li class="accardion__item-content-item">Завтра</li>
-                    <li class="accardion__item-content-item">Завтра</li>
-                    <li class="accardion__item-content-item">Завтра</li>
-                    <li class="accardion__item-content-item">Завтра</li>
-                  </ul>
-                </div>
-              </div> -->
+              <input class="accardion__item-input" type="tel" placeholder="Тел отправителя">
 
               <div class="accardion__item-textarea-wrapper">
                 <label for="" class="accardion__item-label accardion__item-label--right-text">Сообщение</label>

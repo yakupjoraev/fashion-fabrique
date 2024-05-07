@@ -1,69 +1,50 @@
 // Custom Scripts
 // Custom scripts
 // Мобильное меню бургер
-function getScrollbarWidth() {
-  const outer = document.createElement('div');
-  outer.style.visibility = 'hidden';
-  outer.style.overflow = 'scroll';
-  document.body.appendChild(outer);
-  const widthNoScroll = outer.offsetWidth;
-  outer.style.overflow = 'scroll';
-  const inner = document.createElement('div');
-  inner.style.width = '100%';
-  outer.appendChild(inner);
-  const widthWithScroll = inner.offsetWidth;
-  outer.parentNode.removeChild(outer);
-  return widthNoScroll - widthWithScroll;
-}
 
 function burgerMenu() {
   const burger = document.querySelector('.burger');
   const burgerClose = document.querySelector('.full-menu__burger');
   const menu = document.querySelector('.full-menu');
   const body = document.querySelector('body');
-  const scrollbarWidth = getScrollbarWidth();
+
+  const closeMenu = () => {
+    menu.classList.remove('active');
+    body.classList.remove('locked');
+  };
 
   burger.addEventListener('click', () => {
     if (!menu.classList.contains('active')) {
       menu.classList.add('active');
       body.classList.add('locked');
-      if (scrollbarWidth > 0) {
-        body.style.paddingRight = scrollbarWidth + 'px';
-      }
     } else {
-      menu.classList.remove('active');
-      body.classList.remove('locked');
-      body.style.paddingRight = '';
+      closeMenu();
     }
   });
 
-  burgerClose.addEventListener('click', () => {
-    menu.classList.remove('active');
-    body.classList.remove('locked');
-    body.style.paddingRight = '';
-  });
+  burgerClose.addEventListener('click', closeMenu);
 
   const menuItems = document.querySelectorAll('.full-menu__link, .full-menu__sublink');
   menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-      menu.classList.remove('active');
-      body.classList.remove('locked');
-      body.style.paddingRight = '';
-    });
+    item.addEventListener('click', closeMenu);
   });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 991.98) {
-      menu.classList.remove('active');
+      closeMenu();
       burger.classList.remove('active-burger');
-      body.classList.remove('locked');
-      body.style.paddingRight = '';
     }
   });
 
+  document.addEventListener('click', event => {
+    if (!menu.contains(event.target) && !burger.contains(event.target)) {
+      closeMenu();
+    }
+  });
 }
 
 burgerMenu();
+
 
 
 
@@ -95,6 +76,7 @@ function menuBtns() {
   }
 
   let items = document.querySelectorAll('.full-menu__item');
+  let activeItem = null; // Переменная для хранения текущего активного элемента
 
   items.forEach(item => {
     const btn = item.querySelector('.full-menu__btn');
@@ -102,7 +84,11 @@ function menuBtns() {
 
     if (btn && sublist) {
       btn.addEventListener('click', () => {
+        if (activeItem && activeItem !== item) {
+          activeItem.querySelector('.full-menu__sublist').classList.remove('active');
+        }
         sublist.classList.toggle('active');
+        activeItem = item; // Обновляем активный элемент
       });
     }
 
@@ -113,33 +99,46 @@ function menuBtns() {
         sublist.classList.remove('active');
       });
     });
+
+    const links = item.querySelectorAll('.full-menu__link');
+    links.forEach(link => {
+      link.addEventListener('click', event => {
+        event.stopPropagation();
+        items.forEach(item => {
+          const sublist = item.querySelector('.full-menu__sublist');
+          if (sublist) {
+            sublist.classList.remove('active');
+          }
+        });
+        activeItem = null; // Сбрасываем текущий активный элемент
+      });
+    });
   });
 
   const handleClick = event => {
     const target = event.target;
     const isMenuClicked = container.contains(target);
     const isSublinkClicked = target.classList.contains('full-menu__sublink');
+    const isLinkClicked = target.classList.contains('full-menu__link'); // Проверяем, был ли клик на full-menu__link
 
-    if (!isMenuClicked && !isSublinkClicked) {
+    if (!isMenuClicked && !isSublinkClicked && !isLinkClicked) {
       items.forEach(item => {
         const sublist = item.querySelector('.full-menu__sublist');
         if (sublist) {
           sublist.classList.remove('active');
         }
       });
+
+      activeItem = null; // Сбрасываем текущий активный элемент
     }
   };
 
   document.addEventListener('click', handleClick);
-  items.forEach(item => {
-    const sublinks = item.querySelectorAll('.full-menu__sublink');
-    sublinks.forEach(sublink => {
-      sublink.addEventListener('click', handleClick);
-    });
-  });
 }
 
 menuBtns();
+
+
 
 
 
