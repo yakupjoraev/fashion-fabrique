@@ -34,11 +34,10 @@
   }
 
   @media (max-width: $breakpoint992) {
-    height: calc(450px + 132px);
+    height: 100vh;
   }
 
   @media (max-width: $breakpoint580) {
-    height: calc(580px + 72px);
     left: 100%;
   }
 
@@ -312,6 +311,10 @@
 
   &__socials {
     margin-top: 60px;
+
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 20px;
+    }
 
     @media (max-width: $breakpoint768) {
       margin-top: 0;

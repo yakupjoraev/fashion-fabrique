@@ -1,4 +1,5 @@
 .hero {
+
   margin-left: -40px;
 
   @media (max-width: $breakpoint992) {
@@ -41,7 +42,7 @@
     grid-template-columns: 1fr 340px;
     column-gap: 10px;
     opacity: 0 !important;
-    height: 800px;
+    height: calc(100vh - 132px);
 
     @media (max-width: 1200px) {
       height: 520px;
@@ -67,7 +68,7 @@
 
   &__slide-picture {
     position: relative;
-    height: 800px;
+    height: calc(100vh - 132px);
 
     &--object-top {
       .hero__slide-img {

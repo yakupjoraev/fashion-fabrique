@@ -1165,7 +1165,7 @@ body {
      -moz-column-gap: 10px;
           column-gap: 10px;
   opacity: 0 !important;
-  height: 800px;
+  height: calc(100vh - 132px);
 }
 
 .hero__slide.swiper-slide-active {
@@ -1174,7 +1174,7 @@ body {
 
 .hero__slide-picture {
   position: relative;
-  height: 800px;
+  height: calc(100vh - 132px);
 }
 
 .hero__slide-picture--object-top .hero__slide-img {
@@ -2026,6 +2026,8 @@ body {
 }
 
 .filters__item-head {
+  position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2086,7 +2088,7 @@ body {
   position: absolute;
   z-index: 2;
   width: 100%;
-  top: -100%;
+  top: -20px;
   left: 0;
   border: 1px solid #c2c6c7;
   border-top: 0;
@@ -2312,9 +2314,6 @@ body {
 .catalog__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
@@ -2455,6 +2454,11 @@ body {
   margin-top: 20px;
 }
 
+.accardion__item.active .accardion__item-head {
+  position: relative;
+  z-index: 3;
+}
+
 .accardion__item.active .accardion__item-head img {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -2543,7 +2547,7 @@ body {
   position: absolute;
   z-index: 2;
   width: 100%;
-  top: -200%;
+  top: 20px;
   left: 0;
   border: 1px solid #c2c6c7;
   border-top: 0;
@@ -3378,7 +3382,7 @@ body {
       -ms-flex: 0 0 350px;
           flex: 0 0 350px;
   position: sticky;
-  top: 20px;
+  top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3944,9 +3948,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -3954,6 +3958,7 @@ body {
      -moz-column-gap: 20px;
           column-gap: 20px;
   row-gap: 20px;
+  min-height: 92px;
 }
 
 .offline-shops__item-address {
@@ -4947,7 +4952,7 @@ body {
   }
 
   .full-menu {
-    height: 582px;
+    height: 100vh;
   }
 
   .full-menu__top {
@@ -4990,6 +4995,10 @@ body {
 
   .full-menu__sublink {
     padding: 4px 8px;
+  }
+
+  .full-menu__socials {
+    padding-bottom: 20px;
   }
 
   .full-menu__btn {
@@ -5960,7 +5969,6 @@ body {
 
 @media (max-width: 579.98px) {
   .full-menu {
-    height: 652px;
     left: 100%;
   }
 

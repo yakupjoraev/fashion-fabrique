@@ -138,6 +138,8 @@
   // .filters__item-head
 
   &__item-head {
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -192,7 +194,7 @@
     position: absolute;
     z-index: 2;
     width: 100%;
-    top: -100%;
+    top: -20px;
     left: 0;
     border: 1px solid #c2c6c7;
     border-top: 0;

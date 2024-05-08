@@ -90,11 +90,11 @@
   &__item-row {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-start;
     column-gap: 20px;
     row-gap: 20px;
-
+    min-height: 92px;
   }
 
   // .offline-shops__item-address
