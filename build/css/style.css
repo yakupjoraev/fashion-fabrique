@@ -5282,6 +5282,7 @@ body {
 
   .basket__card .accardion {
     row-gap: 16px;
+    margin-top: 0;
   }
 
   .basket__card .accardion__item-head {
