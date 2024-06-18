@@ -1,33 +1,288 @@
+// .card {
+//   // width: 280px;
+//   height: 420px;
+//   // .card__top
+
+//   &__top {
+//     position: relative;
+//     z-index: 1;
+//     display: grid;
+//     height: 360px;
+//   }
+
+//   // .card__picture
+
+//   &__picture {
+//     display: grid;
+//     width: 100%;
+//     height: 360px;
+//   }
+
+//   // .card__img
+
+//   &__img {
+//     max-width: 100%;
+//     width: 100%;
+//     height: 360px;
+//     object-fit: cover;
+//   }
+
+//   // .card__top-row
+
+//   &__top-row {
+//     position: absolute;
+//     z-index: 1;
+//     padding: 10px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     width: 100%;
+//     column-gap: 20px;
+//     row-gap: 20px;
+//     flex-wrap: wrap;
+//   }
+
+//   // .card__top-row--footer
+
+//   &__top-row--footer {
+//     bottom: 0;
+//   }
+
+//   // .card__new
+
+//   &__new {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: fit-content;
+//     background-color: var(--white-color);
+//     border-radius: 32px;
+//     padding: 10px 20px;
+
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 100%;
+//     text-transform: uppercase;
+//     text-align: center;
+//     color: var(--black-color);
+//   }
+
+//   // .card__favorite
+
+//   &__favorite {
+//     margin-left: auto;
+//     background-color: transparent;
+//     border: 0;
+//     outline: 0;
+//     width: 32px;
+//     height: 32px;
+
+//     &.active {
+//       .card__favorite-img {
+//         filter: brightness(0) saturate(100%) invert(16%) sepia(86%) saturate(2750%) hue-rotate(337deg) brightness(86%) contrast(99%);
+//       }
+//     }
+//   }
+
+//   // .card__favorite-img
+
+//   &__favorite-img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: contain;
+//     transition: filter 0.2s linear;
+//   }
+
+//   // .card__bottom
+
+//   &__bottom {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     column-gap: 20px;
+//     padding: 10px 20px 10px 0;
+//   }
+
+//   // .card__column
+
+//   &__column {
+//     display: grid;
+//     row-gap: 4px;
+//   }
+
+//   // .card__name
+
+//   &__name {
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 100%;
+//     color: var(--black-color);
+//   }
+
+//   // .card__colors
+
+//   &__colors {
+//     display: flex;
+//     align-items: center;
+//     column-gap: 8px;
+//     row-gap: 8px;
+//     flex-wrap: wrap;
+//   }
+
+//   // .card__color
+
+//   &__color {
+//     width: 8px;
+//     height: 8px;
+//     min-width: 8px;
+//     border-radius: 100%;
+//   }
+
+//   // .card__color--grey
+
+//   &__color--grey {
+//     background-color: #d8d8d8;
+//   }
+
+//   // .card__color--black
+
+//   &__color--black {
+//     background-color: #161616;
+//   }
+
+//   // .card__color--blue
+
+//   &__color--blue {
+//     background-color: #0085ff;
+//     ;
+//   }
+
+//   // .card__row
+
+//   &__row {
+//     display: flex;
+//     align-items: flex-end;
+//     column-gap: 4px;
+//   }
+
+//   // .card__top-row--header
+
+//   &__top-row--header {
+//     top: 0;
+//     left: 0;
+//   }
+
+//   // .card__availability
+
+//   &__availability {
+//     padding: 10px;
+//     background-color: var(--white-color);
+//     border: 1px solid transparent;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 100%;
+//     text-transform: uppercase;
+//     color: var(--text-color);
+
+//     &--outline {
+//       background: transparent;
+//       border-color: var(--white-color);
+//       color: var(--white-color);
+//     }
+//   }
+
+//   // .card__delete
+
+//   &__delete {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: transparent;
+//     margin-left: auto;
+//     border: 0;
+//     outline: 0;
+
+//     // @media (hover:hover) {
+//     //   &:hover {
+//     //     .card__delete-img {
+//     //       filter: brightness(0) saturate(100%)
+//     //     }
+//     //   }
+//     // }
+//   }
+
+//   // .card__delete-img
+
+//   &__delete-img {}
+
+
+//   // .card__old-price
+
+//   &__old-price {
+//     white-space: nowrap;
+//     font-weight: 300;
+//     font-size: 16px;
+//     line-height: 100%;
+//     color: var(--black-color);
+//     opacity: 0.3;
+//   }
+
+//   // .card__price
+
+//   &__price {
+//     white-space: nowrap;
+//     font-weight: 500;
+//     font-size: 22px;
+//     line-height: 100%;
+//     color: var(--black-color);
+//   }
+
+//   &__data {
+//     font-weight: 300;
+//     font-size: 14px;
+//     line-height: 100%;
+//     text-transform: uppercase;
+//     color: var(--black-color);
+//   }
+
+//   &__data--bold {
+//     font-weight: 500;
+//     font-size: 22px;
+//     line-height: 100%;
+//     text-transform: uppercase;
+//     color: var(--black-color);
+//   }
+// }
+
+
 .card {
   // width: 280px;
-  height: 420px;
-  // .card__top
+  height: auto;
 
   &__top {
     position: relative;
     z-index: 1;
-    display: grid;
-    height: 360px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
-
-  // .card__picture
 
   &__picture {
-    display: grid;
+    position: relative;
     width: 100%;
-    height: 360px;
+    overflow: hidden;
+    padding-top: 133%;
+    /* 3:4 соотношение сторон */
   }
-
-  // .card__img
 
   &__img {
-    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 360px;
+    height: 100%;
     object-fit: cover;
   }
-
-  // .card__top-row
 
   &__top-row {
     position: absolute;
@@ -42,13 +297,14 @@
     flex-wrap: wrap;
   }
 
-  // .card__top-row--footer
+  &__top-row--header {
+    top: 0;
+    left: 0;
+  }
 
   &__top-row--footer {
     bottom: 0;
   }
-
-  // .card__new
 
   &__new {
     display: flex;
@@ -67,8 +323,6 @@
     color: var(--black-color);
   }
 
-  // .card__favorite
-
   &__favorite {
     margin-left: auto;
     background-color: transparent;
@@ -84,92 +338,11 @@
     }
   }
 
-  // .card__favorite-img
-
   &__favorite-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transition: filter 0.2s linear;
-  }
-
-  // .card__bottom
-
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 20px;
-    padding: 10px 20px 10px 0;
-  }
-
-  // .card__column
-
-  &__column {
-    display: grid;
-    row-gap: 4px;
-  }
-
-  // .card__name
-
-  &__name {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
-    color: var(--black-color);
-  }
-
-  // .card__colors
-
-  &__colors {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-    row-gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  // .card__color
-
-  &__color {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    border-radius: 100%;
-  }
-
-  // .card__color--grey
-
-  &__color--grey {
-    background-color: #d8d8d8;
-  }
-
-  // .card__color--black
-
-  &__color--black {
-    background-color: #161616;
-  }
-
-  // .card__color--blue
-
-  &__color--blue {
-    background-color: #0085ff;
-    ;
-  }
-
-  // .card__row
-
-  &__row {
-    display: flex;
-    align-items: flex-end;
-    column-gap: 4px;
-  }
-
-  // .card__top-row--header
-
-  &__top-row--header {
-    top: 0;
-    left: 0;
   }
 
   // .card__availability
@@ -191,6 +364,7 @@
     }
   }
 
+
   // .card__delete
 
   &__delete {
@@ -211,12 +385,59 @@
     // }
   }
 
-  // .card__delete-img
 
-  &__delete-img {}
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 10px 20px 10px 0;
+  }
 
+  &__column {
+    display: grid;
+    row-gap: 4px;
+  }
 
-  // .card__old-price
+  &__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--black-color);
+  }
+
+  &__colors {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__color {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 100%;
+  }
+
+  &__color--grey {
+    background-color: #d8d8d8;
+  }
+
+  &__color--black {
+    background-color: #161616;
+  }
+
+  &__color--blue {
+    background-color: #0085ff;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 4px;
+  }
 
   &__old-price {
     white-space: nowrap;
@@ -226,8 +447,6 @@
     color: var(--black-color);
     opacity: 0.3;
   }
-
-  // .card__price
 
   &__price {
     white-space: nowrap;
