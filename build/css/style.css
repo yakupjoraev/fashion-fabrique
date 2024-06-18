@@ -5273,6 +5273,8 @@ body {
   }
 
   .basket__card .card__name {
+    text-transform: uppercase;
+    font-weight: 400;
     text-align: right;
   }
 
@@ -5810,6 +5812,14 @@ body {
     margin-top: 0;
   }
 
+  .breadcrumbs {
+    display: none;
+  }
+
+  .breadcrumbs ~ * {
+    margin-top: 30px;
+  }
+
   .favorites {
     margin-bottom: 40px;
   }
@@ -6119,6 +6129,29 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 20px;
+  }
+
+  .basket__mob-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basket__mob-row:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .basket__mob-row:nth-child(2) .basket__mob-text {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .basket__mob-row:nth-child(3) {
+    text-align: right;
+  }
+
+  .basket__mob-row:nth-child(3) .basket__mob-text {
+    font-size: 16px;
+    text-transform: uppercase;
   }
 }
 
