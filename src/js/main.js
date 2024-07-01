@@ -144,6 +144,42 @@ menuBtns();
 
 
 
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const togglePasswordButtons = document.querySelectorAll('.registration__input-eye');
+
+  if (togglePasswordButtons.length > 0) {
+    togglePasswordButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const inputWrapper = button.closest('.registration__input-wrapper');
+        const passwordInput = inputWrapper.querySelector('.registration__input');
+        const eyeIcon = button.querySelector('.registration__input-eye-icon');
+
+        if (passwordInput && eyeIcon) {
+          if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            eyeIcon.src = './img/icons/eye-open.svg';
+            eyeIcon.alt = 'eye-open icon';
+          } else {
+            passwordInput.type = 'password';
+            eyeIcon.src = './img/icons/eye-close.svg';
+            eyeIcon.alt = 'eye-close icon';
+          }
+        }
+      });
+    });
+  }
+});
+
+
+
+
+
+
 function accardion() {
   const container = document.querySelector('[data-accardion]')
 
@@ -673,6 +709,34 @@ function deliveryTypes() {
   });
 }
 deliveryTypes();
+
+
+
+const openModalBtns = document.querySelectorAll('.open-modal-btn');
+const closeModalBtns = document.querySelectorAll('.close-modal-btn');
+const modals = document.querySelectorAll('.modal');
+
+openModalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.dataset.modalId;
+    const modal = document.getElementById(modalId);
+    modal.classList.add('show');
+  });
+});
+
+closeModalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal');
+    modal.classList.remove('show');
+  });
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.classList.remove('show');
+  }
+});
+
 
 
 Fancybox.bind("[data-fancybox]", {

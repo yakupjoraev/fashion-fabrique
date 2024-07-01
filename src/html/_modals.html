@@ -1,0 +1,74 @@
+<!-- Modal -->
+
+<div class="modals-wrapper">
+
+  <!-- Для вызова модалки нужно взять клас и id  -->
+  <button class="open-modal-btn" data-modal-id="modal-empty-basket">Open Modal Пустая корзина</button>
+
+  <div class="modal" id="modal-empty-basket">
+    <div class="modal-content">
+      <form action="#" class="modal-form">
+        <button type="button" class="close-modal-btn"></button>
+
+        <div class="modal-form__head">
+          <h3 class="modal-form__title h4">Добавьте товары для <br /> оформления заказа</h3>
+        </div>
+
+        <div class="modal-form__main">
+
+          <div class="registration__row">
+            <button type="button" class="registration__btn btn-black">Продолжить покупки</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="modal-log-in">Open Modal Авторизуйтесь для оформления заказа</button>
+  <div class="modal" id="modal-log-in">
+    <div class="modal-content">
+      <form action="#" class="modal-form">
+        <button type="button" class="close-modal-btn"></button>
+
+        <div class="modal-form__head">
+          <h3 class="modal-form__title h4">Авторизуйтесь для оформления заказа</h3>
+        </div>
+
+        <div class="modal-form__main">
+          <div class="registration__row">
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="email" placeholder="Email">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="password" placeholder="Пароль">
+
+              <button type="button" class="registration__input-eye">
+                <img class="registration__input-eye-icon" src="./img/icons/eye-close.svg" alt="eye-close icon">
+              </button>
+            </div>
+
+          </div>
+
+          <div class="registration__row">
+            <button type="button" class="registration__btn btn-black">Войти</button>
+
+            <a class="registration__password-empty text" href="#">Забыли пароль?</a>
+          </div>
+
+          <div class="registration__row" style="display: none;">
+            <div class="registration__attantion">
+              <p class="registration__text">Заполните выделенные поля</p>
+            </div>
+          </div>
+
+          <div class="registration__row">
+            <button type="button" class="registration__btn btn-white">Зарегистрироваться</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

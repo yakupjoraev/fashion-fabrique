@@ -1,0 +1,267 @@
+.lk {
+
+  &--mobile {
+    .lk__info {
+      @media (max-width: $breakpoint768) {
+        display: block;
+      }
+    }
+  }
+
+  // .lk__inner
+
+  &__inner {
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 1fr 320px;
+    min-height: calc(100vh - 72px);
+
+
+    @media (max-width: $breakpoint1450) {
+      column-gap: 20px;
+      grid-template-columns: 1fr 240px;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+
+  }
+
+  // .lk__main
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1000%;
+      height: 100%;
+      background: rgba(194, 198, 199, 0.1);
+      z-index: -1;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &--not-bg {
+      &::before {
+        content: none;
+      }
+    }
+
+    .registration__input {
+      background-color: transparent;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 80px 0;
+    }
+  }
+
+  // .lk__info
+
+  &__info {
+    padding: 100px 0;
+    margin-right: 110px;
+
+    @media (max-width: $breakpoint1450) {
+      margin-right: 0;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+
+  }
+
+  // .lk__nameing
+
+  &__nameing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-end;
+    margin-bottom: 80px;
+    text-align: right;
+  }
+
+  // .lk__nameing-label
+
+  &__nameing-label {}
+
+  // .lk__nameing-name
+
+  &__nameing-name {}
+
+  // .lk__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 10px;
+
+    &+.lk__list {
+      margin-top: 54px;
+    }
+  }
+
+  // .lk__item
+
+  &__item {}
+
+  // .lk__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+.lk-order {
+  padding-bottom: 40px;
+
+  @media (max-width: $breakpoint768) {
+    padding: 40px 0;
+  }
+}
+
+
+.lk {
+
+  // .lk__orders
+
+  &__orders {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint768) {
+      margin: 0 -10px;
+    }
+  }
+
+  // .lk__orders-item
+
+  &__orders-item {
+    position: relative;
+    padding: 20px;
+    max-width: calc(100vw - 456px);
+    background: rgba(194, 198, 199, 0.1);
+
+
+    @media (max-width: $breakpoint1450) {
+      max-width: calc(100vw - 360px);
+    }
+
+    @media (max-width: $breakpoint992) {
+      max-width: calc(100vw - 286px);
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100vw;
+    }
+  }
+
+  // .lk__orders-head
+
+  &__orders-head {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 32px;
+
+    @media (max-width: $breakpoint992) {
+      column-gap: 20px;
+    }
+  }
+
+  // .lk__orders-texts
+
+  &__orders-texts {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+
+  // .lk__orders-texts--mob
+
+  &__orders-texts--mob {
+    @media (max-width: $breakpoint992) {
+      display: flex;
+    }
+  }
+
+  // .lk__orders-text
+
+  &__orders-text {}
+
+  // .lk__orders-all
+
+  &__orders-all {
+    margin-left: auto;
+  }
+
+  // .lk__orders-mob
+
+  &__orders-mob {
+    display: none;
+
+    @media (max-width: $breakpoint768) {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      margin-bottom: 40px;
+      padding: 0 10px;
+    }
+  }
+
+  // .lk__orders-mob-back
+
+  &__orders-mob-back {
+    margin-top: -4px;
+  }
+
+  // .lk__orders-mob-label
+
+  &__orders-mob-label {}
+}
+
+.lk-order__inner {
+  .basket__mob-top {
+
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+  .basket__mob-row {
+    @media (max-width: 600px) {
+      &:nth-child(1) {
+        grid-column: span 2;
+      }
+
+    }
+  }
+}

@@ -50,6 +50,14 @@ body {
   }
 }
 
+.main-page {
+  @media (max-width: $breakpoint768) {
+    .products-slider {
+      display: none;
+    }
+  }
+}
+
 // Animations
 // Fade
 @keyframes fade {

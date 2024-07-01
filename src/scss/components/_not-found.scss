@@ -1,0 +1,24 @@
+.not-found {
+
+
+  // .not-found__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 80px;
+    justify-content: center;
+    max-width: 394px;
+    margin: auto;
+    height: calc(100vh - 132px);
+  }
+
+  // .not-found__title
+
+  &__title {}
+
+  // .not-found__btn
+
+  &__btn {}
+}
