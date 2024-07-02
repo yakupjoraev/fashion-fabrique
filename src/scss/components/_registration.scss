@@ -1,5 +1,10 @@
 .registration {
 
+  @media (max-width: $breakpoint768) {
+    margin: 0;
+    padding: 80px 0;
+  }
+
   // .registration__inner
 
   &__inner {

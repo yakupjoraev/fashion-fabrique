@@ -285,6 +285,7 @@
       width: 100%;
       column-gap: 10px;
       flex-direction: row-reverse;
+      justify-content: space-between !important;
 
       .logo {
         display: none;

@@ -36,6 +36,11 @@
 
   &__main {
     flex: 1 1 auto;
+
+    @media (max-width: 600px) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
   }
 
   // .check-out__rows
@@ -145,7 +150,7 @@
     @media (max-width: $breakpoint768) {
       flex-direction: row;
       justify-content: space-between;
-      column-gap: 20px;
+      column-gap: 10px;
       row-gap: 20px;
       flex-wrap: wrap;
     }
@@ -175,9 +180,9 @@
       color: var(--text-color);
     }
 
-    @media (max-width: $breakpoint768) {
-      font-size: 14px;
-    }
+    // @media (max-width: $breakpoint768) {
+    //   font-size: 14px;
+    // }
   }
 
   // .check-out__form
@@ -281,6 +286,7 @@
   // .check-out__block-label
 
   &__block-label {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
@@ -309,7 +315,7 @@
 
   &__block-text--bold {
     margin-left: auto;
-    font-weight: 500;
+    font-weight: 500 !important;
   }
 
   // .check-out__block-descr
@@ -355,6 +361,30 @@
       .basket__title {
         display: none;
       }
+    }
+  }
+
+
+  .registration__label {
+    font-size: 14px;
+  }
+
+  .registration__text {
+    font-family: var(--second-family);
+
+    @media (max-width: 600px) {
+      color: #000;
+    }
+  }
+
+  .check-out__aside {
+    @media (max-width: 600px) {
+      display: flex;
+      flex: 0 1 auto;
+      margin-top: 30px;
+      margin-left: -10px;
+      margin-right: -10px;
+      border-top: 0;
     }
   }
 

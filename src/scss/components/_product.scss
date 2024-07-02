@@ -348,6 +348,12 @@
       height: 40px;
       font-size: 12px;
     }
+
+
+    @media (max-width: $breakpoint768) {
+      background-color: var(--black-color);
+      color: var(--white-color);
+    }
   }
 
   // .product__actions-row
@@ -403,7 +409,8 @@
     grid-template-columns: repeat(2, 1fr);
 
     @media (max-width: $breakpoint580) {
-      grid-template-columns: repeat(1, 1fr);
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 
