@@ -2550,7 +2550,9 @@ body {
 
 .accardion__item.active .accardion__item-head {
   position: relative;
-  z-index: 3;
+  z-index: 2;
+  -webkit-box-shadow: 4px 3px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 3px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .accardion__item.active .accardion__item-head img {
@@ -2607,7 +2609,7 @@ body {
       -ms-user-select: auto;
           user-select: auto;
   pointer-events: visible;
-  margin-top: 0;
+  margin-top: -1px;
 }
 
 .accardion__item--border.active .accardion__item-head img {
