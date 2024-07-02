@@ -1,4 +1,7 @@
 .main-catalog {
+  @media (max-width: $breakpoint768) {
+    display: none;
+  }
 
   // .main-catalog__inner
 
@@ -82,8 +85,7 @@
     @media (hover:hover) {
       &:hover {
 
-        .main-catalog__img,
-        .main-catalog__label {
+        .main-catalog__img {
           transform: scale(1.1);
         }
       }

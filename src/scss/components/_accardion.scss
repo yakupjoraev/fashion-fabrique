@@ -44,6 +44,12 @@
       background-color: var(--white-color);
       cursor: pointer;
 
+      font-family: var(--font-family);
+      font-weight: 400;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: var(--black-color);
+
       @media (max-width: $breakpoint992) {
         padding: 10px;
       }
