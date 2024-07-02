@@ -7367,6 +7367,10 @@ body {
     background: rgba(194, 198, 199, 0.1);
   }
 
+  .accardion__item-content-item:hover {
+    background: rgba(194, 198, 199, 0.15);
+  }
+
   .product__btn:hover {
     background-color: var(--text-color);
     color: var(--white-color);

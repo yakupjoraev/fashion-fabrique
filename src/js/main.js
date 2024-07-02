@@ -223,28 +223,34 @@ function accardion() {
     head.addEventListener('click', () => {
       const isOpen = item.classList.contains('active');
 
-      // Закрыть все элементы аккордеона перед открытием нового
+      // Close all accordion items before opening a new one
       accordionItems.forEach(el => el.classList.remove('active'));
 
       if (!isOpen) {
         item.classList.add('active');
       }
     });
+
+    // Close the accordion item if clicking on the content
+    content.addEventListener('click', () => {
+      item.classList.remove('active');
+    });
   });
 
-  // Добавляем обработчик для клика вне аккордеона
+  // Add click handler for clicking outside the accordion
   document.addEventListener('click', (event) => {
     const target = event.target;
 
-    // Проверяем, что клик не произошел внутри аккордеона или его заголовков
+    // Check if the click happened inside the accordion or its headers
     if (!container.contains(target) && !target.closest('[data-accardion-head]')) {
-      // Снимаем классы активности у всех элементов аккордеона
+      // Remove active classes from all accordion items
       accordionItems.forEach(el => el.classList.remove('active'));
     }
   });
 }
 
 accardion();
+
 
 
 function filters() {
