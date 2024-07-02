@@ -336,6 +336,10 @@ pre.code {
   border-radius: 4px;
 }
 
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
 .section {
   margin: 120px auto;
 }
@@ -2673,6 +2677,7 @@ body {
 .accardion__item-content-list {
   max-height: 200px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-color: var(--black-color) var(--white-color);
   scrollbar-width: thin;
 }
