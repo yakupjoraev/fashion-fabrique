@@ -136,7 +136,26 @@
 
   // .accardion__item-content-list
 
-  &__item-content-list {}
+  &__item-content-list {
+    max-height: 200px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--white-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: var(--black-color);
+    }
+
+    scrollbar-color: var(--black-color)var(--white-color);
+    scrollbar-width: thin;
+  }
 
   // .accardion__item-content-item
 

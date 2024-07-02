@@ -2668,6 +2668,26 @@ body {
   transition: all 0.3s linear;
 }
 
+.accardion__item-content-list {
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-color: var(--black-color) var(--white-color);
+  scrollbar-width: thin;
+}
+
+.accardion__item-content-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.accardion__item-content-list::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+
+.accardion__item-content-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--black-color);
+}
+
 .accardion__item-content-item {
   display: -webkit-box;
   display: -ms-flexbox;
