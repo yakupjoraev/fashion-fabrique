@@ -202,6 +202,7 @@
     column-gap: 8px;
     padding: 8px 48px 8px 8px;
     width: 100%;
+    font-weight: 500;
     font-size: 14px;
     line-height: 100%;
     text-transform: uppercase;
@@ -280,6 +281,8 @@
     width: 100%;
     padding: 8px 88px;
     white-space: nowrap;
+
+    font-weight: 500;
     font-size: 14px;
     line-height: 100%;
     text-transform: uppercase;
@@ -329,7 +332,9 @@
   column-gap: 8px;
   padding: 8px 48px 8px 8px;
   width: 100%;
+  font-family: var(--font-family);
   font-size: 14px;
+  font-weight: 500;
   line-height: 100%;
   text-transform: uppercase;
   color: var(--text-color);

@@ -129,7 +129,7 @@
     text-transform: uppercase;
     color: var(--black-color);
 
-    @media (max-width: $breakpoint768) {
+    @media (max-width: $breakpoint992) {
       font-size: 28px;
     }
   }
@@ -142,6 +142,9 @@
     text-transform: uppercase;
     color: var(--black-color);
 
+    @media (max-width: $breakpoint992) {
+      font-size: 22px;
+    }
   }
 
   // .products-slider__slider
