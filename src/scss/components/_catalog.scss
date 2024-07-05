@@ -210,4 +210,9 @@
 
 .catalog__not-found-more {
   margin: 0 auto;
+
+  @media (max-width: $breakpoint768) {
+    border-bottom: 0 !important;
+    justify-content: center !important;
+  }
 }

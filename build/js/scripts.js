@@ -232,10 +232,10 @@ function accardion() {
       }
     });
 
-    // Close the accordion item if clicking on the content
-    content.addEventListener('click', () => {
-      item.classList.remove('active');
-    });
+    // // Close the accordion item if clicking on the content
+    // content.addEventListener('click', () => {
+    //   item.classList.remove('active');
+    // });
   });
 
   // Add click handler for clicking outside the accordion

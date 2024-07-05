@@ -8,6 +8,7 @@
     }
   }
 
+
   // .lk__inner
 
   &__inner {
@@ -267,6 +268,34 @@
         grid-column: span 2;
       }
 
+    }
+  }
+
+
+}
+
+
+.lk-order {
+  .card__old-price {
+    display: none;
+  }
+
+  .basket__mob-top {
+    @media (max-width: 600px) {
+      row-gap: 40px;
+
+    }
+  }
+
+  .basket__inner {
+    @media (max-width: 600px) {
+      row-gap: 40px;
+    }
+  }
+
+  .basket__card .accardion__item-head {
+    @media (max-width: 600px) {
+      border: 0;
     }
   }
 }
