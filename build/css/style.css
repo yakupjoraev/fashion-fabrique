@@ -4276,19 +4276,6 @@ body {
 
 .custom-select-wrapper {
   position: relative;
-  display: inline-block;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.custom-select {
-  position: relative;
-  cursor: pointer;
-}
-
-.custom-select-trigger {
   display: block;
   width: 100%;
   padding: 18px 20px;
@@ -4301,52 +4288,15 @@ body {
   color: var(--text-color);
 }
 
-.custom-options {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  top: 100%;
-  max-height: 0;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  border: 1px solid transparent;
-  background: var(--white-color);
-  z-index: 2;
-  -webkit-transition: 0.3s linear;
-  -o-transition: 0.3s linear;
-  transition: 0.3s linear;
-}
-
-.custom-options.open {
-  top: 100%;
-  max-height: 300px;
-  border-color: rgba(0, 0, 0, 0.3);
-  border-top: transparent;
-}
-
-.custom-option {
-  padding: 18px 20px;
+.custom-select-input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-family: var(--font-family);
   font-size: 14px;
   font-weight: 300;
   text-align: right;
   color: var(--text-color);
-  cursor: pointer;
-}
-
-.custom-option:hover {
-  background-color: rgba(194, 198, 199, 0.3);
-  color: var(--black-color);
-}
-
-.custom-option.selected {
-  background-color: var(--black-color);
-  color: var(--white-color);
 }
 
 .offline-shops {
@@ -5122,6 +5072,22 @@ body {
 
 .lk-order .card__old-price {
   display: none;
+}
+
+.news-subscription {
+  display: none;
+}
+
+.news-subscription__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 40px;
 }
 
 .modals-wrapper {
@@ -7077,6 +7043,11 @@ body {
     margin-bottom: 40px;
     padding: 0 10px;
   }
+
+  .news-subscription {
+    display: block;
+    margin: 80px 0 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -7197,12 +7168,12 @@ body {
   }
 
   .hero__slide {
-    height: 580px;
+    height: 85vh;
     opacity: 1 !important;
   }
 
   .hero__slide-picture {
-    height: 580px;
+    height: 85vh;
   }
 
   .hero__slider-pagination {
