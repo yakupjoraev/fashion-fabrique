@@ -746,6 +746,28 @@ deliveryTypes();
 
 
 
+
+
+
+function headerSearch() {
+  const search = document.querySelector('.header__action--search');
+
+  if (!search) {
+    return null
+  }
+
+  const btn = search.querySelector('.header__action-img')
+
+  btn.addEventListener('click', () => {
+    search.classList.toggle('active')
+  })
+
+}
+headerSearch();
+
+
+
+
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
 const closeModalBtns = document.querySelectorAll('.close-modal-btn');
 const modals = document.querySelectorAll('.modal');

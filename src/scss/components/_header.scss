@@ -492,3 +492,51 @@
 .header.header-small.header-fixed {
   height: 72px;
 }
+
+.header__action--search {
+  overflow: visible;
+  cursor: pointer;
+
+  .header__action-img {}
+
+  &.active {
+    background-color: var(--black-color);
+
+    .header__action-img {
+      filter: invert(1)
+    }
+
+    .header__action-input {
+      left: -168px;
+      width: 200px;
+      padding: 0 36px 0 12px;
+      opacity: 1;
+      user-select: auto;
+      pointer-events: visible;
+    }
+
+  }
+}
+
+.header__action-input {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 0;
+  height: 32px;
+  opacity: 0;
+  outline: 0;
+  border: 1px solid #000;
+  border-radius: 32px;
+  background-color: transparent;
+
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #000;
+
+  user-select: none;
+  pointer-events: none;
+  transition: 0.2s linear;
+}
