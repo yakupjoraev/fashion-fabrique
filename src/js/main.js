@@ -55,7 +55,7 @@ function fixedHeader() {
   const headerInner = document.querySelector('.header__inner');
 
   // указываем в пикселях, сколько нужно проскроллить, чтобы наше меню стало фиксированным
-  const breakpoint = 100; // изменено значение на 500px
+  const breakpoint = 500; // изменено значение на 500px
 
   if (window.scrollY >= breakpoint) {
     header.classList.add('header-fixed');

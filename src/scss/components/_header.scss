@@ -540,3 +540,11 @@
   pointer-events: none;
   transition: 0.2s linear;
 }
+
+.logo-img {
+  margin-top: 6px;
+}
+
+.header-small .logo-img {
+  margin-top: 0;
+}

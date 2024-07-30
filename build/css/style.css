@@ -948,6 +948,14 @@ body {
   transition: 0.2s linear;
 }
 
+.logo-img {
+  margin-top: 6px;
+}
+
+.header-small .logo-img {
+  margin-top: 0;
+}
+
 .full-menu {
   position: absolute;
   top: 0;
@@ -2953,6 +2961,13 @@ body {
 }
 
 .product__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 350px;
           flex: 0 0 350px;
@@ -3014,6 +3029,7 @@ body {
 }
 
 .product__accardion {
+  margin-top: auto;
   margin-bottom: 30px;
 }
 
@@ -3030,6 +3046,7 @@ body {
      -moz-column-gap: 10px;
           column-gap: 10px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .product__btn {

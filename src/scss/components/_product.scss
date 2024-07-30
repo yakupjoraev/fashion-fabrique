@@ -205,6 +205,8 @@
   // .product__info
 
   &__info {
+    display: flex;
+    flex-direction: column;
     flex: 0 0 350px;
 
     @media (max-width: 1200px) {
@@ -293,6 +295,7 @@
   // .product__accardion
 
   &__accardion {
+    margin-top: auto;
     margin-bottom: 30px;
   }
 
@@ -304,6 +307,7 @@
     row-gap: 10px;
     column-gap: 10px;
     margin-bottom: 20px;
+    width: 100%;
 
     @media (max-width: $breakpoint768) {
       margin-bottom: 30px;
