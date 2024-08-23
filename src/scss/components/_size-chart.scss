@@ -1,0 +1,147 @@
+.size-chart {
+  margin: 50px 0 200px;
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px 0 0;
+  }
+
+  .text {
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+  }
+
+  .h6 {
+    // padding: 0 10px;
+  }
+
+  // .size-chart__inner
+
+  &__inner {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  // .size-chart__header
+
+  &__header {}
+
+  // .size-chart__description
+
+  &__description {}
+
+  // .size-chart__rows
+
+  &__rows {}
+
+  // .size-chart__row
+
+  &__row {
+    &.active {
+      .size-chart__head {
+        margin-bottom: 20px;
+      }
+
+      .size-chart__content {
+        // max-height: 3000px;
+      }
+
+      .size-chart__btn {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  // .size-chart__head
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 20px 10px;
+    border-bottom: 1px solid var(--grey-color);
+    transition: 0.3s linear;
+    cursor: pointer;
+  }
+
+  // .size-chart__btn
+
+  &__btn {
+    background-color: transparent;
+    margin-left: auto;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    img {
+      transition: 0.2s linear;
+    }
+  }
+
+  // .size-chart__content
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s linear;
+
+    @media (max-width: $breakpoint768) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  // .size-chart__label
+
+  &__label {
+    margin-bottom: 0;
+    padding: 0 10px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 125%;
+    color: #000;
+
+    // &:has(~.size-chart__picture) {
+    //   margin-bottom: 20px;
+    // }
+  }
+
+  // .size-chart__picture
+
+  &__picture {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // .size-chart__list
+
+  &__list {
+    margin-bottom: 20px;
+    padding-left: 23px;
+    list-style: decimal;
+  }
+
+  // .size-chart__item
+
+  &__item {
+    &.text {
+      margin-bottom: 0;
+    }
+  }
+
+
+}

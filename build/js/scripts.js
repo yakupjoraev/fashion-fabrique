@@ -688,6 +688,74 @@ function checkOutAccordion() {
 }
 checkOutAccordion();
 
+function sizeChartAccordion() {
+  const container = document.querySelector('.size-chart');
+
+  if (!container) {
+    return;
+  }
+
+  let rows = document.querySelectorAll('.size-chart__row');
+
+  rows.forEach(row => {
+    const btn = row.querySelector('.size-chart__head');
+    const content = row.querySelector('.size-chart__content');
+
+    // Устанавливаем начальную высоту контента на 0 и добавляем transition
+    content.style.height = '0px';
+    content.style.overflow = 'hidden'; // Скрываем лишний контент
+    content.style.transition = 'height 0.3s ease'; // Плавная анимация высоты
+
+    btn.addEventListener('click', () => {
+      if (row.classList.contains('active')) {
+        // Закрываем контент
+        content.style.height = '0px';
+        row.classList.remove('active');
+      } else {
+        // Открываем контент
+        const contentHeight = content.scrollHeight; // Получаем полную высоту контента
+        content.style.height = contentHeight + 'px';
+        row.classList.add('active');
+      }
+    });
+
+    // Если активен по умолчанию, устанавливаем высоту
+    if (row.classList.contains('active')) {
+      const contentHeight = content.scrollHeight;
+      content.style.height = contentHeight + 'px';
+    }
+  });
+}
+
+sizeChartAccordion();
+
+function toggleOverlay() {
+  const searchList = document.querySelector('.header__search-list');
+  const body = document.body;
+
+  if (searchList.classList.contains('active')) {
+    body.classList.add('overlay');
+  } else {
+    body.classList.remove('overlay');
+  }
+}
+
+// Следим за изменениями классов на элементе .header__search-list
+const searchList = document.querySelector('.header__search-list');
+
+const observer = new MutationObserver(() => {
+  toggleOverlay();
+});
+
+// Настройка наблюдателя: следим за изменениями атрибутов, включая класс
+observer.observe(searchList, { attributes: true, attributeFilter: ['class'] });
+
+// Инициализация
+toggleOverlay();
+
+
+
+
 function deliveryRadios() {
   const container = document.querySelector('.check-out');
 
