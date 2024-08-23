@@ -3735,6 +3735,70 @@ body {
      object-position: top;
 }
 
+.login__radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 10px;
+}
+
+.login__radio-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -100;
+}
+
+.login__radio-input:checked ~ .login__radio-label {
+  opacity: 1;
+}
+
+.login__radio-label {
+  font-family: var(--font-family);
+  opacity: 0.3;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.login__email {
+  display: none;
+  -webkit-animation: fade 0.3s linear;
+          animation: fade 0.3s linear;
+}
+
+.login__email.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login__tel {
+  display: none;
+  -webkit-animation: fade 0.3s linear;
+          animation: fade 0.3s linear;
+}
+
+.login__tel.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.registration__row .registration__row:has(.registration__password-empty.none) {
+  display: none;
+}
+
 .tehnical__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7735,6 +7799,10 @@ body {
 
   .registration__edit:hover {
     opacity: 1;
+  }
+
+  .login__radio-label:hover {
+    opacity: 0.5;
   }
 
   .tehnical__link:hover {

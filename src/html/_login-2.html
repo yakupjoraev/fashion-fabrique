@@ -1,0 +1,59 @@
+<section class="login">
+  <div class="container">
+    <div class="login__inner">
+      <form action="#" class="login__main">
+
+        <div class="registration__row">
+          <div class="login__radios">
+            <div class="login__radio">
+              <input class="login__radio-input" type="radio" name="login" id="logoin-mail" checked>
+              <label class="login__radio-label" for="logoin-mail">
+                <h3 class="registration__label">Вход по Email</h3>
+              </label>
+            </div>
+
+            <div class="login__radio">
+              <input class="login__radio-input" type="radio" name="login" id="logoin-tel">
+              <label class="login__radio-label" for="logoin-tel">
+                <h3 class="registration__label">Вход по номеру телефона</h3>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="login__email registration__row active">
+          <div class="registration__row">
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="email" placeholder="Email">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="password" placeholder="Пароль">
+
+              <button type="button" class="registration__input-eye">
+                <img class="registration__input-eye-icon" src="./img/icons/eye-close.svg" alt="eye-close icon">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="login__tel registration__row">
+          <input class="registration__input" type="tel" placeholder="+7 (    )">
+        </div>
+
+        <div class="registration__row">
+          <div class="registration__row"><button type="submit" class="registration__btn btn-black">Войти</button></div>
+          <div class="registration__row"><a class="registration__password-empty text" href="#">Забыли пароль?</a></div>
+        </div>
+
+        <div class="registration__row">
+          <button type="submit" class="registration__btn btn-white">Зарегистрироваться</button>
+        </div>
+      </form>
+
+      <div class="login__picture">
+        <img class="login__img" src="./img/login/login-bg.jpg" alt="login bg pic">
+      </div>
+    </div>
+  </div>
+</section>

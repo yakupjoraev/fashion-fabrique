@@ -71,3 +71,61 @@
     object-position: top;
   }
 }
+
+.login__radios {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.login__radio {}
+
+.login__radio-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -100;
+
+  &:checked~.login__radio-label {
+    opacity: 1;
+  }
+}
+
+.login__radio-label {
+  font-family: var(--font-family);
+  opacity: 0.3;
+  transition: 0.2s linear;
+  cursor: pointer;
+
+  @media (hover:hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+
+.login__email {
+  display: none;
+  animation: fade 0.3s linear;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.login__tel {
+  display: none;
+  animation: fade 0.3s linear;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.registration__row .registration__row:has(.registration__password-empty.none) {
+  display: none;
+}

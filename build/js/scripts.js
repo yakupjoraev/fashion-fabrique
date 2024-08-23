@@ -688,6 +688,41 @@ function checkOutAccordion() {
 }
 checkOutAccordion();
 
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.login');
+
+  if (!container) {
+    return;
+  }
+
+  const emailRadio = document.getElementById('logoin-mail');
+  const telRadio = document.getElementById('logoin-tel');
+  const emailBlock = document.querySelector('.login__email');
+  const telBlock = document.querySelector('.login__tel');
+  const emptyLink = document.querySelector('.registration__password-empty')
+
+
+  function updateActiveClass() {
+    if (emailRadio.checked) {
+      emailBlock.classList.add('active');
+      telBlock.classList.remove('active');
+      emptyLink.classList.remove('none');
+    } else if (telRadio.checked) {
+      telBlock.classList.add('active');
+      emailBlock.classList.remove('active');
+      emptyLink.classList.add('none');
+    }
+  }
+
+  // Добавляем обработчики событий на изменение радио-кнопок
+  emailRadio.addEventListener('change', updateActiveClass);
+  telRadio.addEventListener('change', updateActiveClass);
+
+  // Инициализация - сразу выставляем правильный класс при загрузке страницы
+  updateActiveClass();
+});
+
+
 function sizeChartAccordion() {
   const container = document.querySelector('.size-chart');
 
