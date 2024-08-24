@@ -566,6 +566,12 @@
   animation: fade 0.3s linear;
 }
 
+.header__action.have {
+  svg {
+    fill: var(--black-color);
+  }
+}
+
 .header__action:hover .bag__white {
   display: block;
 }
@@ -573,6 +579,30 @@
 .header__action:hover .bag__white~svg {
   display: none;
   animation: fade 0.3s linear;
+}
+
+.bag__count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -2px);
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--black-color);
+
+  &:empty:before {
+    content: '-';
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 7px;
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
 }
 
 .header-small {

@@ -36,21 +36,106 @@
         </a>
 
         <div class="header__actions">
-          <div class="header__action header__action--search">
-            <input class="header__action-input" type="search">
-            <img class="header__action-img" src="./img/icons/Search _ btn.svg" alt="Search">
+          <div class="header__search-wrapper">
+            <div class="header__action header__action--search">
+              <input class="header__action-input" type="search">
+              <img class="header__action-img" src="./img/icons/Search _ btn.svg" alt="Search">
+            </div>
+
+            <!-- С классом active видно -->
+            <ul class="header__search-list">
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <b class="header__search-text h5-medium">Платья</b>
+                  <p class="header__search-text header__search-opacity h5-light">540</p>
+                </a>
+              </li>
+
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <b class="header__search-text h5-medium">Палантин </b>
+                  <p class="header__search-text header__search-opacity h5-light">32</p>
+                </a>
+              </li>
+
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <b class="header__search-text h5-medium">Перчатки</b>
+                  <p class="header__search-text header__search-opacity h5-light">32</p>
+                </a>
+              </li>
+
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
+                </a>
+              </li>
+
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
+                </a>
+              </li>
+
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
+                </a>
+              </li>
+
+              <li class="header__search-item">
+                <a class="header__search-link" href="#">
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
+                </a>
+              </li>
+            </ul>
           </div>
 
+          <!-- bag btn -->
           <a class="header__action" href="#">
-            <img class="header__action-img" src="./img/icons/Bag _ btn.svg" alt="Bag">
+            <!-- <img class="header__action-img" src="./img/icons/Bag _ btn.svg" alt="Bag"> -->
+
+            <svg class="bag__white" width="16" height="16" viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8 1C8.66304 1 9.29893 1.26339 9.76777 1.73223C10.2366 2.20107 10.5 2.83696 10.5 3.5V4H5.5V3.5C5.5 2.83696 5.76339 2.20107 6.23223 1.73223C6.70107 1.26339 7.33696 1 8 1ZM11.5 4V3.5C11.5 2.57174 11.1313 1.6815 10.4749 1.02513C9.8185 0.368749 8.92826 0 8 0C7.07174 0 6.1815 0.368749 5.52513 1.02513C4.86875 1.6815 4.5 2.57174 4.5 3.5V4H1V14C1 14.5304 1.21071 15.0391 1.58579 15.4142C1.96086 15.7893 2.46957 16 3 16H13C13.5304 16 14.0391 15.7893 14.4142 15.4142C14.7893 15.0391 15 14.5304 15 14V4H11.5Z"
+                fill="white" />
+            </svg>
+
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8 1C8.66304 1 9.29893 1.26339 9.76777 1.73223C10.2366 2.20107 10.5 2.83696 10.5 3.5V4H5.5V3.5C5.5 2.83696 5.76339 2.20107 6.23223 1.73223C6.70107 1.26339 7.33696 1 8 1ZM11.5 4V3.5C11.5 2.57174 11.1313 1.6815 10.4749 1.02513C9.8185 0.368749 8.92826 0 8 0C7.07174 0 6.1815 0.368749 5.52513 1.02513C4.86875 1.6815 4.5 2.57174 4.5 3.5V4H1V14C1 14.5304 1.21071 15.0391 1.58579 15.4142C1.96086 15.7893 2.46957 16 3 16H13C13.5304 16 14.0391 15.7893 14.4142 15.4142C14.7893 15.0391 15 14.5304 15 14V4H11.5ZM2 5H14V14C14 14.2652 13.8946 14.5196 13.7071 14.7071C13.5196 14.8946 13.2652 15 13 15H3C2.73478 15 2.48043 14.8946 2.29289 14.7071C2.10536 14.5196 2 14.2652 2 14V5Z"
+                fill="#111810" />
+            </svg>
+
+            <div class="bag__count">23</div>
+
           </a>
 
+          <!-- fovorites btn -->
+          <!-- если есть что-то в избраннах то, добавь класс have -->
           <a class="header__action" href="#">
-            <img class="header__action-img" src="./img/icons/header-fovorites.svg" alt="Liked">
+            <!-- <img class="header__action-img" src="./img/icons/header-fovorites.svg" alt="Liked"> -->
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.6261 1.63975L1.62613 1.63972C2.34491 0.908951 3.31785 0.5 4.33051 0.5C5.34317 0.5 6.31611 0.908951 7.03489 1.63972L7.03548 1.64031C7.19872 1.80572 7.40671 2.00942 7.65845 2.25066L8.00479 2.58255L8.35075 2.25026C8.60175 2.00918 8.80923 1.80568 8.97225 1.6405C9.68801 0.916002 10.6542 0.509597 11.6604 0.506856C12.6666 0.504116 13.6349 0.905249 14.3545 1.62581C15.0743 2.34665 15.4868 3.32901 15.4997 4.35989C15.5126 5.38933 15.1259 6.38084 14.4262 7.1199L8.25923 13.3916C8.25921 13.3916 8.25919 13.3916 8.25918 13.3916C8.1899 13.462 8.09778 13.5 8.00353 13.5C7.90926 13.5 7.81713 13.462 7.74785 13.3916C7.74784 13.3916 7.74783 13.3916 7.74782 13.3916L1.58047 7.12034C0.88112 6.3854 0.492209 5.39873 0.500118 4.37253C0.508035 3.34531 0.913778 2.36381 1.6261 1.63975Z"
+                stroke="#111810" />
+            </svg>
           </a>
 
+          <!-- account btn -->
+          <!-- если уже авторизован то, добавь класс have -->
           <a class="header__action" href="#">
-            <img class="header__action-img" src="./img/icons/Account _ btn.svg" alt="Account">
+            <!-- <img class="header__action-img" src="./img/icons/Account _ btn.svg" alt="Account"> -->
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.0714 4.57143C12.0714 6.82002 10.2486 8.64286 8 8.64286C5.75141 8.64286 3.92857 6.82002 3.92857 4.57143C3.92857 2.32284 5.75141 0.5 8 0.5C10.2486 0.5 12.0714 2.32284 12.0714 4.57143ZM0.5 16.6429V13.9234C2.68046 11.8023 5.22177 10.6374 7.79853 10.5714C10.3761 10.5053 13.0502 11.5369 15.5 13.9233V16.6429H0.5Z"
+                stroke="black" />
+            </svg>
           </a>
         </div>
       </div>
