@@ -5300,6 +5300,7 @@ body {
 .gift-certificate-demo {
   max-width: 950px;
   width: 100%;
+  padding-bottom: 80px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7425,6 +7426,10 @@ body {
   .news-subscription {
     display: block;
     margin: 80px 0 20px;
+  }
+
+  .gift-certificate-demo {
+    padding-bottom: 40px;
   }
 
   .gift-certificate-demo__rows {
