@@ -1012,10 +1012,18 @@ body {
   stroke: var(--black-color);
 }
 
+.full-menu__btn-arrow {
+  margin-left: auto;
+}
+
+.header-small .full-menu__sublist {
+  padding-top: 114px;
+}
+
 .full-menu {
   position: absolute;
   top: 0;
-  left: -50%;
+  left: -100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1048,10 +1056,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 64px;
-     -moz-column-gap: 64px;
-          column-gap: 64px;
-  margin-bottom: 50px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  margin-bottom: 56px;
   width: 432px;
 }
 
@@ -1070,14 +1078,18 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 100%;
   z-index: 1;
   cursor: pointer;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
+}
+
+.full-menu__logo-img {
+  margin-bottom: -2px;
 }
 
 .full-menu__border {
@@ -1097,9 +1109,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 60px;
-  width: 432px;
+  width: 250px;
   height: 100%;
-  padding-left: 84px;
+  padding-left: 70px;
 }
 
 .full-menu__row {
@@ -1126,7 +1138,7 @@ body {
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
-  padding: 8px 48px 8px 8px;
+  padding: 8px 8px 8px 8px;
   width: 100%;
   font-weight: 500;
   font-size: 14px;
@@ -1161,13 +1173,33 @@ body {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
-  padding: 88px 0;
+  padding: 154px 0 88px;
   border-left: 1px solid transparent;
   background-color: var(--white-color);
 }
 
+.full-menu__sublist.active {
+  right: -300px;
+  width: 300px;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  pointer-events: visible;
+  border-left: 1px solid rgba(194, 198, 199, 0.3);
+  overflow: visible;
+}
+
 .full-menu__subitem {
   width: 100%;
+}
+
+.full-menu__subitem .full-menu__btn {
+  padding: 8px 40px;
 }
 
 .full-menu__sublink {
@@ -1181,7 +1213,7 @@ body {
      -moz-column-gap: 10px;
           column-gap: 10px;
   width: 100%;
-  padding: 8px 88px;
+  padding: 8px 40px;
   white-space: nowrap;
   font-weight: 500;
   font-size: 14px;
@@ -1212,7 +1244,7 @@ body {
   -webkit-column-gap: 8px;
      -moz-column-gap: 8px;
           column-gap: 8px;
-  padding: 8px 48px 8px 8px;
+  padding: 8px 8px 8px 8px;
   width: 100%;
   font-family: var(--font-family);
   font-size: 14px;
@@ -3888,6 +3920,10 @@ body {
   display: none;
 }
 
+.tehnical {
+  font-family: var(--second-family);
+}
+
 .tehnical__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6110,6 +6146,10 @@ body {
     padding: 30px 0 20px 10px;
   }
 
+  .header-small .full-menu__sublist {
+    padding-top: 0;
+  }
+
   .full-menu {
     left: -100%;
     padding-left: 10px;
@@ -6149,7 +6189,7 @@ body {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px 0 10px 10px;
+    padding: 0 10px 10px 10px;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
@@ -6160,7 +6200,10 @@ body {
             user-select: auto;
     pointer-events: visible;
     border: 0;
-    border-top: 1px solid rgba(194, 198, 199, 0.3);
+  }
+
+  .full-menu__sublist br {
+    display: none;
   }
 
   .full-menu__sublink {
@@ -7787,21 +7830,6 @@ body {
 
   .full-menu__link:hover {
     font-weight: bold;
-  }
-
-  .full-menu__sublist.active {
-    right: -100%;
-    width: 100%;
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-    -webkit-user-select: auto;
-       -moz-user-select: auto;
-        -ms-user-select: auto;
-            user-select: auto;
-    pointer-events: visible;
-    border-left: 1px solid rgba(194, 198, 199, 0.3);
   }
 
   .full-menu__sublink:hover {

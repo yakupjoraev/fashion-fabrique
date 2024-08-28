@@ -68,75 +68,129 @@ function fixedHeader() {
 window.addEventListener('scroll', fixedHeader);
 
 
-function menuBtns() {
-  const container = document.querySelector('.full-menu');
 
-  if (!container) {
-    return null;
-  }
 
-  let items = document.querySelectorAll('.full-menu__item');
-  let activeItem = null; // Переменная для хранения текущего активного элемента
 
-  items.forEach(item => {
-    const btn = item.querySelector('.full-menu__btn');
-    const sublist = item.querySelector('.full-menu__sublist');
+// function menuBtns() {
+//   const container = document.querySelector('.full-menu');
 
-    if (btn && sublist) {
-      btn.addEventListener('click', () => {
-        if (activeItem && activeItem !== item) {
-          activeItem.querySelector('.full-menu__sublist').classList.remove('active');
-        }
-        sublist.classList.toggle('active');
-        activeItem = item; // Обновляем активный элемент
-      });
-    }
+//   if (!container) {
+//     return null;
+//   }
 
-    const sublinks = item.querySelectorAll('.full-menu__sublink');
-    sublinks.forEach(sublink => {
-      sublink.addEventListener('click', event => {
-        event.stopPropagation();
-        sublist.classList.remove('active');
-      });
-    });
+//   let activeItem = null;
 
-    const links = item.querySelectorAll('.full-menu__link');
-    links.forEach(link => {
-      link.addEventListener('click', event => {
-        event.stopPropagation();
-        items.forEach(item => {
-          const sublist = item.querySelector('.full-menu__sublist');
-          if (sublist) {
-            sublist.classList.remove('active');
-          }
-        });
-        activeItem = null; // Сбрасываем текущий активный элемент
-      });
-    });
-  });
+//   const toggleSublist = (btn, sublist, item) => {
+//     const isActive = sublist.classList.contains('active');
 
-  const handleClick = event => {
-    const target = event.target;
-    const isMenuClicked = container.contains(target);
-    const isSublinkClicked = target.classList.contains('full-menu__sublink');
-    const isLinkClicked = target.classList.contains('full-menu__link'); // Проверяем, был ли клик на full-menu__link
+//     // Если активный элемент не совпадает с текущим, закрываем все подменю в активном элементе
+//     if (activeItem && activeItem !== item) {
+//       closeAllSublists(activeItem);
+//     }
 
-    if (!isMenuClicked && !isSublinkClicked && !isLinkClicked) {
-      items.forEach(item => {
-        const sublist = item.querySelector('.full-menu__sublist');
-        if (sublist) {
-          sublist.classList.remove('active');
-        }
-      });
+//     // Переключаем состояние текущего подменю
+//     if (!isActive) {
+//       sublist.classList.add('active');
+//       activeItem = item;
 
-      activeItem = null; // Сбрасываем текущий активный элемент
-    }
-  };
+//     } else {
+//       sublist.classList.remove('active');
+//       if (!item.querySelector('.full-menu__sublist.active')) {
+//         activeItem = null;
+//       }
+//     }
+//   };
 
-  document.addEventListener('click', handleClick);
-}
+//   const deactivateSublistsAtSameLevel = (sublist) => {
+//     const parentItem = sublist.closest('.full-menu__subitem');
+//     if (parentItem) {
+//       const siblingSublists = parentItem.parentElement.querySelectorAll('.full-menu__sublist');
+//       siblingSublists.forEach(sub => {
+//         if (sub !== sublist) {
+//           sub.classList.remove('active');
+//         }
+//       });
+//     }
+//   };
 
-menuBtns();
+//   const closeSublistsAtSameLevel = (item) => {
+//     const parentItem = item.closest('.full-menu__subitem');
+//     if (parentItem) {
+//       const siblingSublists = parentItem.parentElement.querySelectorAll('.full-menu__sublist.active');
+//       siblingSublists.forEach(sub => sub.classList.remove('active'));
+//     }
+//   };
+
+
+//   const closeAllSublists = (item) => {
+//     const allSublists = container.querySelectorAll('.full-menu__sublist.active');
+//     allSublists.forEach(sub => sub.classList.remove('active'));
+//   };
+
+//   const closeAllSublistsInner = (item) => {
+//     const allSublists = container.querySelectorAll('.full-menu__sublist.active');
+//     allSublists.forEach(sub => sub.classList.remove('active'));
+//   };
+
+//   const handleItemClick = (item) => {
+//     const btn = item.querySelector('.full-menu__btn'); // Первый кнопка внутри .full-menu__item
+//     const sublist = item.querySelector('.full-menu__sublist');
+
+//     if (btn && sublist) {
+//       btn.addEventListener('click', (event) => {
+//         event.stopPropagation(); // Останавливаем всплытие событий
+
+//         // При клике на первую кнопку внутри .full-menu__item снимаем active со всех подсписков
+//         closeAllSublists(container);
+
+//         toggleSublist(btn, sublist, item);
+//       });
+//     }
+
+//     // Обрабатываем вложенные подменю, если они существуют
+//     const nestedSublists = sublist ? sublist.querySelectorAll('.full-menu__sublist') : [];
+//     nestedSublists.forEach(nestedSublist => {
+//       const nestedBtn = nestedSublist.closest('.full-menu__subitem').querySelector('.full-menu__btn');
+//       if (nestedBtn) {
+//         nestedBtn.addEventListener('click', (event) => {
+//           event.stopPropagation();
+//           toggleSublist(nestedBtn, nestedSublist, item);
+//         });
+//       }
+//     });
+
+//     // Закрываем подменю при клике на ссылку
+//     const links = item.querySelectorAll('.full-menu__link, .full-menu__sublink');
+//     links.forEach(link => {
+//       link.addEventListener('click', event => {
+//         event.stopPropagation();
+//         closeAllSublists(item); // Закрываем все подменю в текущем элементе
+//       });
+//     });
+//   };
+
+//   // Инициализация кликов для всех элементов меню
+//   const items = document.querySelectorAll('.full-menu__item');
+//   items.forEach(item => handleItemClick(item));
+
+
+//   // Закрываем все подменю при клике вне меню
+//   document.addEventListener('click', (event) => {
+//     const isMenuClicked = container.contains(event.target);
+//     if (!isMenuClicked) {
+//       if (activeItem) {
+//         closeAllSublists(activeItem);
+//         activeItem = null;
+//       }
+//     }
+//   });
+
+
+// }
+
+// menuBtns();
+
+
 
 
 
@@ -171,6 +225,119 @@ menuBtns();
 // });
 
 
+
+
+function menuBtns() {
+  const container = document.querySelector('.full-menu');
+
+  if (!container) {
+    return null;
+  }
+
+  let activeItem = null;
+
+  const toggleSublist = (btn, sublist, item) => {
+    const isActive = sublist.classList.contains('active');
+
+    // Если активный элемент не совпадает с текущим, закрываем все подменю в активном элементе
+    if (activeItem && activeItem !== item) {
+      closeAllSublists(activeItem);
+    }
+
+    // Деактивируем все подменю на том же уровне, что и текущее
+    deactivateSublistsAtSameLevel(sublist);
+
+    // Переключаем состояние текущего подменю
+    if (!isActive) {
+      sublist.classList.add('active');
+      activeItem = item;
+    } else {
+      sublist.classList.remove('active');
+      if (!item.querySelector('.full-menu__sublist.active')) {
+        activeItem = null;
+      }
+    }
+  };
+
+  const deactivateSublistsAtSameLevel = (sublist) => {
+    const parentItem = sublist.closest('.full-menu__subitem');
+    if (parentItem) {
+      const siblingSublists = parentItem.parentElement.querySelectorAll('.full-menu__sublist');
+      siblingSublists.forEach(sub => {
+        if (sub !== sublist) {
+          sub.classList.remove('active');
+        }
+      });
+    }
+  };
+
+  const closeSublistsAtSameLevel = (item) => {
+    const parentItem = item.closest('.full-menu__subitem');
+    if (parentItem) {
+      const siblingSublists = parentItem.parentElement.querySelectorAll('.full-menu__sublist.active');
+      siblingSublists.forEach(sub => sub.classList.remove('active'));
+    }
+  };
+
+  const closeAllSublists = (item) => {
+    const allSublists = container.querySelectorAll('.full-menu__sublist.active');
+    allSublists.forEach(sub => sub.classList.remove('active'));
+  };
+
+  const handleItemClick = (item) => {
+    const btn = item.querySelector('.full-menu__btn'); // Первая кнопка внутри .full-menu__item
+    const sublist = item.querySelector('.full-menu__sublist');
+
+    if (btn && sublist) {
+      btn.addEventListener('click', (event) => {
+        event.stopPropagation(); // Останавливаем всплытие событий
+
+        // При клике на кнопку внутри .full-menu__item снимаем active со всех подсписков
+        closeAllSublists(container);
+
+        toggleSublist(btn, sublist, item);
+      });
+    }
+
+    // Обрабатываем вложенные подменю, если они существуют
+    const nestedSublists = sublist ? sublist.querySelectorAll('.full-menu__sublist') : [];
+    nestedSublists.forEach(nestedSublist => {
+      const nestedBtn = nestedSublist.closest('.full-menu__subitem').querySelector('.full-menu__btn');
+      if (nestedBtn) {
+        nestedBtn.addEventListener('click', (event) => {
+          event.stopPropagation();
+          toggleSublist(nestedBtn, nestedSublist, item);
+        });
+      }
+    });
+
+    // Закрываем подменю при клике на ссылку
+    const links = item.querySelectorAll('.full-menu__link, .full-menu__sublink');
+    links.forEach(link => {
+      link.addEventListener('click', event => {
+        event.stopPropagation();
+        closeAllSublists(item); // Закрываем все подменю в текущем элементе
+      });
+    });
+  };
+
+  // Инициализация кликов для всех элементов меню
+  const items = document.querySelectorAll('.full-menu__item');
+  items.forEach(item => handleItemClick(item));
+
+  // Закрываем все подменю при клике вне меню
+  document.addEventListener('click', (event) => {
+    const isMenuClicked = container.contains(event.target);
+    if (!isMenuClicked) {
+      if (activeItem) {
+        closeAllSublists(activeItem);
+        activeItem = null;
+      }
+    }
+  });
+}
+
+menuBtns();
 
 
 

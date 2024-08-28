@@ -622,3 +622,17 @@
     }
   }
 }
+
+.full-menu__btn-arrow {
+  margin-left: auto;
+}
+
+.header-small {
+  .full-menu__sublist {
+    padding-top: 114px;
+
+    @media (max-width: $breakpoint992) {
+      padding-top: 0;
+    }
+  }
+}
