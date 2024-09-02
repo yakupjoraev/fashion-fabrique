@@ -12,7 +12,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -40,6 +40,15 @@
   opacity: 0;
   transform: translateY(-50px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &--large {
+    width: 96%;
+    max-width: 470px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px auto;
+  }
 }
 
 .modal.show .modal-content {
@@ -71,6 +80,10 @@
 
   &__title {
     text-align: center;
+
+    &--left {
+      text-align: left;
+    }
   }
 
   // .modal-form__main

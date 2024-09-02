@@ -71,162 +71,6 @@ window.addEventListener('scroll', fixedHeader);
 
 
 
-// function menuBtns() {
-//   const container = document.querySelector('.full-menu');
-
-//   if (!container) {
-//     return null;
-//   }
-
-//   let activeItem = null;
-
-//   const toggleSublist = (btn, sublist, item) => {
-//     const isActive = sublist.classList.contains('active');
-
-//     // Если активный элемент не совпадает с текущим, закрываем все подменю в активном элементе
-//     if (activeItem && activeItem !== item) {
-//       closeAllSublists(activeItem);
-//     }
-
-//     // Переключаем состояние текущего подменю
-//     if (!isActive) {
-//       sublist.classList.add('active');
-//       activeItem = item;
-
-//     } else {
-//       sublist.classList.remove('active');
-//       if (!item.querySelector('.full-menu__sublist.active')) {
-//         activeItem = null;
-//       }
-//     }
-//   };
-
-//   const deactivateSublistsAtSameLevel = (sublist) => {
-//     const parentItem = sublist.closest('.full-menu__subitem');
-//     if (parentItem) {
-//       const siblingSublists = parentItem.parentElement.querySelectorAll('.full-menu__sublist');
-//       siblingSublists.forEach(sub => {
-//         if (sub !== sublist) {
-//           sub.classList.remove('active');
-//         }
-//       });
-//     }
-//   };
-
-//   const closeSublistsAtSameLevel = (item) => {
-//     const parentItem = item.closest('.full-menu__subitem');
-//     if (parentItem) {
-//       const siblingSublists = parentItem.parentElement.querySelectorAll('.full-menu__sublist.active');
-//       siblingSublists.forEach(sub => sub.classList.remove('active'));
-//     }
-//   };
-
-
-//   const closeAllSublists = (item) => {
-//     const allSublists = container.querySelectorAll('.full-menu__sublist.active');
-//     allSublists.forEach(sub => sub.classList.remove('active'));
-//   };
-
-//   const closeAllSublistsInner = (item) => {
-//     const allSublists = container.querySelectorAll('.full-menu__sublist.active');
-//     allSublists.forEach(sub => sub.classList.remove('active'));
-//   };
-
-//   const handleItemClick = (item) => {
-//     const btn = item.querySelector('.full-menu__btn'); // Первый кнопка внутри .full-menu__item
-//     const sublist = item.querySelector('.full-menu__sublist');
-
-//     if (btn && sublist) {
-//       btn.addEventListener('click', (event) => {
-//         event.stopPropagation(); // Останавливаем всплытие событий
-
-//         // При клике на первую кнопку внутри .full-menu__item снимаем active со всех подсписков
-//         closeAllSublists(container);
-
-//         toggleSublist(btn, sublist, item);
-//       });
-//     }
-
-//     // Обрабатываем вложенные подменю, если они существуют
-//     const nestedSublists = sublist ? sublist.querySelectorAll('.full-menu__sublist') : [];
-//     nestedSublists.forEach(nestedSublist => {
-//       const nestedBtn = nestedSublist.closest('.full-menu__subitem').querySelector('.full-menu__btn');
-//       if (nestedBtn) {
-//         nestedBtn.addEventListener('click', (event) => {
-//           event.stopPropagation();
-//           toggleSublist(nestedBtn, nestedSublist, item);
-//         });
-//       }
-//     });
-
-//     // Закрываем подменю при клике на ссылку
-//     const links = item.querySelectorAll('.full-menu__link, .full-menu__sublink');
-//     links.forEach(link => {
-//       link.addEventListener('click', event => {
-//         event.stopPropagation();
-//         closeAllSublists(item); // Закрываем все подменю в текущем элементе
-//       });
-//     });
-//   };
-
-//   // Инициализация кликов для всех элементов меню
-//   const items = document.querySelectorAll('.full-menu__item');
-//   items.forEach(item => handleItemClick(item));
-
-
-//   // Закрываем все подменю при клике вне меню
-//   document.addEventListener('click', (event) => {
-//     const isMenuClicked = container.contains(event.target);
-//     if (!isMenuClicked) {
-//       if (activeItem) {
-//         closeAllSublists(activeItem);
-//         activeItem = null;
-//       }
-//     }
-//   });
-
-
-// }
-
-// menuBtns();
-
-
-
-
-
-
-
-
-
-
-
-// document.querySelectorAll('.custom-select').forEach(select => {
-//   const trigger = select.querySelector('.custom-select-trigger');
-//   const options = select.querySelector('.custom-options');
-
-//   trigger.addEventListener('click', () => {
-//     options.classList.toggle('open');
-//   });
-
-//   select.querySelectorAll('.custom-option').forEach(option => {
-//     option.addEventListener('click', () => {
-//       trigger.textContent = option.textContent;
-//       select.querySelectorAll('.custom-option').forEach(opt => opt.classList.remove('selected'));
-//       option.classList.add('selected');
-//       options.classList.remove('open');
-//     });
-//   });
-
-//   window.addEventListener('click', e => {
-//     if (!select.contains(e.target)) {
-//       options.classList.remove('open');
-//     }
-//   });
-// });
-
-
-
-
 function menuBtns() {
   const container = document.querySelector('.full-menu');
 
@@ -336,10 +180,60 @@ function menuBtns() {
     }
   });
 }
+if (window.matchMedia("(min-width: 993px)").matches) {
+  menuBtns();
+}
 
-menuBtns();
 
+function mobileMenu() {
+  const items = document.querySelectorAll('.full-menu__item, .full-menu__subitem');
+  const burger = document.querySelector('.full-menu__burger');
 
+  // Handle toggling of menu items
+  items.forEach(item => {
+    const btn = item.querySelector('.full-menu__btn');
+
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Remove 'active' class from all sibling items at the same level
+        const siblingItems = item.parentNode.querySelectorAll('.full-menu__item.active, .full-menu__subitem.active');
+        siblingItems.forEach(sibling => {
+          sibling.classList.remove('active');
+        });
+
+        // Toggle 'active' class for the current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    }
+  });
+
+  // Handle the burger button click to remove all 'active' classes
+  if (burger) {
+    burger.addEventListener('click', () => {
+      const activeItems = document.querySelectorAll('.full-menu__item.active, .full-menu__subitem.active');
+      activeItems.forEach(activeItem => {
+        activeItem.classList.remove('active');
+      });
+    });
+  }
+}
+
+// Initialize mobile menu only if screen width is 992px or less
+function initMobileMenu() {
+  if (window.matchMedia("(max-width: 992px)").matches) {
+    mobileMenu();
+  }
+}
+
+// Run the function to check screen size on load
+initMobileMenu();
+
+// Add an event listener to reinitialize the mobile menu on window resize
+window.addEventListener('resize', initMobileMenu);
 
 
 
@@ -1024,17 +918,28 @@ function headerSearch() {
   const search = document.querySelector('.header__action--search');
 
   if (!search) {
-    return null
+    return null;
   }
 
-  const btn = search.querySelector('.header__action-img')
+  const btn = search.querySelector('.header__action-img');
 
-  btn.addEventListener('click', () => {
-    search.classList.toggle('active')
-  })
+  btn.addEventListener('click', (event) => {
+    search.classList.toggle('active');
+    event.stopPropagation();
+  });
 
+  document.addEventListener('click', (event) => {
+
+    if (!search.contains(event.target)) {
+      search.classList.remove('active');
+    }
+  });
 }
+
 headerSearch();
+
+
+
 
 
 
@@ -1066,17 +971,19 @@ window.addEventListener('click', (event) => {
 
 
 
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
+const fancyboxElements = document.querySelectorAll("[data-fancybox]");
 
-  Toolbar: {
-    display: {
-      left: [],
-      // middle: ["prev", "infobar", "next"],
-      right: ["close"],
+if (fancyboxElements.length > 0) {
+  // Elements are present, initialize Fancybox
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    Toolbar: {
+      display: {
+        left: [],
+        // middle: ["prev", "infobar", "next"],
+        right: ["close"],
+      },
     },
-  },
-
-});
-
+  });
+}
 

@@ -147,9 +147,6 @@
             <li class="nav__item"><a class="nav__link" href="#">Одежда</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Обувь</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Аксессуары</a></li>
-            <!-- <li class="nav__item"><a class="nav__link" href="#">New</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Bestsellers</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Sale</a></li> -->
             <li class="nav__item"><a class="nav__link" href="#">Подарочная карта</a></li>
           </ul>
         </nav>
@@ -178,8 +175,6 @@
                 <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                   alt="aroorw">
               </button>
-              <a class="full-menu__link" href="#">Одежда</a>
-
               <ul class="full-menu__sublist">
                 <li class="full-menu__subitem">
                   <button type="button" class="full-menu__btn">
@@ -188,7 +183,6 @@
                     <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                       alt="aroorw">
                   </button>
-                  <a class="full-menu__link" href="#">Платья</a>
 
                   <ul class="full-menu__sublist">
                     <li class="full-menu__subitem"><a class="full-menu__sublink" href="#">Пальто</a></li>
@@ -210,7 +204,6 @@
                     <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                       alt="aroorw">
                   </button>
-                  <a class="full-menu__link" href="#">Трикотаж</a>
 
                   <ul class="full-menu__sublist">
                     <li class="full-menu__subitem"><a class="full-menu__sublink" href="#">Пальто</a></li>
@@ -235,7 +228,7 @@
                     <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                       alt="aroorw">
                   </button>
-                  <a class="full-menu__link" href="#">Свитшоты и худи</a>
+
                   <ul class="full-menu__sublist">
                     <li class="full-menu__subitem"><a class="full-menu__sublink" href="#">Пальто</a></li>
                     <li class="full-menu__subitem"><a class="full-menu__sublink" href="#">Плащи</a></li>
@@ -262,7 +255,6 @@
                 <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                   alt="aroorw">
               </button>
-              <a class="full-menu__link" href="#">Обувь</a>
 
               <ul class="full-menu__sublist">
                 <li class="full-menu__subitem"><a class="full-menu__sublink" href="#">Туфли</a></li>
@@ -282,7 +274,6 @@
                 <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                   alt="aroorw">
               </button>
-              <a class="full-menu__link" href="#">Аксессуары</a>
 
               <ul class="full-menu__sublist">
                 <li class="full-menu__subitem"><a class="full-menu__sublink" href="#">Серьги</a></li>
@@ -437,6 +428,118 @@
       </form>
     </div>
   </div>
+
+
+  //////////////// NEW /////////////////////////////////////////
+  <button class="open-modal-btn" data-modal-id="ask">Ask a question</button>
+  <div class="modal" id="ask">
+    <div class="modal-content modal-content--large">
+      <form action="#" class="modal-form">
+        <button type="button" class="close-modal-btn"></button>
+
+        <div class="modal-form__head">
+          <h3 class="modal-form__title modal-form__title--left h4">Задайте свой вопрос</h3>
+        </div>
+
+        <div class="modal-form__main">
+          <div class="registration__row">
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Имя">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Фамилия">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="email" placeholder="Email">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="tel" placeholder="Номер телефона">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <textarea class="registration__input registration__input--textarea"
+                placeholder="Сообщение или вопрос"></textarea>
+            </div>
+
+            <div class="registration__row">
+              <h3 class="registration__label h5-light">Как с вами связаться?</h3>
+
+              <div class="registration__checkboxes">
+                <div class="registration__checkbox">
+                  <input class="registration__checkbox-input" type="checkbox" id="checkbox-1">
+                  <label class="registration__checkbox-label" for="checkbox-1">
+                    <div class="registration__checkbox-decor"></div>
+                    <p class="registration__checkbox-text text">Email</p>
+                  </label>
+                </div>
+
+                <div class="registration__checkbox">
+                  <input class="registration__checkbox-input" type="checkbox" id="checkbox-2">
+                  <label class="registration__checkbox-label" for="checkbox-2">
+                    <div class="registration__checkbox-decor"></div>
+                    <p class="registration__checkbox-text text">Мессенджеры</p>
+                  </label>
+                </div>
+
+                <div class="registration__checkbox">
+                  <input class="registration__checkbox-input" type="checkbox" id="checkbox-3">
+                  <label class="registration__checkbox-label" for="checkbox-3">
+                    <div class="registration__checkbox-decor"></div>
+                    <p class="registration__checkbox-text text">Звонок на телефон</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="registration__row">
+            <button type="button" class="registration__btn btn-black">Отправить</button>
+          </div>
+
+          <div class="registration__row" style="display: none;">
+            <div class="registration__attantion">
+              <p class="registration__text">Заполните выделенные поля</p>
+            </div>
+          </div>
+
+          <div class="registration__bottom">
+            <div class="registration__bottom-or">
+              <div class="registration__bottom-or-border"></div>
+              <p class="registration__bottom-or-text text">или</p>
+              <div class="registration__bottom-or-border"></div>
+            </div>
+
+            <div class="registration__bottom-socials">
+              <a class="registration__bottom-social" href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.0069 10.4582 14.006 10.4252 13.9973 10.3938C13.9886 10.3624 13.9724 10.3337 13.95 10.31C13.89 10.26 13.81 10.28 13.74 10.29C13.65 10.31 12.25 11.24 9.52 13.08C9.12 13.35 8.76 13.49 8.44 13.48C8.08 13.47 7.4 13.28 6.89 13.11C6.26 12.91 5.77 12.8 5.81 12.45C5.83 12.27 6.08 12.09 6.55 11.9C9.47 10.63 11.41 9.79 12.38 9.39C15.16 8.23 15.73 8.03 16.11 8.03C16.19 8.03 16.38 8.05 16.5 8.15C16.6 8.23 16.63 8.34 16.64 8.42C16.63 8.48 16.65 8.66 16.64 8.8Z"
+                    fill="#111810" />
+                </svg>
+              </a>
+
+              <a class="registration__bottom-social" href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12C2 13.89 2.525 15.66 3.438 17.168L2.546 20.2C2.49478 20.3741 2.49141 20.5587 2.53624 20.7346C2.58107 20.9104 2.67245 21.0709 2.80076 21.1992C2.92907 21.3276 3.08958 21.4189 3.26542 21.4638C3.44125 21.5086 3.62592 21.5052 3.8 21.454L6.832 20.562C8.39074 21.5049 10.1782 22.0023 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM9.738 14.263C11.761 16.285 13.692 16.552 14.374 16.577C15.411 16.615 16.421 15.823 16.814 14.904C16.8632 14.7896 16.881 14.6641 16.8655 14.5405C16.85 14.417 16.8019 14.2998 16.726 14.201C16.178 13.501 15.437 12.998 14.713 12.498C14.5619 12.3932 14.3761 12.3512 14.1946 12.3806C14.0131 12.4101 13.8502 12.5088 13.74 12.656L13.14 13.571C13.1083 13.62 13.0591 13.6551 13.0025 13.6692C12.9459 13.6833 12.886 13.6754 12.835 13.647C12.428 13.414 11.835 13.018 11.409 12.592C10.983 12.166 10.611 11.6 10.402 11.219C10.3767 11.1705 10.3696 11.1145 10.3819 11.0611C10.3941 11.0078 10.425 10.9606 10.469 10.928L11.393 10.242C11.5252 10.1276 11.6106 9.96841 11.6328 9.79495C11.6549 9.62149 11.6123 9.44596 11.513 9.302C11.065 8.646 10.543 7.812 9.786 7.259C9.6881 7.18866 9.57369 7.14479 9.45385 7.13165C9.33402 7.11851 9.21282 7.13654 9.102 7.184C8.182 7.578 7.386 8.588 7.424 9.627C7.449 10.309 7.716 12.24 9.738 14.263Z"
+                    fill="#111810" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="registration__bottom-contacts">
+              <a class="registration__bottom-contact h5-light" href="tel:88002222770">8 800 222 27 70</a>
+              <a class="registration__bottom-contact h5-light" href="mailto:info@ffabrique.com ">info@ffabrique.com </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
     </main>
 
@@ -567,6 +670,14 @@
     </div>
   </div>
 </footer>
+
+<div class="cookines">
+  <div class="cookines__inner">
+    <p class="cookines__text">Мы используем cookies. Используя сайт, вы соглашаетесь с обработкой данных с целью сбора
+      аналитики.</p>
+    <button type="button" class="cookines__btn btn-black">Хорошо</button>
+  </div>
+</div>
   </div>
 
 </body>

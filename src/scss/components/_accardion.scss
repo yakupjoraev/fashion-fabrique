@@ -114,6 +114,10 @@
     user-select: none;
     pointer-events: none;
     transition: top 0.2s linear, max-height 0.3s linear, padding 0.3s linear, opacity 0.1s linear, bottom 0.2s linear, margin 0.2s linear;
+
+    @media (max-width: $breakpoint768) {
+      padding: 0 10px;
+    }
   }
 
   // .accardion__item-content--absolute
@@ -195,4 +199,9 @@
 
 .card-gift .accardion__item--nominals.active .accardion__item-content {
   max-height: 240px !important;
+}
+
+.accardion__item-content-item.disabled {
+  color: #cdcdcd;
+  cursor: not-allowed;
 }

@@ -594,15 +594,6 @@
   text-transform: uppercase;
   color: var(--black-color);
 
-  &:empty:before {
-    content: '-';
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 7px;
-    text-transform: uppercase;
-    color: var(--black-color);
-  }
 }
 
 .header-small {

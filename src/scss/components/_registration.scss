@@ -270,6 +270,14 @@
     z-index: -100;
     opacity: 0;
 
+    &.error~.registration__checkbox-label {
+
+      .registration__checkbox-decor {
+        border-color: red;
+        background-color: white;
+      }
+    }
+
     &:checked~.registration__checkbox-label {
 
       .registration__checkbox-decor {
@@ -303,4 +311,67 @@
 
 .registration__password-empty {
   text-align: center;
+}
+
+
+.registration {
+
+  // .registration__bottom
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  // .registration__bottom-or
+
+  &__bottom-or {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+  }
+
+  // .registration__bottom-or-border
+
+  &__bottom-or-border {
+    flex: 1 1 auto;
+    height: 1px;
+    width: 100%;
+    background-color: var(--grey-color);
+  }
+
+  // .registration__bottom-or-text
+
+  &__bottom-or-text {}
+
+  // .registration__bottom-socials
+
+  &__bottom-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  // .registration__bottom-social
+
+  &__bottom-social {}
+
+  // .registration__bottom-contacts
+
+  &__bottom-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  // .registration__bottom-contact
+
+  &__bottom-contact {}
 }

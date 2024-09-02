@@ -151,6 +151,7 @@
 
   &__slider {
     position: static;
+    margin-left: 0;
     // width: 100%;
 
     @media (hover:hover) {
@@ -232,4 +233,8 @@
   .swiper-button-lock {
     display: flex;
   }
+}
+
+.swiper-css-mode>.swiper-wrapper {
+  overflow-y: hidden;
 }
