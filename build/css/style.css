@@ -633,6 +633,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.select-wrapper:has(.custom-select-container.is-open) {
+  z-index: 3;
+}
+
 .select-wrapper .custom-select-opener {
   background-color: transparent;
 }
@@ -651,6 +655,19 @@ body {
 
 .select-wrapper .custom-select-option {
   cursor: pointer;
+}
+
+.select-wrapper .custom-select-panel {
+  -webkit-transition-duration: 0.3s, 0.1s;
+       -o-transition-duration: 0.3s, 0.1s;
+          transition-duration: 0.3s, 0.1s;
+  -webkit-transition-delay: 0s, 0.3s;
+       -o-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+.text-danger {
+  color: var(--accent);
 }
 
 html,

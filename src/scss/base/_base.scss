@@ -323,6 +323,10 @@ body {
   background-position-y: 20px;
   background-repeat: no-repeat;
 
+  &:has(.custom-select-container.is-open) {
+    z-index: 3;
+  }
+
   .custom-select-opener {
     background-color: transparent;
   }
@@ -341,4 +345,13 @@ body {
   .custom-select-option {
     cursor: pointer;
   }
+
+  .custom-select-panel {
+    transition-duration: 0.3s, 0.1s;
+    transition-delay: 0s, 0.3s;
+  }
+}
+
+.text-danger {
+  color: var(--accent);
 }

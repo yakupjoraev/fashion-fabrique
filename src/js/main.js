@@ -590,6 +590,14 @@ class HvrSlider {
         const hvr = document.createElement('div');
         hvr.classList.add('hvr');
 
+        // Check if the parent is a link
+        let linkWrapper = null;
+        if (el.tagName.toLowerCase() === 'a') {
+          linkWrapper = document.createElement('a');
+          linkWrapper.href = el.href;
+          linkWrapper.classList.add('hvr-link-wrapper');
+        }
+
         const hvrImages = document.createElement('div');
         hvrImages.classList.add('hvr__images');
         hvr.appendChild(hvrImages);
@@ -602,7 +610,13 @@ class HvrSlider {
         hvrDots.classList.add('hvr__dots');
         hvr.appendChild(hvrDots);
 
-        el.parentNode.insertBefore(hvr, el);
+        // Wrap the whole slider in a link if the original element is a link
+        if (linkWrapper) {
+          linkWrapper.appendChild(hvr);
+          el.parentNode.insertBefore(linkWrapper, el);
+        } else {
+          el.parentNode.insertBefore(hvr, el);
+        }
         hvrImages.prepend(el);
 
         const hvrImagesArray = hvr.querySelectorAll('img');
@@ -611,28 +625,23 @@ class HvrSlider {
           hvrDots.insertAdjacentHTML('afterbegin', '<div class="hvr__dot"></div>');
         });
         hvrDots.firstChild.classList.add('hvr__dot--active');
+
         const setActiveEl = function (targetEl) {
           const index = [...hvrSectors.children].indexOf(targetEl);
           hvrImagesArray.forEach((img, idx) => {
-            if (index == idx) {
-              img.style.display = 'block';
-            } else {
-              img.style.display = 'none';
-            }
+            img.style.display = index === idx ? 'block' : 'none';
           });
           hvr.querySelectorAll('.hvr__dot').forEach((dot, idx) => {
-            if (index == idx) {
-              dot.classList.add('hvr__dot--active');
-            } else {
-              dot.classList.remove('hvr__dot--active');
-            }
+            dot.classList.toggle('hvr__dot--active', index === idx);
           });
         };
+
         hvrSectors.addEventListener('mouseover', function (e) {
           if (e.target.matches('.hvr__sector')) {
             setActiveEl(e.target);
           }
         });
+
         hvrSectors.addEventListener('touchmove', function (e) {
           const position = e.changedTouches[0];
           const target = document.elementFromPoint(position.clientX, position.clientY);
@@ -648,6 +657,7 @@ class HvrSlider {
 if (window.matchMedia("(min-width: 1025px)").matches) {
   new HvrSlider('.pictures-slider');
 }
+
 
 function texnicalLinks() {
   const container = document.querySelector('.tehnical__links');
