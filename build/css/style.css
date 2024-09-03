@@ -612,6 +612,7 @@ body {
 }
 
 .select-wrapper {
+  z-index: 2;
   width: 100%;
   padding: 10px 0 10px 0;
   border: 0;
