@@ -355,3 +355,7 @@ body {
 .text-danger {
   color: var(--accent);
 }
+
+.hvr-link-wrapper {
+  z-index: -1;
+}
