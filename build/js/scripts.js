@@ -969,9 +969,6 @@ deliveryTypes();
 
 
 
-
-
-
 function headerSearch() {
   const search = document.querySelector('.header__action--search');
 
@@ -998,6 +995,29 @@ headerSearch();
 
 
 
+
+function checkLabels() {
+  const container = document.querySelector('.filters__item-labels');
+
+  if (!container) {
+    return null;
+  }
+
+  const labels = container.querySelectorAll('.filters__item-label');
+  const labelCount = labels.length;
+
+  const limit = window.innerWidth <= 768 ? 2 : 3;
+
+  if (labelCount > limit) {
+    container.classList.add('ellipses');
+  } else {
+    container.classList.remove('ellipses');
+  }
+}
+
+checkLabels();
+
+window.addEventListener('resize', checkLabels);
 
 
 
@@ -1045,4 +1065,10 @@ if (fancyboxElements.length > 0) {
   });
 }
 
-customSelect('select');
+
+
+const selectElements = document.querySelectorAll("select");
+
+if (selectElements.length > 0) {
+  customSelect('select');
+}
