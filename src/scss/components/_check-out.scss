@@ -1,5 +1,14 @@
 .check-out {
 
+  .registration__btn {
+    min-height: 54px;
+  }
+
+  a.registration__text {
+    text-decoration: underline;
+    ;
+  }
+
   // .check-out__inner
 
   &__inner {
@@ -166,6 +175,11 @@
     text-transform: uppercase;
     color: var(--grey-color);
     transition: 0.2s linear;
+
+    &.active {
+      font-weight: 500;
+      color: var(--text-color);
+    }
 
     input {
       position: absolute;

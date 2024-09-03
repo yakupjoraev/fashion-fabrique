@@ -985,3 +985,5 @@ if (fancyboxElements.length > 0) {
     },
   });
 }
+
+customSelect('select');
