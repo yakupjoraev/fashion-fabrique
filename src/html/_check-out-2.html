@@ -5,7 +5,7 @@
 
       <form action="#" class="check-out__main">
         <div class="check-out__rows">
-          <div class="check-out__row active">
+          <div class="check-out__row accordion-active">
             <div class="check-out__head">
               <p class="check-out__head-text">Персональные данные</p>
               <button type="button" class="check-out__head-btn">
@@ -19,7 +19,7 @@
                 <div class="check-out__label active">[ имя и фамилия ]</div>
               </div>
 
-              <div class="check-out__form radio-form-content active" data-delivery="1">
+              <div class="check-out__form radio-form-content radio-active" data-delivery="1">
                 <div class="registration__row">
                   <h3 class="registration__label">Получатель</h3>
 
@@ -95,130 +95,6 @@
                   <button type="submit" class="registration__btn btn-white">Применить </button>
                 </div>
               </div>
-
-              <div class="check-out__form radio-form-content" data-delivery="2">
-                <div class="registration__row">
-                  <h3 class="registration__label">Получатель</h3>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Имя">
-                  </div>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Фамилия">
-                  </div>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="tel" placeholder="Номер телефона">
-                  </div>
-
-                  <p class="registration__text registration__text--grey">Мы отправим подтверждение заказа через смс
-                  </p>
-                </div>
-
-                <br />
-                <br />
-                <br />
-
-                <div class="registration__row">
-                  <h3 class="registration__label">Выбор ПВЗ</h3>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Город">
-                  </div>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Почтовый индекс">
-                  </div>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Адрес ПВЗ">
-                  </div>
-
-                  <div class="registration__map">Тут карта</div>
-
-                  <button type="submit" class="registration__btn btn-white">Применить </button>
-                  <p class="registration__text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry</p>
-                </div>
-              </div>
-
-              <div class="check-out__form radio-form-content" data-delivery="3">
-                <div class="registration__row">
-                  <h3 class="registration__label">Получатель</h3>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Имя">
-                  </div>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Фамилия">
-                  </div>
-
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="tel" placeholder="Номер телефона">
-                  </div>
-
-                  <p class="registration__text registration__text--grey">Мы отправим подтверждение заказа через смс
-                  </p>
-                </div>
-
-                <br />
-                <br />
-                <br />
-
-                <div class="registration__row">
-                  <h3 class="registration__label">Выбор магазина</h3>
-
-                  <div class="registration__magazines">
-                    <div class="registration__magazine">
-                      <input class="registration__magazine-input" name="magazine" type="radio" id="magazine-1" checked>
-                      <label class="registration__magazine-label" for="magazine-1">
-                        <address class="registration__magazine-address">Москва, Кузнецкий мост, 19с1</address>
-                        <time class="registration__magazine-time">Ежедневно с 10:00 до 22:00</time>
-
-                        <div class="registration__magazine-columns">
-                          <div class="registration__magazine-column">Кузнецкий мост</div>
-                          <div class="registration__magazine-column">Лубянка</div>
-                          <div class="registration__magazine-column">Китай-город</div>
-                        </div>
-                      </label>
-                    </div>
-
-                    <div class="registration__magazine">
-                      <input class="registration__magazine-input" name="magazine" type="radio" id="magazine-2">
-                      <label class="registration__magazine-label" for="magazine-2">
-                        <address class="registration__magazine-address">Санкт-петербург, Литейный проспект, 15</address>
-                        <time class="registration__magazine-time">Ежедневно с 10:00 до 22:00</time>
-
-                        <div class="registration__magazine-columns">
-                          <div class="registration__magazine-column">Площадь Ленина</div>
-                          <div class="registration__magazine-column">Маяковская</div>
-                          <div class="registration__magazine-column">Чернышевская</div>
-                        </div>
-                      </label>
-                    </div>
-
-                    <div class="registration__magazine">
-                      <input class="registration__magazine-input" name="magazine" type="radio" id="magazine-3">
-                      <label class="registration__magazine-label" for="magazine-3">
-                        <address class="registration__magazine-address">Санкт-петербург, Бородинская, 15</address>
-                        <time class="registration__magazine-time">Ежедневно с 10:00 до 22:00</time>
-
-                        <div class="registration__magazine-columns">
-                          <div class="registration__magazine-column">Звенигородская</div>
-                          <div class="registration__magazine-column">Пушкинская</div>
-                          <div class="registration__magazine-column">Достоевская</div>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="registration__btn btn-white">Применить </button>
-                  <p class="registration__text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry</p>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -238,47 +114,147 @@
                 </label>
 
                 <label for="delivery-2" class="check-out__label">
-                  ПВЗ
+                  ПВЗ СДЭК
                   <input type="radio" name="delivery" id="delivery-2">
                 </label>
 
                 <label for="delivery-3" class="check-out__label">
-                  Из Магазина
+                  ПВЗ Почта
                   <input type="radio" name="delivery" id="delivery-3">
                 </label>
-              </div>
-            </div>
 
-          </div>
-
-
-          <div class="check-out__row check-out__row--disabled" style="display: none;">
-            <div class="check-out__head">
-              <p class="check-out__head-text">Промокод</p>
-              <button type="button" class="check-out__head-btn"><img width="12" height="12"
-                  src="./img/icons/accardion-arrow.svg" alt="arrow"></button>
-            </div>
-
-            <div class="check-out__content">
-              <div class="check-out__labels">
-                <div class="check-out__label active">Промокод</div>
+                <label for="delivery-4" class="check-out__label">
+                  Из Магазина
+                  <input type="radio" name="delivery" id="delivery-4">
+                </label>
               </div>
 
-              <div class="check-out__form">
-                <div class="registration__row">
-                  <h3 class="registration__label">Введите промокод </h3>
 
-                  <div class="registration__input-wrapper">
-                    <input class="registration__input" type="text" placeholder="Введите код">
+              <div class="check-out__form radio-form-content radio-active" data-delivery="1">
+                <div class="radio-form__content">
+                  <div class="radio-form__info">
+                    <div class="check-out__block-left">
+                      <p class="check-out__block-text check-out__block-text--bold">Курьер сдэк</p>
+                      <p class="check-out__block-sum">600 р</p>
+                    </div>
+
+                    <div class="check-out__block-rows">
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Срок доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">15 работчих дней</p>
+                      </div>
+
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Примерная дата доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">12.10.23</p>
+                      </div>
+                    </div>
+
+                    <p class="check-out__block-descr">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                      industry
+                    </p>
                   </div>
 
-                  <button type="submit" class="registration__btn btn-white">Применить код</button>
-                  <p class="registration__text">Код можно применить один раз при оплате заказа</p>
-                  <p class="registration__text">Узнайте подробности использования подарочной карты</p>
+                  <button type="button" class="radio-form__btn btn-white">Применить</button>
                 </div>
+              </div>
 
+              <div class="check-out__form radio-form-content radio-active" data-delivery="2">
+                <div class="radio-form__content">
+                  <div class="radio-form__info">
+                    <div class="check-out__block-left">
+                      <p class="check-out__block-text check-out__block-text--bold">ПВЗ СДЭК</p>
+                      <p class="check-out__block-sum">600 р</p>
+                    </div>
+
+                    <div class="check-out__block-rows">
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Срок доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">15 работчих дней</p>
+                      </div>
+
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Примерная дата доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">12.10.23</p>
+                      </div>
+                    </div>
+
+                    <p class="check-out__block-descr">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                      industry
+                    </p>
+                  </div>
+
+                  <button type="button" class="radio-form__btn btn-white">Применить</button>
+                </div>
+              </div>
+
+              <div class="check-out__form radio-form-content radio-active" data-delivery="3">
+                <div class="radio-form__content">
+                  <div class="radio-form__info">
+                    <div class="check-out__block-left">
+                      <p class="check-out__block-text check-out__block-text--bold">ПВЗ Почта</p>
+                      <p class="check-out__block-sum">600 р</p>
+                    </div>
+
+                    <div class="check-out__block-rows">
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Срок доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">15 работчих дней</p>
+                      </div>
+
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Примерная дата доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">12.10.23</p>
+                      </div>
+                    </div>
+
+                    <p class="check-out__block-descr">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                      industry
+                    </p>
+                  </div>
+
+                  <button type="button" class="radio-form__btn btn-white">Применить</button>
+                </div>
+              </div>
+
+              <div class="check-out__form radio-form-content radio-active" data-delivery="4">
+                <div class="radio-form__content">
+                  <div class="radio-form__info">
+                    <div class="check-out__block-left">
+                      <p class="check-out__block-text check-out__block-text--bold">Из Магазина</p>
+                      <p class="check-out__block-sum">600 р</p>
+                    </div>
+
+                    <div class="check-out__block-rows">
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Срок доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">15 работчих дней</p>
+                      </div>
+
+                      <div class="check-out__block-row">
+                        <p class="check-out__block-text">Примерная дата доставки</p>
+                        <p class="check-out__block-text check-out__block-text--bold">12.10.23</p>
+                      </div>
+                    </div>
+
+                    <p class="check-out__block-descr">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting
+                      industry
+                    </p>
+                  </div>
+
+                  <button type="button" class="radio-form__btn btn-white">Применить</button>
+                </div>
               </div>
             </div>
+
           </div>
 
           <div class="check-out__row">

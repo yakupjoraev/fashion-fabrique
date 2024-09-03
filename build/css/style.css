@@ -4928,6 +4928,17 @@ body {
   border: 1px solid rgba(194, 198, 199, 0.3);
 }
 
+.check-out__row.accordion-active .check-out__head-btn {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.check-out__row.accordion-active .check-out__content {
+  padding: 40px 20px 20px;
+  max-height: 1000px;
+}
+
 .check-out__row.active .check-out__head-btn {
   -webkit-transform: rotate(0);
       -ms-transform: rotate(0);
@@ -5323,8 +5334,76 @@ body {
           animation: fade 0.3s linear;
 }
 
+.radio-form-content.radio-active {
+  display: block;
+}
+
 .radio-form-content.active {
   display: block;
+}
+
+.radio-form__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+}
+
+.radio-form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  padding: 30px 20px;
+  background-color: var(--black-color);
+}
+
+.radio-form__info .check-out__block-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.radio-form__info .check-out__block-text {
+  font-weight: 300;
+  color: var(--white-color);
+}
+
+.radio-form__info .check-out__block-sum {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--white-color);
+}
+
+.radio-form__info .check-out__block-row {
+  color: var(--white-color);
+}
+
+.radio-form__info .check-out__block-text--bold {
+  margin-left: 0;
+  font-weight: 500;
+}
+
+.radio-form__info .check-out__block-descr {
+  color: var(--white-color);
 }
 
 .not-found__inner {

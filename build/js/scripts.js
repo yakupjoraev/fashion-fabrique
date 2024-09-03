@@ -729,25 +729,25 @@ function range() {
 range();
 
 
-function checkOutAccordion() {
-  const container = document.querySelector('.check-out');
+// function checkOutAccordion() {
+//   const container = document.querySelector('.check-out');
 
-  if (!container) {
-    return;
-  }
+//   if (!container) {
+//     return;
+//   }
 
-  let rows = document.querySelectorAll('.check-out__row');
+//   let rows = document.querySelectorAll('.check-out__row');
 
-  rows.forEach(row => {
-    const btn = row.querySelector('.check-out__head')
-    const content = row.querySelector('.check-out__content')
+//   rows.forEach(row => {
+//     const btn = row.querySelector('.check-out__head')
+//     const content = row.querySelector('.check-out__content')
 
-    btn.addEventListener('click', () => {
-      row.classList.toggle('active')
-    })
-  });
-}
-checkOutAccordion();
+//     btn.addEventListener('click', () => {
+//       row.classList.toggle('active')
+//     })
+//   });
+// }
+// checkOutAccordion();
 
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.querySelector('.login');
@@ -852,6 +852,42 @@ toggleOverlay();
 
 
 
+// function deliveryRadios() {
+//   const container = document.querySelector('.check-out');
+
+//   if (!container) {
+//     return;
+//   }
+
+//   const deliveryRadios = document.querySelectorAll('input[type="radio"][name="delivery"]');
+//   const radioFormContents = document.querySelectorAll('.radio-form-content');
+
+//   // Функция для обновления класса active у формы в зависимости от выбранного радио-инпута
+//   function updateActiveForm() {
+//     radioFormContents.forEach(form => {
+//       const dataDelivery = form.getAttribute('data-delivery');
+//       const correspondingRadio = document.getElementById(`delivery-${dataDelivery}`);
+
+//       if (correspondingRadio.checked) {
+//         form.classList.add('active');
+//       } else {
+//         form.classList.remove('active');
+//       }
+//     });
+//   }
+
+//   // Обработчик события для радио-инпутов
+//   deliveryRadios.forEach(radio => {
+//     radio.addEventListener('change', updateActiveForm);
+//   });
+
+//   // Вызываем функцию при загрузке страницы для установки начального состояния
+//   updateActiveForm();
+// }
+
+// deliveryRadios();
+
+
 function deliveryRadios() {
   const container = document.querySelector('.check-out');
 
@@ -862,16 +898,16 @@ function deliveryRadios() {
   const deliveryRadios = document.querySelectorAll('input[type="radio"][name="delivery"]');
   const radioFormContents = document.querySelectorAll('.radio-form-content');
 
-  // Функция для обновления класса active у формы в зависимости от выбранного радио-инпута
+  // Функция для обновления класса radio-active у формы в зависимости от выбранного радио-инпута
   function updateActiveForm() {
     radioFormContents.forEach(form => {
       const dataDelivery = form.getAttribute('data-delivery');
       const correspondingRadio = document.getElementById(`delivery-${dataDelivery}`);
 
       if (correspondingRadio.checked) {
-        form.classList.add('active');
+        form.classList.add('radio-active');
       } else {
-        form.classList.remove('active');
+        form.classList.remove('radio-active');
       }
     });
   }
@@ -885,7 +921,29 @@ function deliveryRadios() {
   updateActiveForm();
 }
 
+function checkOutAccordion() {
+  const container = document.querySelector('.check-out');
+
+  if (!container) {
+    return;
+  }
+
+  let rows = document.querySelectorAll('.check-out__row');
+
+  rows.forEach(row => {
+    const btn = row.querySelector('.check-out__head');
+    const content = row.querySelector('.check-out__content');
+
+    btn.addEventListener('click', () => {
+      row.classList.toggle('accordion-active');
+    });
+  });
+}
+
+// Вызов функций
 deliveryRadios();
+checkOutAccordion();
+
 
 function deliveryTypes() {
   const container = document.querySelector('.check-out');
