@@ -574,7 +574,7 @@ body {
 .cookines {
   position: fixed;
   z-index: 100;
-  bottom: 20px;
+  bottom: 0;
   width: 100%;
   left: 0;
   right: 0;
