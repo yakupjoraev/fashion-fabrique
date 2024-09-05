@@ -51,7 +51,7 @@
 
   &__top-row {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -320,7 +320,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 2;
   display: flex;
   width: 100%;
   overflow: hidden;
