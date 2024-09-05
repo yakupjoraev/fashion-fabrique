@@ -113,7 +113,7 @@
     align-items: center;
     column-gap: 30px;
     background-color: var(--text-color);
-    padding: 16px 40px;
+    padding: 10px 40px;
 
     @media (max-width: $breakpoint992) {
       padding: 16px 10px;
@@ -619,11 +619,11 @@
 }
 
 .header-small {
-  .full-menu__sublist {
-    padding-top: 114px;
+  // .full-menu__sublist {
+  //   padding-top: 114px;
 
-    @media (max-width: $breakpoint992) {
-      padding-top: 0;
-    }
-  }
+  //   @media (max-width: $breakpoint992) {
+  //     padding-top: 0;
+  //   }
+  // }
 }
