@@ -2814,6 +2814,67 @@ body {
   display: none;
 }
 
+.range-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.range-wrapper .slider-range {
+  margin-bottom: 10px;
+}
+
+.range-wrapper .slider-range input {
+  background: transparent;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #000;
+}
+
+.range-wrapper .slider-range input:nth-child(2) {
+  text-align: right;
+}
+
+.range-wrapper .ui-widget-header {
+  background: #000;
+}
+
+.range-wrapper .ui-slider .ui-slider-handle {
+  border-radius: 100% !important;
+  background: #000;
+  border: 0;
+  top: -0.2em;
+}
+
+.range-wrapper .ui-widget-content {
+  margin-bottom: 0 !important;
+  border: 0;
+  background: #d9d9d9;
+}
+
+#slider {
+  margin-bottom: 20px;
+}
+
+#min {
+  width: 120px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-indent: 10px;
+}
+
+#max {
+  width: 120px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-indent: 10px;
+  float: right;
+}
+
 .catalog__filters {
   margin-bottom: 28px;
 }

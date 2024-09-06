@@ -685,58 +685,58 @@ function texnicalLinks() {
 
 texnicalLinks();
 
-function range() {
-  const container = document.querySelector('.filters__range');
+// function range() {
+//   const container = document.querySelector('.filters__range');
 
-  if (!container) {
-    return;
-  }
+//   if (!container) {
+//     return;
+//   }
 
-  let sliderOne = container.querySelector(".slider-1");
-  let sliderTwo = container.querySelector(".slider-2");
-  let displayValOne = container.querySelector(".values__range1");
-  let displayValTwo = container.querySelector(".values__range2");
-  let sliderTrack = container.querySelector(".slider-track");
+//   let sliderOne = container.querySelector(".slider-1");
+//   let sliderTwo = container.querySelector(".slider-2");
+//   let displayValOne = container.querySelector(".values__range1");
+//   let displayValTwo = container.querySelector(".values__range2");
+//   let sliderTrack = container.querySelector(".slider-track");
 
-  if (!sliderOne || !sliderTwo || !displayValOne || !displayValTwo || !sliderTrack) {
-    console.error('Не удалось найти один или несколько элементов');
-    return;
-  }
+//   if (!sliderOne || !sliderTwo || !displayValOne || !displayValTwo || !sliderTrack) {
+//     console.error('Не удалось найти один или несколько элементов');
+//     return;
+//   }
 
-  let minGap = 0;
-  let sliderMaxValue = sliderOne.max;
+//   let minGap = 0;
+//   let sliderMaxValue = sliderOne.max;
 
-  function slideOne() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderOne.value = parseInt(sliderTwo.value) - minGap;
-    }
-    displayValOne.textContent = `${sliderOne.value} р.`;
-    fillColor();
-  }
+//   function slideOne() {
+//     if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+//       sliderOne.value = parseInt(sliderTwo.value) - minGap;
+//     }
+//     displayValOne.textContent = `${sliderOne.value} р.`;
+//     fillColor();
+//   }
 
-  function slideTwo() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-      sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    }
-    displayValTwo.textContent = `${sliderTwo.value} р.`;
-    fillColor();
-  }
+//   function slideTwo() {
+//     if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+//       sliderTwo.value = parseInt(sliderOne.value) + minGap;
+//     }
+//     displayValTwo.textContent = `${sliderTwo.value} р.`;
+//     fillColor();
+//   }
 
-  function fillColor() {
-    let percent1 = (sliderOne.value / sliderMaxValue) * 100;
-    let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, #eee ${percent1}%, #000 ${percent1}%, #000 ${percent2}%, #eee ${percent2}%)`;
-  }
+//   function fillColor() {
+//     let percent1 = (sliderOne.value / sliderMaxValue) * 100;
+//     let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+//     sliderTrack.style.background = `linear-gradient(to right, #eee ${percent1}%, #000 ${percent1}%, #000 ${percent2}%, #eee ${percent2}%)`;
+//   }
 
-  sliderOne.addEventListener("input", slideOne);
-  sliderTwo.addEventListener("input", slideTwo);
+//   sliderOne.addEventListener("input", slideOne);
+//   sliderTwo.addEventListener("input", slideTwo);
 
-  // Вызываем функции slideOne и slideTwo после добавления слушателей
-  slideOne();
-  slideTwo();
-}
+//   // Вызываем функции slideOne и slideTwo после добавления слушателей
+//   slideOne();
+//   slideTwo();
+// }
 
-range();
+// range();
 
 
 // function checkOutAccordion() {
@@ -1082,3 +1082,41 @@ const selectElements = document.querySelectorAll("select");
 if (selectElements.length > 0) {
   customSelect('select');
 }
+
+$(function () {
+  // Получаем значения из HTML
+  var minValue = parseInt($('#min').val().replace(/\D/g, ''));
+  var maxValue = parseInt($('#max').val().replace(/\D/g, ''));
+
+  // Получаем данные из атрибутов
+  var sliderMin = parseInt($('#min').data('min')); // Атрибут data-min
+  var sliderMax = parseInt($('#max').data('max')); // Атрибут data-max
+
+  // Инициализация слайдера с динамическими значениями из атрибутов
+  $('#slider').slider({
+    range: true,
+    min: sliderMin,
+    max: sliderMax,
+    values: [minValue, maxValue],
+    slide: function (event, ui) {
+      $('#min').val(ui.values[0] + ' р.');
+      $('#max').val(ui.values[1] + ' р.');
+    }
+  });
+
+  // Устанавливаем "руб." при загрузке страницы
+  $('#min').val(minValue + ' р.');
+  $('#max').val(maxValue + ' р.');
+
+  // Обновляем поля при изменении слайдера
+  $('#min').on('change', function () {
+    var minVal = parseInt($(this).val().replace(/\D/g, ''));
+    $('#slider').slider('values', 0, minVal);
+  });
+
+  $('#max').on('change', function () {
+    var maxVal = parseInt($(this).val().replace(/\D/g, ''));
+    $('#slider').slider('values', 1, maxVal);
+  });
+});
+

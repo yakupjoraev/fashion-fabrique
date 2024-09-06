@@ -506,3 +506,65 @@
     }
   }
 }
+
+
+.range-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  .slider-range {
+    margin-bottom: 10px;
+
+    input {
+      background: transparent;
+      font-family: var(--third-family);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      color: #000;
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+  }
+
+  .ui-widget-header {
+    background: #000;
+  }
+
+  .ui-slider .ui-slider-handle {
+    border-radius: 100% !important;
+    background: #000;
+    border: 0;
+    top: -.2em;
+  }
+
+  .ui-widget-content {
+    margin-bottom: 0 !important;
+    border: 0;
+    background: rgba(217, 217, 217, 1);
+  }
+}
+
+#slider {
+  margin-bottom: 20px;
+}
+
+#min {
+  width: 120px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-indent: 10px;
+}
+
+#max {
+  width: 120px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-indent: 10px;
+  float: right;
+}

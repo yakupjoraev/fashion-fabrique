@@ -574,7 +574,7 @@
               </div>
               <div class="filters__item-content" data-filters-items-content>
                 <div class="filters__item-row filters__item-row--range">
-                  <div class="filters__range">
+                  <!-- <div class="filters__range">
                     <div class="values">
                       <span class="values__range1">300 р.</span>
 
@@ -587,8 +587,15 @@
                       <input type="range" min="300" max="86000" value="86000" class="range-input slider-2"
                         oninput="slideTwo()">
                     </div>
-                  </div>
+                  </div> -->
 
+                  <div class="range-wrapper">
+                    <div class="slider-range" id="slider-range">
+                      <input type="text" id="min" value="8000" data-min="0" data-max="9999">
+                      <input type="text" id="max" value="9000" data-min="0" data-max="9999">
+                    </div>
+                    <div id="slider"></div>
+                  </div>
                 </div>
               </div>
             </div>
