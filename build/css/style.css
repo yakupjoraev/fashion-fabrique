@@ -674,6 +674,74 @@ body {
   z-index: -1;
 }
 
+.loader-wrapper {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100dvh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.loader-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-color: rgba(5, 5, 5, 0.8);
+}
+
+.loader {
+  width: 96px;
+  height: 96px;
+  border: 8px solid var(--white-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 html,
 body {
   min-height: 100vh;
@@ -4258,16 +4326,42 @@ body {
   line-height: 125% !important;
 }
 
+.tehnical h1 {
+  font-family: var(--font-family) !important;
+  font-size: 36px !important;
+  line-height: 90% !important;
+  font-weight: 500 !important;
+}
+
+.tehnical h2 {
+  font-family: var(--font-family) !important;
+  font-size: 16px !important;
+  line-height: 100% !important;
+  font-weight: 500 !important;
+}
+
+.tehnical p {
+  font-family: var(--second-family) !important;
+  font-size: 12pt !important;
+  line-height: 125% !important;
+}
+
+.tehnical ul li {
+  font-family: var(--second-family) !important;
+  font-size: 12pt !important;
+  line-height: 125% !important;
+}
+
 .tehnical__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-column-gap: 40px;
-     -moz-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 100px;
+     -moz-column-gap: 100px;
+          column-gap: 100px;
   margin: 0 auto;
 }
 
@@ -7360,11 +7454,6 @@ body {
     top: -20px;
     right: 30px;
     overflow: hidden;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: none;
     -webkit-transition: top 0.2s linear, height 0.1s linear, margin 0.1s linear;
     -o-transition: top 0.2s linear, height 0.1s linear, margin 0.1s linear;
     transition: top 0.2s linear, height 0.1s linear, margin 0.1s linear;
