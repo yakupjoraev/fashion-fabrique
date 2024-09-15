@@ -90,34 +90,19 @@
   z-index: -100;
 
   &:checked~.login__radio-label {
-    opacity: 1;
-    /* Standard compliant browsers */
-    -moz-opacity: 1;
-    /* Firefox and Mozilla browsers */
-    -webkit-opacity: 1;
-    /* WebKit browser e.g. Safari */
+    filter: opacity(1);
   }
 }
 
 .login__radio-label {
   font-family: var(--font-family);
-  opacity: 0.3;
-  /* Standard compliant browsers */
-  -moz-opacity: 0.3;
-  /* Firefox and Mozilla browsers */
-  -webkit-opacity: 0.3;
-  /* WebKit browser e.g. Safari */
+  filter: opacity(0.3);
   transition: 0.2s linear;
   cursor: pointer;
 
   @media (hover:hover) {
     &:hover {
-      opacity: 0.5;
-      /* Standard compliant browsers */
-      -moz-opacity: 0.5;
-      /* Firefox and Mozilla browsers */
-      -webkit-opacity: 0.5;
-      /* WebKit browser e.g. Safari */
+      filter: opacity(0.5);
     }
   }
 }
