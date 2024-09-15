@@ -146,11 +146,23 @@
 
   // .lk__orders
 
+  @media (max-width: $breakpoint768) {
+    .products-slider__slide-card {
+      width: 190px;
+    }
+
+    .products-slider__slide {
+      width: 190px !important;
+      height: auto;
+    }
+  }
+
   &__orders {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
     overflow: hidden;
+    width: 100%;
 
     @media (max-width: $breakpoint768) {
       margin: 0 -10px;
