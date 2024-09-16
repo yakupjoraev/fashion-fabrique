@@ -4379,15 +4379,18 @@ body {
 
 .login__radio-label {
   font-family: var(--font-family);
-  -webkit-filter: opacity(0.3);
-          filter: opacity(0.3);
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
   cursor: pointer;
 }
 
-.login__radio-label.active {
+.login__radio-label .registration__label {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+
+.login__radio-label.active .registration__label {
   -webkit-filter: opacity(1);
           filter: opacity(1);
 }
