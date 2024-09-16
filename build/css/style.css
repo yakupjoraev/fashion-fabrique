@@ -4377,6 +4377,12 @@ body {
   z-index: -100;
 }
 
+.login__radio-input:checked ~ .login__radio-label .registration__label {
+  -webkit-filter: opacity(1);
+  filter: opacity(1);
+  opacity: 1;
+}
+
 .login__radio-label {
   font-family: var(--font-family);
   -webkit-transition: 0.2s linear;
@@ -4386,13 +4392,9 @@ body {
 }
 
 .login__radio-label .registration__label {
-  -webkit-filter: opacity(0.3);
-          filter: opacity(0.3);
-}
-
-.login__radio-label.active .registration__label {
-  -webkit-filter: opacity(1);
-          filter: opacity(1);
+  -webkit-filter: opacity(0.5);
+  filter: opacity(0.5);
+  opacity: 0.5;
 }
 
 .login__email {
@@ -8859,8 +8861,9 @@ body {
   }
 
   .login__radio-label:hover .registration__label {
-    -webkit-filter: opacity(0.5);
-            filter: opacity(0.5);
+    -webkit-filter: opacity(0.7);
+    filter: opacity(0.7);
+    opacity: 0.7;
   }
 
   .tehnical__link:hover {

@@ -769,34 +769,28 @@ document.addEventListener('DOMContentLoaded', function () {
   const telRadio = document.getElementById('logoin-tel');
   const emailBlock = document.querySelector('.login__email');
   const telBlock = document.querySelector('.login__tel');
-  const emptyLink = document.querySelector('.registration__password-empty');
+  const emptyLink = document.querySelector('.registration__password-empty')
 
-  // Получаем соответствующие label для радио-инпутов
-  const emailLabel = document.querySelector('label[for="logoin-mail"]');
-  const telLabel = document.querySelector('label[for="logoin-tel"]');
 
   function updateActiveClass() {
     if (emailRadio.checked) {
       emailBlock.classList.add('active');
       telBlock.classList.remove('active');
       emptyLink.classList.remove('none');
-      emailLabel.classList.add('active');
-      telLabel.classList.remove('active');
     } else if (telRadio.checked) {
       telBlock.classList.add('active');
       emailBlock.classList.remove('active');
       emptyLink.classList.add('none');
-      telLabel.classList.add('active');
-      emailLabel.classList.remove('active');
     }
   }
 
+  // Добавляем обработчики событий на изменение радио-кнопок
   emailRadio.addEventListener('change', updateActiveClass);
   telRadio.addEventListener('change', updateActiveClass);
 
+  // Инициализация - сразу выставляем правильный класс при загрузке страницы
   updateActiveClass();
 });
-
 
 
 function sizeChartAccordion() {
