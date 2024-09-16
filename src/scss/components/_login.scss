@@ -90,19 +90,28 @@
   z-index: -100;
 
   &:checked~.login__radio-label {
-    filter: opacity(1);
+    .registration__label {
+      filter: opacity(1);
+    }
   }
 }
 
 .login__radio-label {
   font-family: var(--font-family);
-  filter: opacity(0.3);
+
   transition: 0.2s linear;
   cursor: pointer;
 
+  .registration__label {
+    filter: opacity(0.3);
+  }
+
   @media (hover:hover) {
     &:hover {
-      filter: opacity(0.5);
+      .registration__label {
+        filter: opacity(0.5);
+      }
+
     }
   }
 }

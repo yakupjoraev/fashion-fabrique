@@ -4377,19 +4377,22 @@ body {
   z-index: -100;
 }
 
-.login__radio-input:checked ~ .login__radio-label {
+.login__radio-input:checked ~ .login__radio-label .registration__label {
   -webkit-filter: opacity(1);
           filter: opacity(1);
 }
 
 .login__radio-label {
   font-family: var(--font-family);
-  -webkit-filter: opacity(0.3);
-          filter: opacity(0.3);
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
   cursor: pointer;
+}
+
+.login__radio-label .registration__label {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
 }
 
 .login__email {
@@ -8855,7 +8858,7 @@ body {
     opacity: 1;
   }
 
-  .login__radio-label:hover {
+  .login__radio-label:hover .registration__label {
     -webkit-filter: opacity(0.5);
             filter: opacity(0.5);
   }
