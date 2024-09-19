@@ -1143,16 +1143,6 @@ body {
   fill: var(--black-color);
 }
 
-.header__action:hover .bag__white {
-  display: block;
-}
-
-.header__action:hover .bag__white ~ svg {
-  display: none;
-  -webkit-animation: fade 0.3s linear;
-          animation: fade 0.3s linear;
-}
-
 .bag__count {
   position: absolute;
   top: 50%;
@@ -2189,6 +2179,30 @@ body {
 .card__favorite img {
   width: 16px;
   height: 14px;
+}
+
+.card__favorite.have {
+  opacity: 1;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  pointer-events: visible;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.26967 1.2891C2.08154 0.46369 3.18253 0 4.33051 0C5.4785 0 6.57949 0.46369 7.39136 1.2891C7.5501 1.44995 7.75444 1.65014 8.00439 1.88965C8.25376 1.65014 8.45782 1.44995 8.61656 1.2891C9.42503 0.470758 10.5184 0.00996487 11.6591 0.00685807C12.7997 0.00375127 13.8955 0.458582 14.7083 1.27251C15.521 2.08644 15.9851 3.19368 15.9996 4.35363C16.0142 5.51358 15.578 6.63249 14.7859 7.46721L8.61569 13.7422C8.45332 13.9073 8.23312 14 8.00353 14C7.77393 14 7.55373 13.9073 7.39136 13.7422L1.22118 7.46809C0.429811 6.63806 -0.0087772 5.52478 0.000133157 4.36867C0.00904351 3.21257 0.465603 2.10641 1.26967 1.2891Z' fill='%23111810' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 14px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.card__favorite.have img {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .card__favorite.active {
@@ -3634,6 +3648,16 @@ body {
   transition: background-color 0.2s linear, color 0.2s linear;
 }
 
+.product__action.active {
+  background-color: var(--text-color);
+  color: var(--white-color);
+}
+
+.product__action.active img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(88%) saturate(0%) hue-rotate(239deg) brightness(103%) contrast(101%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(88%) saturate(0%) hue-rotate(239deg) brightness(103%) contrast(101%);
+}
+
 .product__footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -4427,7 +4451,7 @@ body {
 
 .tehnical {
   font-family: var(--second-family) !important;
-  font-size: 12pt !important;
+  font-size: 12px !important;
   line-height: 125% !important;
 }
 
@@ -4445,15 +4469,49 @@ body {
   font-weight: 500 !important;
 }
 
+.tehnical h3 {
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  line-height: 100% !important;
+  font-weight: 500 !important;
+}
+
+.tehnical h4 {
+  font-family: var(--font-family) !important;
+  font-size: 12px !important;
+  line-height: 125% !important;
+  font-weight: 400 !important;
+}
+
+.tehnical h5 {
+  font-family: var(--font-family) !important;
+  font-size: 12px !important;
+  line-height: 125% !important;
+  font-weight: 400 !important;
+}
+
+.tehnical h6 {
+  font-family: var(--font-family) !important;
+  font-size: 12px !important;
+  line-height: 125% !important;
+  font-weight: 400 !important;
+}
+
 .tehnical p {
   font-family: var(--second-family) !important;
-  font-size: 12pt !important;
+  font-size: 12px !important;
+  line-height: 125% !important;
+}
+
+.tehnical div {
+  font-family: var(--second-family) !important;
+  font-size: 12px !important;
   line-height: 125% !important;
 }
 
 .tehnical ul li {
   font-family: var(--second-family) !important;
-  font-size: 12pt !important;
+  font-size: 12px !important;
   line-height: 125% !important;
 }
 
@@ -6903,7 +6961,7 @@ body {
   }
 
   .full-menu__socials {
-    padding-bottom: 20px;
+    padding-bottom: 60px;
   }
 
   .full-menu__btn {
@@ -7938,7 +7996,7 @@ body {
     margin-top: 12px;
   }
 
-  .filters__item-labels::before {
+  .filters__item-labels:has(.filters__item-label:nth-child(n+3))::before {
     content: "...";
     position: absolute;
     right: -20px;
@@ -8251,6 +8309,13 @@ body {
 
   .lk__inner {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .lk__main::before {
+    right: auto;
+    left: -100px;
+    top: -100px;
+    height: 200vh;
   }
 
   .lk__main {
@@ -8663,6 +8728,16 @@ body {
 
   .header__search-link:hover .header__search-text {
     color: var(--white-color);
+  }
+
+  .header__action:hover .bag__white {
+    display: block;
+  }
+
+  .header__action:hover .bag__white ~ svg {
+    display: none;
+    -webkit-animation: fade 0.3s linear;
+            animation: fade 0.3s linear;
   }
 
   .header-small .burger:hover {

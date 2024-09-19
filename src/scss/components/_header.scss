@@ -572,13 +572,15 @@
   }
 }
 
-.header__action:hover .bag__white {
-  display: block;
-}
+@media (hover:hover) {
+  .header__action:hover .bag__white {
+    display: block;
+  }
 
-.header__action:hover .bag__white~svg {
-  display: none;
-  animation: fade 0.3s linear;
+  .header__action:hover .bag__white~svg {
+    display: none;
+    animation: fade 0.3s linear;
+  }
 }
 
 .bag__count {

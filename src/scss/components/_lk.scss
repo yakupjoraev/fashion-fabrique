@@ -52,6 +52,13 @@
       z-index: -1;
       user-select: none;
       pointer-events: none;
+
+      @media (max-width: $breakpoint768) {
+        right: auto;
+        left: -100px;
+        top: -100px;
+        height: 200vh;
+      }
     }
 
     &--not-bg {

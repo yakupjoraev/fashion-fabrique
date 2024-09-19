@@ -490,13 +490,16 @@
 
   @media (max-width: $breakpoint768) {
 
-    &::before {
-      content: '...';
-      position: absolute;
-      right: -20px;
-      top: 50%;
-      transform: translateY(-50%);
+    &:has(.filters__item-label:nth-child(n+3)) {
+      &::before {
+        content: '...';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
+
 
 
     .filters__item-label {
