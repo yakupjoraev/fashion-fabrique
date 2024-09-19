@@ -1083,6 +1083,11 @@ if (selectElements.length > 0) {
 }
 
 $(function () {
+  // Проверка на наличие элемента с классом .range-wrapper
+  if (!$('.range-wrapper').length) {
+    return null;
+  }
+
   // Получаем значения из HTML
   var minValue = parseInt($('#min').val().replace(/\D/g, ''));
   var maxValue = parseInt($('#max').val().replace(/\D/g, ''));
