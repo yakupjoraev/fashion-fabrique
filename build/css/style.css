@@ -8320,10 +8320,11 @@ body {
 
   .lk__main {
     padding: 80px 0;
+    display: none;
   }
 
   .lk__info {
-    display: none;
+    display: block;
   }
 
   .lk-order {
