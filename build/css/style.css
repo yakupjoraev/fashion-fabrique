@@ -8303,6 +8303,14 @@ body {
     font-size: 16px;
   }
 
+  .lk.my-account .lk__info {
+    display: block;
+  }
+
+  .lk.my-account .lk__main {
+    display: none;
+  }
+
   .lk--mobile .lk__info {
     display: block;
   }
@@ -8320,11 +8328,10 @@ body {
 
   .lk__main {
     padding: 80px 0;
-    display: none;
   }
 
   .lk__info {
-    display: block;
+    display: none;
   }
 
   .lk-order {
