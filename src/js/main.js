@@ -1082,6 +1082,8 @@ if (selectElements.length > 0) {
   customSelect('select');
 }
 
+
+
 $(function () {
   // Проверка на наличие элемента с классом .range-wrapper
   if (!$('.range-wrapper').length) {
@@ -1093,10 +1095,10 @@ $(function () {
   var maxValue = parseInt($('#max').val().replace(/\D/g, ''));
 
   // Получаем данные из атрибутов
-  var sliderMin = parseInt($('#min').data('min')); // Атрибут data-min
-  var sliderMax = parseInt($('#max').data('max')); // Атрибут data-max
+  var sliderMin = parseInt($('#min').data('min'));
+  var sliderMax = parseInt($('#max').data('max'));
 
-  // Инициализация слайдера с динамическими значениями из атрибутов
+  // Инициализация слайдера
   $('#slider').slider({
     range: true,
     min: sliderMin,
@@ -1115,11 +1117,55 @@ $(function () {
   // Обновляем поля при изменении слайдера
   $('#min').on('change', function () {
     var minVal = parseInt($(this).val().replace(/\D/g, ''));
+    if (minVal < sliderMin) minVal = sliderMin;
+    if (minVal > maxValue) minVal = maxValue;
     $('#slider').slider('values', 0, minVal);
+    $(this).val(minVal + ' р.');
   });
 
   $('#max').on('change', function () {
     var maxVal = parseInt($(this).val().replace(/\D/g, ''));
+    if (maxVal > sliderMax) maxVal = sliderMax;
+    if (maxVal < minValue) maxVal = minValue;
     $('#slider').slider('values', 1, maxVal);
+    $(this).val(maxVal + ' р.');
   });
 });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Получаем текущий путь URL
+//   const currentPath = window.location.pathname;
+//   const lkDiv = document.querySelector('.lk.my-account');
+
+//   if (currentPath === '/my-account') {
+//     const links = document.querySelectorAll('.lk__info .lk__link');
+
+//     links.forEach(function (link) {
+//       const linkPath = new URL(link.href).pathname;
+
+//       if (linkPath === '/my-account') {
+//         link.addEventListener('click', function (event) {
+//           event.preventDefault();
+
+//           if (lkDiv) {
+//             lkDiv.classList.remove('my-account');
+//             document.querySelector('.lk__main').style.display = 'block';
+//             document.querySelector('.lk__info').style.display = 'none';
+//           }
+//         });
+//       }
+//     });
+
+//     const backButton = document.querySelector('.registration__back');
+//     if (backButton) {
+//       backButton.addEventListener('click', function () {
+//         if (lkDiv) {
+//           lkDiv.classList.add('my-account');
+//           document.querySelector('.lk__main').style.display = 'none';
+//           document.querySelector('.lk__info').style.display = 'block';
+//         }
+//       });
+//     }
+//   }
+// });
