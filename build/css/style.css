@@ -2429,7 +2429,7 @@ body {
      object-fit: cover;
 }
 
-.card__top:hover .card__img-main {
+.card__top:hover:has(.hvr__images) .card__img-main {
   display: none;
 }
 
