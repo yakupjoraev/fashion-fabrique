@@ -3105,6 +3105,18 @@ body {
   position: relative;
 }
 
+.accardion__item.error {
+  border-color: var(--accent);
+}
+
+.accardion__item.error .accardion__item-head {
+  border-color: var(--accent);
+}
+
+.accardion__item.error .accardion__item-content {
+  border-color: var(--accent);
+}
+
 .accardion__item.active .accardion__item-content {
   top: 0;
   opacity: 1;

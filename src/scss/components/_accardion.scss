@@ -10,6 +10,18 @@
     background-color: var(--white-color);
     position: relative;
 
+    &.error {
+      border-color: var(--accent);
+
+      .accardion__item-head {
+        border-color: var(--accent);
+      }
+
+      .accardion__item-content {
+        border-color: var(--accent);
+      }
+    }
+
     &.active {
 
       .accardion__item-content {
