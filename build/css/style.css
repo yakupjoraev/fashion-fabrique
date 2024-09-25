@@ -8269,6 +8269,13 @@ body {
   .check-out__content {
     grid-template-columns: 1fr;
     row-gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .check-out__labels {

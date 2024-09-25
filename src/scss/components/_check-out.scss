@@ -157,6 +157,8 @@
     @media (max-width: $breakpoint768) {
       grid-template-columns: 1fr;
       row-gap: 30px;
+      display: flex;
+      flex-direction: column;
     }
   }
 
