@@ -11,14 +11,14 @@
     position: relative;
 
     &.error {
-      border-color: var(--accent);
+      border-color: #FF0000;
 
       .accardion__item-head {
-        border-color: var(--accent);
+        border-color: #FF0000;
       }
 
       .accardion__item-content {
-        border-color: var(--accent);
+        border-color: #FF0000;
       }
     }
 

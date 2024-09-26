@@ -516,6 +516,8 @@
 }
 
 .custom-select-input {
+  display: flex;
+  justify-content: flex-end;
   border: 0;
   outline: 0;
   width: 100%;

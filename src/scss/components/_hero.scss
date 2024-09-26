@@ -33,6 +33,10 @@
     @media (max-width: $breakpoint992) {
       margin: 0;
     }
+
+    @media (max-width: $breakpoint580) {
+      display: none;
+    }
   }
 
   // .hero__slider-wrapper
@@ -281,5 +285,14 @@
     @media (max-width: $breakpoint580) {
       display: none;
     }
+  }
+}
+
+.hero__slider--mobile {
+  display: none;
+
+
+  @media (max-width: $breakpoint580) {
+    display: block;
   }
 }
