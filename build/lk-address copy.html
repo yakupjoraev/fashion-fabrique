@@ -11,14 +11,27 @@
 </head>
 
 <body class="main__body">
-  <div class="wrapper main-page">
+  <div class="wrapper">
     <!-- Header -->
-    <div class="header">
+    <div class="header header-small">
   <div class="container">
     <div class="header__inner">
       <div class="header__top">
+
+        <div class="header__burger-second">
+          <div class="burger">
+            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="0.5" x2="16" y2="0.5" stroke="white" />
+              <line y1="4.5" x2="16" y2="4.5" stroke="white" />
+              <line y1="8.5" x2="16" y2="8.5" stroke="white" />
+            </svg>
+          </div>
+
+          <!-- <span>МЕНЮ</span> -->
+        </div>
+
         <a class="logo" href="#">
-          <img class="logo-img" src="./img/logo-big.svg" alt="logo">
+          <img class="logo-img" width="33" height="27" src="./img/new-logo.svg" alt="logo">
           <img class="logo-img--mini" src="./img/new-logo.svg" alt="logo">
         </a>
 
@@ -30,88 +43,57 @@
             </div>
 
             <!-- С классом active видно -->
-            <ul class="header__search-list active">
+            <ul class="header__search-list">
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <b class="header__search-text h5-medium">Платья</b>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">540</p>
-                  </div>
+                  <b class="header__search-text h5-medium">Платья</b>
+                  <p class="header__search-text header__search-opacity h5-light">540</p>
                 </a>
               </li>
 
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <b class="header__search-text h5-medium">Палантин </b>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">32</p>
-                  </div>
+                  <b class="header__search-text h5-medium">Палантин </b>
+                  <p class="header__search-text header__search-opacity h5-light">32</p>
                 </a>
               </li>
 
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <b class="header__search-text h5-medium">Перчатки</b>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">32</p>
-                  </div>
+                  <b class="header__search-text h5-medium">Перчатки</b>
+                  <p class="header__search-text header__search-opacity h5-light">32</p>
                 </a>
               </li>
 
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <p class="header__search-text h5-light">Платье с пояском</p>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
-                  </div>
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
                 </a>
               </li>
 
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <p class="header__search-text h5-light">Платье с пояском</p>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
-                  </div>
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
                 </a>
               </li>
 
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <p class="header__search-text h5-light">Платье с пояском Платье с пояском Платье с пояском Платье с
-                      пояском</p>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
-                  </div>
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
                 </a>
               </li>
 
               <li class="header__search-item">
                 <a class="header__search-link" href="#">
-                  <div class="header__search-link-item">
-                    <p class="header__search-text h5-light">Платье с пояском Платье с пояском Платье с пояском Платье с
-                      пояском</p>
-                  </div>
-                  <div class="header__search-link-item">
-                    <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
-                  </div>
+                  <p class="header__search-text h5-light">Платье с пояском</p>
+                  <p class="header__search-text header__search-opacity h5-light">АРТ 500431333</p>
                 </a>
               </li>
             </ul>
           </div>
-
 
           <!-- bag btn -->
           <!-- если есть что-то в корзине то, добавь класс have -->
@@ -159,31 +141,6 @@
         </div>
       </div>
 
-
-      <div class="header__bottom">
-        <a href="#" class="logo__mobile">
-          <img class="logo__mobile-img" src="./img/logo-mobile.svg" alt="logo">
-        </a>
-
-        <div class="burger">
-          <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line y1="0.5" x2="16" y2="0.5" stroke="white" />
-            <line y1="4.5" x2="16" y2="4.5" stroke="white" />
-            <line y1="8.5" x2="16" y2="8.5" stroke="white" />
-          </svg>
-        </div>
-
-
-        <nav class="nav">
-          <ul class="nav__menu">
-            <li class="nav__item"><a class="nav__link" href="#">Одежда</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Обувь</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Аксессуары</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Подарочная карта</a></li>
-          </ul>
-        </nav>
-      </div>
-
       <div class="full-menu">
         <div class="full-menu__top">
           <div class="full-menu__burger active-burger">
@@ -207,6 +164,7 @@
                 <img class="full-menu__btn-arrow" width="12" height="12" src="./img/icons/black-menu-arrow.svg"
                   alt="aroorw">
               </button>
+
               <ul class="full-menu__sublist">
                 <li class="full-menu__subitem">
                   <button type="button" class="full-menu__btn">
@@ -387,250 +345,123 @@
 
     <!-- Main Page -->
     <main>
-      <div class="products-slider section">
-        <div class="products-slider__inner">
-          <div class="products-slider__head">
-            <h3 class="products-slider__title">Bestseller</h3>
-            <a class="products-slider__more" href="#">
-              <span> Смотреть все</span>
-
-              <img src="./img/icons/arrow-right.svg" alt="arrow right icon">
-            </a>
-          </div>
-
-          <div class="products-slider__slider swiper mySwiper" data-slider="4">
-            <div class="products-slider__wrapper swiper-wrapper">
-              <div class="products-slider__slide swiper-slide">
-                <div class="products-slider__slide-card card">
-                  <div class="card__top">
-                    <a href="https://fonts.google.com/" class="card__img-main">
-                      <img src="./img/hero/1.jpg" alt="main pic">
-                    </a>
-                    <a href="https://fonts.google.com/" class="card__picture pictures-slider">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-1.jpg" alt="product">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-2.jpg" alt="product">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-3.jpg" alt="product">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-4.jpg" alt="product">
-                    </a>
-
-                    <div class="card__top-row card__top-row--footer">
-                      <div class="card__new">new</div>
-                      <button type="button" class="card__favorite">
-                        <img class="card__favorite-img" src="./img/icons/Liked _ btn.svg" alt="like icon">
-                      </button>
-                    </div>
-
-                  </div>
-
-                  <div class="card__bottom">
-                    <div class="card__column">
-                      <a href="https://fonts.google.com/" class="card__name">Платье-макси</a>
-                      <div class="card__colors">
-                        <div class="card__color card__color--grey"></div>
-                        <div class="card__color card__color--black"></div>
-                        <div class="card__color card__color--blue"></div>
-                      </div>
-                    </div>
-
-                    <a href="https://fonts.google.com/" class="card__row">
-                      <div class="card__old-price"><strike>1200</strike></div>
-                      <div class="card__price">1000 р.</div>
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="products-slider__slide swiper-slide">
-                <div class="products-slider__slide-card card">
-                  <div class="card__top">
-                    <a href="https://fonts.google.com/" class="card__img-main">
-                      <img src="./img/hero/1.jpg" alt="main pic">
-                    </a>
-                    <!-- <a href="https://fonts.google.com/" class="card__picture pictures-slider">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-1.jpg" alt="product">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-2.jpg" alt="product">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-3.jpg" alt="product">
-                      <img class="card__img picture-slide" src="./img/card/card-pic-4.jpg" alt="product">
-                    </a> -->
-
-                    <div class="card__top-row card__top-row--footer">
-                      <div class="card__new">new</div>
-                      <button type="button" class="card__favorite">
-                        <img class="card__favorite-img" src="./img/icons/Liked _ btn.svg" alt="like icon">
-                      </button>
-                    </div>
-
-                  </div>
-
-                  <div class="card__bottom">
-                    <div class="card__column">
-                      <a href="https://fonts.google.com/" class="card__name">Платье-макси</a>
-                      <div class="card__colors">
-                        <div class="card__color card__color--grey"></div>
-                        <div class="card__color card__color--black"></div>
-                        <div class="card__color card__color--blue"></div>
-                      </div>
-                    </div>
-
-                    <a href="https://fonts.google.com/" class="card__row">
-                      <div class="card__old-price"><strike>1200</strike></div>
-                      <div class="card__price">1000 р.</div>
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="products-slider__arrow products-slider__arrow--prev" data-slider-prev="4">
-              <img src="./img/icons/arrow-left.svg" alt="arrow left icon">
-            </div>
-
-            <div class="products-slider__arrow products-slider__arrow--next" data-slider-next="4">
-              <img src="./img/icons/arrow-right.svg" alt="arrow right icon">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+      <div class="lk">
   <div class="container">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <nav class="footer__nav">
-          <ul class="footer__list">
-            <li class="footer__item footer__item--label" data-footer-accordion>
-              <h4 class="footer__item-label">Каталог</h4>
-              <button type="button" class="footer__item-btn" data-footer-accordion-btn>
-                <img class="footer__item-arrow" src="./img/icons/footer-item-arrow.svg" alt="arrow">
-              </button>
-            </li>
-            <li class="footer__item"> <a class="footer__link" href="#">Одежда</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Обувь</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Аксессуары</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Новинки</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Sale</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Bestseller </a></li>
-          </ul>
+    <div class="lk__inner">
+      <div class="lk__main">
+        <form action="#" class="registration__inner">
+          <div class="registration__row">
+            <div class="registration__row-head">
+              <a class="registration__back" href="#">
+                <img width="16" height="16" src="./img/icons/arrow-left.svg" alt="arrow">
+              </a>
 
-          <ul class="footer__list">
-            <li class="footer__item footer__item--label" data-footer-accordion>
-              <h4 class="footer__item-label">Клиентам</h4>
-              <button type="button" class="footer__item-btn" data-footer-accordion-btn>
-                <img class="footer__item-arrow" src="./img/icons/footer-item-arrow.svg" alt="arrow">
-              </button>
-            </li>
-            <li class="footer__item"> <a class="footer__link" href="#">Личный кабиент</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Адреса магазинов</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Оплата и доставка</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Обмен и возврат</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Таблица размеров</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Подарочная карта</a></li>
-          </ul>
+              <h3 class="registration__label h4">Адреса доставки</h3>
 
-          <ul class="footer__list">
-            <li class="footer__item footer__item--label" data-footer-accordion>
-              <h4 class="footer__item-label">Бренд</h4>
-              <button type="button" class="footer__item-btn" data-footer-accordion-btn>
-                <img class="footer__item-arrow" src="./img/icons/footer-item-arrow.svg" alt="arrow">
-              </button>
-            </li>
-            <li class="footer__item"> <a class="footer__link" href="#">О нас</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Работа в компании</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Сотрудничество</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Написать нам</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Контакты</a></li>
-          </ul>
+              <button type="button" class="registration__edit text">Редактировать</button>
+            </div>
 
-          <ul class="footer__list footer__list--mobile-politicals">
-            <li class="footer__item footer__item--label" data-footer-accordion>
-              <h4 class="footer__item-label">Юридические документы</h4>
-              <button type="button" class="footer__item-btn" data-footer-accordion-btn>
-                <img class="footer__item-arrow" src="./img/icons/footer-item-arrow.svg" alt="arrow">
-              </button>
-            </li>
-            <li class="footer__item"> <a class="footer__link" href="#">Обработка персональных данных</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Рекламная рассылка</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Пользовательская оферта</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Пользовательское соглашение</a></li>
-            <li class="footer__item"> <a class="footer__link" href="#">Политика конфиденциальности</a></li>
-          </ul>
-        </nav>
+            <div class="registration__row-head registration__row-head--not-mb">
+              <h3 class="registration__label h4">Название</h3>
+            </div>
 
-        <div class="footer__right">
-          <div class="footer__row">
-            <h4 class="footer__row-label">Поддержка</h4>
-            <a class="footer__row-link" href="tel:+77777777777" target="_blank">+7 777 777 77 77</a>
-            <a class="footer__row-link" href="mailto:support@fashionfabrique.com"
-              target="_blank">support@fashionfabrique.com</a>
-          </div>
-          <div class="footer__row">
-            <h4 class="footer__row-label">Мы в соц сетях</h4>
-            <ul class="footer__socials">
-              <li class="footer__social">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./img/icons/footer-facebook.svg" alt="social icon">
-                </a>
-              </li>
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Имя">
+            </div>
 
-              <li class="footer__social">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./img/icons/footer-instagrem.svg" alt="social icon">
-                </a>
-              </li>
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Фамилия">
+            </div>
 
-              <li class="footer__social">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./img/icons/footer-vk.svg" alt="social icon">
-                </a>
-              </li>
+            <div class="registration__input-wrapper registration__input-wrapper--triple">
+              <input class="registration__input" type="number" placeholder="№">
+              <input class="registration__input" type="number" placeholder="№">
+              <input class="registration__input" type="number" placeholder="№">
+            </div>
 
-              <li class="footer__social">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./img/icons/footer-tg.svg" alt="social icon">
-                </a>
-              </li>
-
-              <li class="footer__social">
-                <a class="footer__social-link" href="#">
-                  <img class="footer__social-icon" src="./img/icons/footer-pinterest.svg" alt="social icon">
-                </a>
-              </li>
-            </ul>
           </div>
 
-        </div>
+          <div class="registration__row">
+            <div class="registration__row-head registration__row-head--not-mb">
+              <h3 class="registration__label h4">Название</h3>
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Имя">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Фамилия">
+            </div>
+
+            <div class="registration__input-wrapper registration__input-wrapper--triple">
+              <input class="registration__input" type="number" placeholder="№">
+              <input class="registration__input" type="number" placeholder="№">
+              <input class="registration__input" type="number" placeholder="№">
+            </div>
+          </div>
+
+          <div class="registration__row">
+            <div class="registration__row-head registration__row-head--not-mb">
+              <h3 class="registration__label h4">Название</h3>
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Имя">
+            </div>
+
+            <div class="registration__input-wrapper">
+              <input class="registration__input" type="text" placeholder="Фамилия">
+            </div>
+
+            <div class="registration__input-wrapper registration__input-wrapper--triple">
+              <input class="registration__input" type="number" placeholder="№">
+              <input class="registration__input" type="number" placeholder="№">
+              <input class="registration__input" type="number" placeholder="№">
+            </div>
+          </div>
+
+          <div class="registration__row" style="display: none;">
+            <div class="registration__attantion">
+              <p class="registration__text">Заполните выделенные поля</p>
+            </div>
+          </div>
+
+        </form>
       </div>
 
-
-      <div class="footer__bottom">
-        <div class="footer__politicals">
-          <a class="footer__political" href="#">Обработка персональных данных</a>
-          <a class="footer__political" href="#">Рекламная рассылка</a>
-          <a class="footer__political" href="#">Пользовательская оферта</a>
-          <a class="footer__political" href="#">Пользовательское соглашение</a>
-          <a class="footer__political" href="#">Политика конфиденциальности</a>
+      <div class="lk__info">
+        <div class="lk__nameing">
+          <p class="lk__nameing-label h5-light">Привет,</p>
+          <h1 class="lk__nameing-name h2">ИМЯ</h1>
         </div>
 
-        <div class="footer__copy">
-          <p class="footer__copy-text">All rights received. Fashionfabrique, 2023 </p>
-        </div>
+        <ul class="lk__list">
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">Аккаунт</a></li>
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">Пароль</a></li>
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">Мои заказы</a></li>
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">Адреса доставки</a></li>
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">Подарочные карты</a></li>
+        </ul>
+
+        <ul class="lk__list">
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">нужна помощь?</a></li>
+        </ul>
+
+        <ul class="lk__list">
+          <li class="lk__item"><a class="lk__link h5-medium" href="#">
+              <img src="./img/icons/logout-sharp.svg" alt="logout-sharp icon">
+
+              выйти</a></li>
+        </ul>
       </div>
     </div>
   </div>
-</footer>
-
-<div class="cookines">
-  <div class="cookines__inner">
-    <p class="cookines__text">Мы используем cookies. Используя сайт, вы соглашаетесь с обработкой данных с целью сбора
-      аналитики.</p>
-    <button type="button" class="cookines__btn btn-black">Хорошо</button>
-  </div>
 </div>
+    </main>
+
+    <!-- Footer -->
+    
   </div>
 
 </body>

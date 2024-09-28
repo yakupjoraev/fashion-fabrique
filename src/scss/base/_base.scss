@@ -99,10 +99,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  width: 100%;
+  min-height: 52px;
+  background-color: transparent;
+  border: 1px solid var(--grey-color);
 
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--grey-color);
+  transition: border-color 0.2s linear, background-color 0.2s linear, color 0.2s linear;
 
   @media (hover:hover) {
-    &:hover {}
+    &:hover {
+      border-color: var(--text-color);
+      background-color: transparent;
+      color: var(--text-color);
+    }
   }
 }
 

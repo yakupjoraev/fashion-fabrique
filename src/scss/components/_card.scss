@@ -297,6 +297,10 @@
     border-radius: 100%;
   }
 
+  &__color--white {
+    border: 1px solid var(--grey-color);
+  }
+
   &__color--grey {
     background-color: #d8d8d8;
   }
