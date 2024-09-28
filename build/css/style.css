@@ -1643,6 +1643,7 @@ body {
 }
 
 .hero__slide-footer {
+  padding-top: 240px;
   margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1655,6 +1656,10 @@ body {
 }
 
 .hero__slide-labels {
+  position: absolute;
+  right: 0;
+  bottom: 88px;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7149,6 +7154,10 @@ body {
   }
 
   .hero__slide-info {
+    display: none;
+  }
+
+  .hero__slide-labels {
     display: none;
   }
 

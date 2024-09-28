@@ -186,6 +186,7 @@
   // .hero__slide-footer
 
   &__slide-footer {
+    padding-top: 240px;
     margin-top: auto;
     display: flex;
     flex-direction: column;
@@ -199,11 +200,21 @@
   // .hero__slide-labels
 
   &__slide-labels {
+    position: absolute;
+    right: 0;
+    bottom: 88px;
+    z-index: 1;
+
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     row-gap: 10px;
     text-align: right;
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
   }
 
   // .hero__slide-label
