@@ -10,7 +10,7 @@
   &__inner {
     max-width: 390px;
     width: 100%;
-    margin: auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -374,4 +374,8 @@
   // .registration__bottom-contact
 
   &__bottom-contact {}
+}
+
+input[type="submit"] {
+  cursor: pointer;
 }
